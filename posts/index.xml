@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on . local author .</title>
+    <link>https://localauthor.github.io/posts.html</link>
+    <description>Recent content in Posts on . local author .</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Jan 2021 21:44:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Local</title>
+      <link>https://localauthor.github.io/posts/hello-local.html</link>
+      <pubDate>Wed, 27 Jan 2021 21:44:00 +0200</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/hello-local.html</guid>
+      <description>Content TK.</description>
+    </item>
+    
+  </channel>
+</rss>
