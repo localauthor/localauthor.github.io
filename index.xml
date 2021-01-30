@@ -26,6 +26,16 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://localauthor.github.io/posts/localauthor.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/localauthor.html</guid>
+      <description>Notes TECHNICAL TO DO categories  note categories on the posts category list page  archive by month configure menu / pages NOTE: (set links manually in config.toml)
+models  Irreal Stuart Elden  potential titles  local author boring secrets stop eject  topics  photography art teaching writing computer things reading  articles books    resources: Excellent walkthrough by shane sveller https://www.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://localauthor.github.io/about.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
