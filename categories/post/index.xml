@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>post on . local author .</title>
+    <link>https://localauthor.github.io/categories/post.html</link>
+    <description>Recent content in post on . local author .</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Another Post</title>
+      <link>https://localauthor.github.io/posts/another-post.html</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/another-post.html</guid>
+      <description>And the good stuff goes here. Nisl nulla nam. Varius semper vitae quisque tincidunt aptent bibendum maecenas fames fames potenti mattis est vestibulum rhoncus taciti ultrices Sodales lectus inceptos at cum quam. Risus sapien eleifend, tellus laoreet phasellus at interdum luctus.
+Ipsum pellentesque parturient mollis, auctor lorem class ante semper purus orci integer imperdiet congue maecenas.</description>
+    </item>
+    
+  </channel>
+</rss>
