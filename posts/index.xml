@@ -6,7 +6,16 @@
     <description>Recent content in Posts on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 12:11:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 17:43:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Post</title>
+      <link>https://localauthor.github.io/posts/newest-post.html</link>
+      <pubDate>Sat, 30 Jan 2021 17:43:00 +0200</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/newest-post.html</guid>
+      <description>Hey David. Fixed it!</description>
+    </item>
+    
     <item>
       <title>Hello Ruta</title>
       <link>https://localauthor.github.io/posts/hello-ruta.html</link>
