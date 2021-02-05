@@ -5,35 +5,7 @@
     <link>https://localauthor.github.io/</link>
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 30 Jan 2021 17:43:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>New Post</title>
-      <link>https://localauthor.github.io/posts/newest-post.html</link>
-      <pubDate>Sat, 30 Jan 2021 17:43:00 +0200</pubDate>
-      
-      <guid>https://localauthor.github.io/posts/newest-post.html</guid>
-      <description>Hey David. Fixed it!</description>
-    </item>
-    
-    <item>
-      <title>Hello Ruta</title>
-      <link>https://localauthor.github.io/posts/hello-ruta.html</link>
-      <pubDate>Thu, 28 Jan 2021 12:11:00 +0200</pubDate>
-      
-      <guid>https://localauthor.github.io/posts/hello-ruta.html</guid>
-      <description>What do you think?</description>
-    </item>
-    
-    <item>
-      <title>Hello Local</title>
-      <link>https://localauthor.github.io/posts/hello-local.html</link>
-      <pubDate>Wed, 27 Jan 2021 21:44:00 +0200</pubDate>
-      
-      <guid>https://localauthor.github.io/posts/hello-local.html</guid>
-      <description>Content TK. Promise.x</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://localauthor.github.io/about.html</link>
