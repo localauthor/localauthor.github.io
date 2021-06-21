@@ -6,14 +6,15 @@
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 00:06:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 16:23:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test post</title>
-      <link>https://localauthor.github.io/posts/test-post.html</link>
-      <pubDate>Tue, 22 Jun 2021 00:06:00 +0300</pubDate>
+      <title>The Wise Man</title>
+      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
+      <pubDate>Fri, 12 Feb 2021 16:23:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/test-post.html</guid>
-      <description>and so on</description>
+      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
+      <description>There is a man who looks at me where I walk my dog in the park.
+Outside the French embassy, up the street from the university where I teach, he stands in a long black coat and dark hat, peering over a significant beard maintained with care for decades, or so one can deduce from its broad, stately sweep.</description>
     </item>
     
     <item>
@@ -23,16 +24,6 @@
       
       <guid>https://localauthor.github.io/about.html</guid>
       <description>This is the about page.</description>
-    </item>
-    
-    <item>
-      <title>The Wise Man</title>
-      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
-      <description>There is a man who looks at me where I walk my dog in the park.
-Outside the French embassy, up the street from the university where I teach, he stands in a long black coat and dark hat, peering over a significant beard maintained with care for decades, or so one can deduce from its broad, stately sweep.</description>
     </item>
     
   </channel>
