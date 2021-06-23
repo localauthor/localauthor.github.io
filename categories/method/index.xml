@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on . local author .</title>
-    <link>https://localauthor.github.io/posts.html</link>
-    <description>Recent content in Posts on . local author .</description>
+    <title>method on . local author .</title>
+    <link>https://localauthor.github.io/categories/method.html</link>
+    <description>Recent content in method on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jun 2021 22:07:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 22:07:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/method/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Textual Encounters of the Worthwhile Kind</title>
       <link>https://localauthor.github.io/posts/textual-encounters.html</link>
@@ -15,16 +15,6 @@
       <guid>https://localauthor.github.io/posts/textual-encounters.html</guid>
       <description>Reading without taking notes is as good as not reading.
 What was the last text you read, of any significant length or substance &amp;mdash; book, chapter, article, or blog post? How long ago did you read it? How much of it has stayed with you? What do you remember more clearly: the text itself, the circumstances in which you read it, or the feeling of accomplishment that came over you as you finished it?</description>
-    </item>
-    
-    <item>
-      <title>The Wise Man</title>
-      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
-      <pubDate>Fri, 12 Feb 2021 16:23:00 +0200</pubDate>
-      
-      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
-      <description>There is a man who looks at me where I walk my dog in the park.
-Outside the French embassy, up the street from the university where I teach, he stands in a long black coat and dark hat, peering over a significant beard maintained with care for decades, or so one can deduce from its broad, stately sweep.</description>
     </item>
     
   </channel>
