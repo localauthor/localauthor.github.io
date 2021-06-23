@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>place on . local author .</title>
+    <link>https://localauthor.github.io/categories/place.html</link>
+    <description>Recent content in place on . local author .</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Feb 2021 16:24:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/place/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Wise Man</title>
+      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
+      <pubDate>Fri, 12 Feb 2021 16:24:00 +0200</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
+      <description>There is a man who looks at me where I walk my dog in the park.
+Outside the French embassy, up the street from the university where I teach, he stands in a long black coat and dark hat, peering over a significant beard maintained with care for decades, or so one can deduce from its broad, stately sweep.</description>
+    </item>
+    
+  </channel>
+</rss>
