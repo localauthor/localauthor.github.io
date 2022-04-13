@@ -6,7 +6,18 @@
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Oct 2021 11:12:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 01:26:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs: Open links exactly where you want them</title>
+      <link>https://localauthor.github.io/posts/aw-select.html</link>
+      <pubDate>Thu, 14 Apr 2022 01:26:00 +0300</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/aw-select.html</guid>
+      <description>This post describes how the Emacs package link-hint can be combined with ace-window to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+ Ace-window is a real fancy window-switcher The ace-window package, written by abo-abo, offers a handy, full-featured alternative to the built-in window-switching function other-window The package&amp;rsquo;s primary function&amp;mdash;the titular ace-window&amp;mdash;overlays a different character (letter or number) over each visible Emacs window, so you can switch to the desired window by simply pressing its assigned character.</description>
+    </item>
+    
     <item>
       <title>Stendhal at Hand</title>
       <link>https://localauthor.github.io/posts/stendhal.html</link>
@@ -61,6 +72,15 @@ What do you remember more clearly:</description>
       
       <guid>https://localauthor.github.io/about.html</guid>
       <description>This is the about page. It&amp;rsquo;s where you would find out what this page is about.</description>
+    </item>
+    
+    <item>
+      <title>Poem Machine</title>
+      <link>https://localauthor.github.io/posts/poem-machine.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/poem-machine.html</guid>
+      <description></description>
     </item>
     
   </channel>
