@@ -35,7 +35,7 @@
 <article class="post-list">
     <div class="title-group">
         <div class="title">
-            <h1><a href="./posts/aw-select.html">Emacs: Open links exactly where you want them</a></h1>
+            <h1><a href="./posts/aw-select.html">Emacs: With ace-window, open links exactly where you want them</a></h1>
         </div>
         
         
@@ -51,18 +51,22 @@
   <div></div>
 <p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
 </div>
-<h2 id="ace-window-is-a-real-fancy-window-switcher">Ace-window is a real fancy window-switcher</h2>
+<h2 id="ace-window-is--more-than--a-fancy-window-switcher">Ace-window is (more than) a fancy window-switcher</h2>
 <p>The ace-window package, written by <a href="https://github.com/abo-abo" target="_blank">abo-abo</a>, offers a handy, full-featured
-alternative to the built-in window-switching function <code>other-window</code> The
+alternative to the built-in window-switching function <code>other-window</code>. The
 package&rsquo;s primary function&mdash;the titular <code>ace-window</code>&mdash;overlays a different
 character (letter or number) over each visible Emacs window, so you can
 switch to the desired window by simply pressing its assigned character. Very
 useful, very sleek.</p>
-<p>The package offers the additional option of performing an action in the
-selected window before switching to it. In this regard, it follows the design
-of its parent package <a href="https://github.com/abo-abo/avy" target="_blank">avy</a>&mdash;also by abo-abo. Instead of just switching to a
-window, you can split it, call switch-to-buffer in it, or even close it.
-Fantastic!</p>
+<p>But ace-window is more than just a handy way to switch windows.</p>
+<p>The package also offers the ability to perform an action in the selected
+window before switching to it. In this regard, it follows the design of its
+parent package <a href="https://github.com/abo-abo/avy" target="_blank">avy</a>&mdash;also by abo-abo. Instead of simply switching to a
+window, you can <a href="https://github.com/abo-abo/ace-window#aw-dispatch-alist" target="_blank">split it first, call switch-to-buffer in it, or even close
+it</a>. For a demonstration of this aspect of ace-window, see <a href="https://www.youtube.com/watch?v=I3BvGZ3m8Oo" target="_blank">this video
+from Protesilaos Stavrou</a>.)</p>
+<p>The greatness of ace-window truly comes through, however, when it is combined
+with other packages.</p>
 <h2 id="with-ace-window-and-embark-open-files-buffers-in-specified-windows">With ace-window and Embark, open files/buffers in specified windows</h2>
 <p>In his <a href="https://karthinks.com/software/fifteen-ways-to-use-embark/" target="_blank">detailed write-up on using Embark</a>, Karthik Chikmagalur showcases a
 killer mash-up of ace-window and Embark, demonstrating how ace-window can be
@@ -82,16 +86,24 @@ Karthik gives to the embark/ace-window function)</li>
 <h2 id="with-ace-window-and-link-hint-follow-links-in-specified-windows">With ace-window and link-hint, follow links in specified windows</h2>
 <p>Inspired by what Karthik showed was possible, I wanted to incorporate
 ace-window with link-hint, to make it possible to choose which window a link
-would open in. The result is the function called <code>link-hint-aw-select</code>.</p>
+would open in. The result is the function called <code>link-hint-aw-select</code>:</p>
+
+<figure>
+    <img src="./ox-hugo/aw-select-demo.gif"
+         alt="Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window."/> <figcaption>
+            <p>Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.</p>
+        </figcaption>
+</figure>
+
 <p>If you&rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
 ace-window: it puts a character overlay on visible links in a buffer so that
-you can choose a link to follow by typing its assigned character. The
-conceptual similarity of these packages is not surprising, since both are
-based on avy.</p>
+you can choose a link to follow by typing its assigned character. (The
+conceptual similarity of link-hint and ace-window is not surprising, since
+both are based on avy.)</p>
 <p>Link-hint can identify a lot of different type of links, such as urls, file
-paths, email addresses, org-links, buttons, and dired filenames. New link
-types can also be defined by the user. (More on this later.)</p>
-<p>Much like avy and ace-window, link-hint allows for different actions to
+paths, mailto links, org-links, buttons, and dired filenames. New link
+types can also be defined by the user. (More on that later.)</p>
+<p>As with avy and ace-window, link-hint allows for different actions to
 performed on the chosen link. However, there are only two default actions for acting on links: open link and copy link.</p>
 <p>Defining a new action is done by defining a new function, in this case the
 above-mentioned <code>link-hint-aw-select</code>, which will be entry-point command for all link types:</p>
