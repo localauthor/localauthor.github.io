@@ -3,7 +3,7 @@
   <channel>
     <title>. local author .</title>
     <link>https://localauthor.github.io/</link>
-    <description></description>
+    <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Apr 2022 01:26:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,220 @@
       <pubDate>Thu, 14 Apr 2022 01:26:00 +0300</pubDate>
       
       <guid>https://localauthor.github.io/posts/aw-select.html</guid>
-      <description>This post describes how the Emacs package link-hint can be combined with ace-window to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.
-.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
- Ace-window is (more than) a fancy window-switcher The ace-window package, written by abo-abo, offers a handy, full-featured alternative to the built-in window-switching function other-window.</description>
+      <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
+&lt;a href=&#34;https://github.com/abo-abo/ace-window&#34; target=&#34;_blank&#34;&gt;ace-window&lt;/a&gt; to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;ace-window-is--more-than--a-fancy-window-switcher&#34;&gt;Ace-window is (more than) a fancy window-switcher&lt;/h2&gt;
+&lt;p&gt;The ace-window package, written by &lt;a href=&#34;https://github.com/abo-abo&#34; target=&#34;_blank&#34;&gt;abo-abo&lt;/a&gt;, offers a handy, full-featured
+alternative to the built-in window-switching function &lt;code&gt;other-window&lt;/code&gt;. The
+package&amp;rsquo;s primary function&amp;mdash;the titular &lt;code&gt;ace-window&lt;/code&gt;&amp;mdash;overlays a different
+character (letter or number) over each visible Emacs window, so you can
+switch to the desired window by simply pressing its assigned character. Very
+useful, very sleek.&lt;/p&gt;
+&lt;p&gt;But ace-window is more than just a handy way to switch windows.&lt;/p&gt;
+&lt;p&gt;The package also offers the ability to perform an action in the selected
+window before switching to it. In this regard, it follows the design of its
+parent package &lt;a href=&#34;https://github.com/abo-abo/avy&#34; target=&#34;_blank&#34;&gt;avy&lt;/a&gt;&amp;mdash;also by abo-abo. Instead of simply switching to a
+window, you can &lt;a href=&#34;https://github.com/abo-abo/ace-window#aw-dispatch-alist&#34; target=&#34;_blank&#34;&gt;split it first, call switch-to-buffer in it, or even close
+it&lt;/a&gt;. For a demonstration of this aspect of ace-window, see &lt;a href=&#34;https://www.youtube.com/watch?v=I3BvGZ3m8Oo&#34; target=&#34;_blank&#34;&gt;this video
+from Protesilaos Stavrou&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;The greatness of ace-window truly comes through, however, when it is combined
+with other packages.&lt;/p&gt;
+&lt;h2 id=&#34;with-ace-window-and-embark-open-files-buffers-in-specified-windows&#34;&gt;With ace-window and Embark, open files/buffers in specified windows&lt;/h2&gt;
+&lt;p&gt;In his &lt;a href=&#34;https://karthinks.com/software/fifteen-ways-to-use-embark/&#34; target=&#34;_blank&#34;&gt;detailed write-up on using Embark&lt;/a&gt;, Karthik Chikmagalur showcases a
+killer mash-up of ace-window and Embark, demonstrating how ace-window can be
+used for more than just switching windows.&lt;/p&gt;
+&lt;p&gt;Briefly put, Karthik shows how to incorporate ace-window&amp;rsquo;s window-selection
+function into the opening of a file or buffer from the minibuffer so that, as
+he writes, &amp;ldquo;any buffer/file/bookmark I open is always placed exactly where I
+want it to be on the screen.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;An example usage would be:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;call &lt;code&gt;find-file&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;call &lt;code&gt;embark-act&lt;/code&gt; on file you wish to open&lt;/li&gt;
+&lt;li&gt;call &lt;code&gt;my/embark-ace-action-find-file&lt;/code&gt; (this is the slightly unwieldy name
+Karthik gives to the embark/ace-window function)&lt;/li&gt;
+&lt;li&gt;select desired window with &lt;code&gt;ace-window&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;with-ace-window-and-link-hint-follow-links-in-specified-windows&#34;&gt;With ace-window and link-hint, follow links in specified windows&lt;/h2&gt;
+&lt;p&gt;Inspired by what Karthik showed was possible, I wanted to incorporate
+ace-window with link-hint, to make it possible to choose which window a link
+would open in. The result is the function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&#34;./ox-hugo/aw-select-demo.gif&#34;
+         alt=&#34;Using &amp;amp;rsquo;link-hint-aw-select&amp;amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you&amp;rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
+ace-window: it puts a character overlay on visible links in a buffer so that
+you can choose a link to follow by typing its assigned character. (The
+conceptual similarity of link-hint and ace-window is not surprising, since
+both are based on avy.)&lt;/p&gt;
+&lt;p&gt;Link-hint can identify a lot of different type of links, such as urls, file
+paths, mailto links, org-links, buttons, and dired filenames. New link
+types can also be defined by the user. (More on that later.)&lt;/p&gt;
+&lt;p&gt;As with avy and ace-window, link-hint allows for different actions to
+performed on the chosen link. However, there are only two default actions for acting on links: open link and copy link.&lt;/p&gt;
+&lt;p&gt;Defining a new action is done by defining a new function, in this case the
+above-mentioned &lt;code&gt;link-hint-aw-select&lt;/code&gt;, which will be entry-point command for all link types:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Use avy to open a link in a window selected with ace-window.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;interactive&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;unless&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;avy-with&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint-aw-select&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint--one&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;:aw-select&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;No visible links&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Things get more complicated very quickly, however.&lt;/p&gt;
+&lt;p&gt;Each action must be tailored to each different link type. Take the case of
+the &amp;ldquo;open&amp;rdquo; action, for examples: urls open one way&amp;mdash;in a browser&amp;mdash;and
+filepaths open another way&amp;mdash;in a relevant application&amp;mdash;and email addresses
+open another way&amp;mdash;in a new draft email. Each action is actually many
+different actions, all roughly similar.&lt;/p&gt;
+&lt;p&gt;When creating a new action, then, it is necessary to make sure that each link
+type is associated with a function that will perform the new action in the
+appropriate way.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;aw-select&lt;/code&gt; action for file links is quite simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-file-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;find-file&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To make the link-hint ecosystem aware of this new association of link-type,
+action, and function, there is a handy macro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;file-link&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-file-link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If different link-types behave similarly, it is possible to create a macro
+of our own that will do all of the above very efficiently. This is the case with buttons and dired-filenames, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defmacro&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-type&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;fn&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;progn&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;,link-type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#111&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;intern&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;concat&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;link-hint--aw-select-&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                     &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;symbol-name&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-type&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;intern&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;concat&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;link-hint--aw-select-&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                             &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;symbol-name&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-type&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;length&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-window-list&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;fn&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;button&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;push-button&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;dired-filename&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;dired-find-file&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same is &lt;em&gt;almost&lt;/em&gt; the case with org-links as well, except that by default
+org-links are opened using &lt;code&gt;find-file-other-window&lt;/code&gt; instead of &lt;code&gt;find-file&lt;/code&gt;,
+meaning that the above macro wouldn&amp;rsquo;t work properly.&lt;/p&gt;
+&lt;p&gt;I prefer to change this setting globally, so that org-links are opened in the
+current window, by evaluating the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;setf&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;cdr&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;assoc&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;file&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;org-link-frame-setup&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;find-file&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This allows me to use the macro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;org-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;org-open-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To leave org&amp;rsquo;s default behavior in place globally, it is necessary to define
+a function specifically for org-links, in which the behavior is changed
+locally in a let-binding:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-org-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-link-frame-setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;find-file&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;length&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-window-list&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-open-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;org-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-org-link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Things are actually even a bit more complicated than this with org-links.&lt;/p&gt;
+&lt;p&gt;Since org handles different link-types internally, the function
+&lt;code&gt;link-hint--aw-select-org-link&lt;/code&gt; can also be made to handle certain org
+link-types differently. For example, if you want http/https links to be
+opened externally, there is no reason to call the &lt;code&gt;aw-select&lt;/code&gt; behavior for
+that type of org-link. This could be accomplished by including something like
+the following in the function&amp;rsquo;s &amp;ldquo;if&amp;rdquo; conditional:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;member&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-element-property&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;:type&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-element-context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The whole function would be:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-org-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-link-frame-setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;find-file&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;length&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-window-list&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;member&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-element-property&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                             &lt;span style=&#34;color:#111&#34;&gt;:type&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-element-context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;org-open-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example-use-case-note-taking-zettelkasten-etc-dot&#34;&gt;Example use-case: note-taking, zettelkasten, etc.&lt;/h2&gt;
+&lt;p&gt;I find this functionality really useful in my note-taking environment, where
+each of my notes contains several links to other notes. I rarely want to
+follow a link in the same window as the note where the link appears. I
+typically want to leave that note where it is and open a link somewhere else.
+If I have several windows arrayed around my screen, I can use
+&lt;code&gt;link-hint-aw-select&lt;/code&gt; to open the linked note exactly where I want it to be.&lt;/p&gt;
+&lt;p&gt;To use this with org, the above configuration is enough. If you use another note-taking environment, you may need to define a new link type.&lt;/p&gt;
+&lt;p&gt;For example, for use with my own Zettelkasten package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt;, for example, I
+define a new link type &lt;code&gt;zk-link&lt;/code&gt; and a &lt;code&gt;zk-link-hint-aw-select&lt;/code&gt; function, as
+follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;zk-link-hint--zk-link-at-point-p&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Return the ID for the zk-link at the point or nil.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk--id-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;thing-at-point-looking-at&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;zk-link-regexp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;zk-link-hint--next-zk-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;bound&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Find the unext zk-link.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;Only search the range between just after the point and BOUND.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint--next-regexp&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;zk-id-regexp&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;bound&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-zk-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;length&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-window-list&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;((&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk-follow-link-at-point&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;current-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;window&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;new-buffer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;))))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;zk-link&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:next&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk-link-hint--next-zk-link&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:at-point-p&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk-link-hint--zk-link-at-point-p&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:open&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk-follow-link-at-point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:copy&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;kill-new&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;link-hint--aw-select-zk-link&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;push&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;link-hint-zk-link&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;link-hint-types&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Even though link-hint can be a bit complex under the hood, it is quite
+effortless, even elegant, when put in combination with ace-window. Give
+it a try and puzzle over what you had done so long without it.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -24,10 +235,49 @@
       <pubDate>Sun, 31 Oct 2021 11:12:00 +0200</pubDate>
       
       <guid>https://localauthor.github.io/posts/stendhal.html</guid>
-      <description>.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
- Stendhal might have spent the night in a building near where I live.
-There is a plaque on the wall of the building — a bookstore now, specializing in French literature — memorializing the night that Stendhal is said to have stayed there.
-With its bilingual inscription and bas relief portrait of the artist, the plaque brings some kind of life to that corner, projecting a line clear to a far side of Europe.</description>
+      <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Stendhal might have spent the night in a building near where I live.&lt;/p&gt;
+&lt;p&gt;There is a plaque on the wall of the building — a bookstore now, specializing in French literature — memorializing the night that Stendhal is said to have stayed there.&lt;/p&gt;
+&lt;p&gt;With its bilingual inscription and &lt;em&gt;bas relief&lt;/em&gt; portrait of the artist, the plaque brings some kind of life to that corner, projecting a line clear to a far side of Europe.&lt;/p&gt;
+&lt;p&gt;Something of French culture once comforted itself here, we are to understand.&lt;/p&gt;
+&lt;p&gt;Can you imagine?&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You’ll have to imagine.&lt;/p&gt;
+&lt;p&gt;The plaque does not cite its sources. It does not quote from the writer himself. It does not paint a picture of an event, a time, or a place.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ŠIAME NAME &amp;hellip; BUVO APSISTOJES &amp;hellip; STENDALIS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!--quoteend--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DANS CETTE MAISON STENDHAL &amp;hellip; FIT ETAPE&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Where would one look, anyway, if one were inclined to dig up the truth of what may or may not have happened in this or another place at this or that time so many decades, centuries since?&lt;/p&gt;
+&lt;p&gt;But, also, who would care to doubt?&lt;/p&gt;
+&lt;p&gt;The plaque is less a statement of fact than a statement of values, anyway. Draw this place closer, in your mind, to what you might already know well, it seems to say. Comfort yourself, that you are not so far away, so disconnected, as you thought, as you might have feared.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In some letters, it turns out, Stendhal notes his passing, while marching with Napoleon’s army, through various cities and towns in the region.&lt;/p&gt;
+&lt;p&gt;His remarks are spare, revealing an experience of dismal early winter. Little else.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Antanas Vaičiulaitis, “Stendhal in Lithuania,” trans. M. Vasiliauskas, &lt;i&gt;Lituanus: Lithuanian Quarterly Journal of Arts and Sciences&lt;/i&gt; 22, no. 2 (1976).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
     </item>
     
     <item>
@@ -36,11 +286,83 @@ With its bilingual inscription and bas relief portrait of the artist, the plaque
       <pubDate>Sat, 30 Oct 2021 12:56:00 +0300</pubDate>
       
       <guid>https://localauthor.github.io/posts/drafting.html</guid>
-      <description>.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
- There is no good way to write an essay.
-But there are several bad ways.
-Too common, I think, is the impulse to open up a fresh document in Microsoft Word &amp;mdash; or Google Docs, or LibreOffice1 &amp;mdash; and begin banging away at whatever process has worked in the past.
-That process &amp;mdash; whether it be freewriting, or transcribing, or listing, or outlining &amp;mdash; might be effective, or it might not.</description>
+      <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;There is no good way to write an essay.&lt;/p&gt;
+&lt;p&gt;But there &lt;em&gt;are&lt;/em&gt; several bad ways.&lt;/p&gt;
+&lt;p&gt;Too common, I think, is the impulse
+to open up a fresh document in Microsoft Word
+&amp;mdash; or Google Docs, or LibreOffice&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&amp;mdash; and begin banging away at whatever process has worked in the past.&lt;/p&gt;
+&lt;p&gt;That process &amp;mdash; whether it be freewriting, or transcribing, or listing, or outlining
+&amp;mdash; &lt;em&gt;might&lt;/em&gt; be effective, or it might not.&lt;/p&gt;
+&lt;p&gt;But the &lt;em&gt;forum&lt;/em&gt; in which that process takes place all-too-often
+&amp;mdash; the blank white simulated piece of paper
+&amp;mdash; is &lt;em&gt;certainly&lt;/em&gt; not doing you any favors.&lt;/p&gt;
+&lt;p&gt;I once saw the great Ted Nelson&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; give a talk (screed)
+in a library, in which he denounced (railed against)
+the usage of the term &amp;ldquo;desktop&amp;rdquo; in personal computing.&lt;/p&gt;
+&lt;p&gt;How many desktops, he asked (shouted), are positioned &lt;em&gt;vertically&lt;/em&gt;
+in front of you?&lt;/p&gt;
+&lt;p&gt;Similarly: do you really need to type out your essay&amp;rsquo;s fledgling stages
+on something that &lt;em&gt;looks&lt;/em&gt; like a piece of paper&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; just because that&amp;rsquo;s the particular physicality that your essay will take on &lt;em&gt;later&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s be honest, though &amp;mdash; your essay will &lt;em&gt;never&lt;/em&gt; take on the physicality of a piece of paper.&lt;/p&gt;
+&lt;p&gt;Because you&amp;rsquo;re not going to print your essay out on paper.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re just going to email it to someone, who is &lt;em&gt;also&lt;/em&gt; not going to print it out on paper.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;So, what else can you do? Where else can you write?&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Do me a favor:&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open TextEdit (on MacOS) or Notepad (on Windows).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start your essay-writing process, whatever that might entail.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reflect.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;How does it feel to be writing in a space ungoverned
+by the arbitrary geometries of the US Letter or A4 sheet?&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Do you feel liberated? No? Well, give it a minute.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve enabled &amp;ldquo;Word Wrap&amp;rdquo; (Notepad) or &amp;ldquo;Wrap to Page&amp;rdquo; (TextEdit) try resizing
+the window so you can only see the few sentences you&amp;rsquo;re working on.
+How does that feel?&lt;/p&gt;
+&lt;p&gt;Liberating? No? &lt;em&gt;Then try something else.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The point here is not to prescribe a way of writing
+but rather to prompt the shaking loose of the notion of prescription.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There is no straight line through the production of an essay
+and, accordingly, no good reason why a process as messy and full of switchbacks as writing
+tends to be should take place on the image of a facsimile of a white piece paper.&lt;/p&gt;
+&lt;p&gt;In any case, you can always paste your draft into Word later.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;A free and open-source (&lt;a href=&#34;https://en.wikipedia.org/wiki/Free%5Fand%5Fopen-source%5Fsoftware&#34; target=&#34;_blank&#34;&gt;FOSS&lt;/a&gt;) alternative to MS Word: &lt;a href=&#34;https://www.libreoffice.org/&#34; target=&#34;_blank&#34;&gt;https://www.libreoffice.org/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Ted%5FNelson&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Ted_Nelson&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.m.wikipedia.org/wiki/Skeuomorph#Virtual%5Fexamples&#34; target=&#34;_blank&#34;&gt;https://en.m.wikipedia.org/wiki/Skeuomorph#Virtual_examples&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Do yourself a favor.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Paper%5Fsize&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Paper_size&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
     </item>
     
     <item>
@@ -49,14 +371,83 @@ That process &amp;mdash; whether it be freewriting, or transcribing, or listing,
       <pubDate>Wed, 23 Jun 2021 22:07:00 +0300</pubDate>
       
       <guid>https://localauthor.github.io/posts/textual-encounters.html</guid>
-      <description>Reading without taking notes is as good as not reading at all.
-.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
- Think of the last text you read &amp;mdash; a book, a chapter, an article, a blog post.
-What do you remember about it?
-What do you remember more clearly:
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;a) The text itself.
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;b) The circumstances in which you read it.
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;c) The feeling of accomplishment that came over you when you finished reading.</description>
+      <description>&lt;p&gt;&lt;em&gt;Reading without taking notes is as good as not reading at all.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Think of the last text you read &amp;mdash; a book, a chapter, an article, a blog post.&lt;/p&gt;
+&lt;p&gt;What do you remember about it?&lt;/p&gt;
+&lt;p class=&#34;verse&#34;&gt;
+What do you remember more clearly:&lt;br /&gt;
+&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;a) The text itself.&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;b) The circumstances in which you read it.&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;c) The feeling of accomplishment that came over you when you finished reading.&lt;br /&gt;
+&lt;br /&gt;
+I, for one, do not remember the last book I read. (Or the last article, chapter, or blog post.)&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;Maybe I remember a title, a general topic, an author&amp;rsquo;s name &amp;mdash; sometimes more.&lt;br /&gt;
+But that one anecdote on such-and-such a page? The footnote with all the citations that seemed so promising? The statement of argument a third of the way through the introduction?&lt;/p&gt;
+&lt;p&gt;They&amp;rsquo;re gone. Like they never existed. And like we, therefore, never encountered each other.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;But we &lt;em&gt;did&lt;/em&gt; encounter each other&amp;hellip;&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;So what was it all &lt;em&gt;for&lt;/em&gt;?&lt;/p&gt;
+&lt;/div&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Whenever I am reading something that I find to be of significant moment &amp;mdash; something compelling, inciting, &lt;em&gt;good&lt;/em&gt; &amp;mdash; I make a text file on my computer.&lt;/p&gt;
+&lt;p&gt;In that file, I take notes on whatever strikes me about what I am reading. Beside each note, I write a page number. It ends up looking something like this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[40]: Crusoe arrives on the island.&lt;br /&gt;
+[72]: RC can&amp;rsquo;t believe there&amp;rsquo;s corn growing.&lt;br /&gt;
+[75]: Can we consider this an immaculate corn-ception?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sometimes I type direct quotes from the text. But often I only describe, in a few words, what is being discussed on a given page: analysis of a primary or secondary source, discussion of a concept, definition of a key term.&lt;/p&gt;
+&lt;p&gt;Later when I need to recall some details about something I&amp;rsquo;ve read, I&amp;rsquo;ve got a clear and easily accessible record of my reading.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;What makes this process distinct, noteworthy, worthy of note? The following precept, which I try as hard as possible to adhere to:&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Do not make any notes in the text itself.&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That&amp;rsquo;s right. No underlining, no highlighting, no notes in the margins.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;This is not in the interest of keeping a clean original document, digital or otherwise.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;No &amp;mdash; it is to prevent me from &lt;em&gt;feeling&lt;/em&gt; like some work has been done when, in reality, &lt;em&gt;no work&lt;/em&gt; has been done.&lt;/p&gt;
+&lt;p&gt;Underlining and highlighting &lt;em&gt;feel great&lt;/em&gt;. They are easy. They feel like an accomplishment. But once you close a book or pdf, what do you have? Quickly fading memories.&lt;/p&gt;
+&lt;p&gt;Sure, you have books and pdfs full of marks. But to get to those marks, you&amp;rsquo;ll have to go back to the books/pdfs themselves &amp;mdash; if you can find them.&lt;/p&gt;
+&lt;p&gt;And then, what do those marks really &lt;em&gt;mean&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll have to read the underlined/highlighted portions of text &lt;em&gt;again&lt;/em&gt; in order to understand them.&lt;/p&gt;
+&lt;p&gt;And &lt;em&gt;then&lt;/em&gt;, if you&amp;rsquo;re like me &amp;mdash; and I assume you are &amp;mdash; you will wonder half the time why you thought a passage was worth underlining/highlighting in the first place.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Why do &lt;em&gt;a lot&lt;/em&gt; of extra work later when you can do a &lt;em&gt;little&lt;/em&gt; extra work now?&lt;/p&gt;
+&lt;p&gt;I know the answer to this question, of course. It&amp;rsquo;s because you&amp;rsquo;re the &lt;em&gt;now&lt;/em&gt; you, and you don&amp;rsquo;t care about the &lt;em&gt;later&lt;/em&gt; you, and all the work that they may or may not have to do. Let &lt;em&gt;them&lt;/em&gt; figure it out.&lt;/p&gt;
+&lt;p&gt;They&amp;rsquo;re going to be &lt;em&gt;so&lt;/em&gt; mad&amp;hellip;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Where do I keep these notes? What kind of files are they? How do I title them? How do I search through them? What if I want to refer to another note? Or to another text? Questions, questions&amp;hellip;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
     </item>
     
     <item>
@@ -65,10 +456,42 @@ What do you remember more clearly:
       <pubDate>Fri, 12 Feb 2021 16:24:00 +0200</pubDate>
       
       <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
-      <description>There is a man who looks at me where I walk my dog in the park.
-.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
- Near the French embassy, up the street from the university, he stands in a long black coat and hat, peering over a significant beard, maintained with care for decades, or so one can deduce from its stately sweep.
-He is a painting on a wall.</description>
+      <description>&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Near the French embassy, up the street from the university, he stands in a long black coat and hat, peering over a significant beard, maintained with care for decades, or so one can deduce from its stately sweep.&lt;/p&gt;
+&lt;p&gt;He is a painting on a wall. Less a mural or a portrait than an icon.&lt;/p&gt;
+&lt;p&gt;The wall marks the boundary of what was the Jewish ghetto in Vilnius, established during the Nazi occupation.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This representation, notably greater than life-size, is rendered in a stenciled style. It was placed here as a reminder of the kinds of lives that used to pass not just behind, through, around, and in front of walls like the one it appears on, but also&amp;mdash;and perhaps most importantly&amp;mdash;with no special regard for such things: unheeded and undetermined by the barriers such walls would become.&lt;/p&gt;
+&lt;p&gt;This painting&amp;mdash;one of many in the area&amp;mdash;has been given a nickname: “The Wise Man.” His arms are folded, his hands are tucked into opposing sleeves, his head is tilted knowingly. His posture is one of forbearance, as much as wisdom, or anything else. One feels suffered to look, but not to linger.&lt;/p&gt;
+&lt;p&gt;I pass him with the briefest acknowledgment and return home. He does not follow me.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This man’s likeness, it turns out, was drawn from an archival photograph.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Upon learning this, I started to feel whatever life, wisdom, forbearance, and otherwise that the painting purported to represent drain out of that static, flattened artifact.&lt;/p&gt;
+&lt;p&gt;What of the real man, himself? Did he live in this sector? Or in this city? Was he wise? Did he, in his life, stand for what he has been made to stand for, now? And how, and to whom, did he convey whatever wisdom he might might have possessed?&lt;/p&gt;
+&lt;p&gt;Of what is this painting a reminder? Perhaps only a reminder to remember &amp;mdash; which may be enough, and plenty, for a given moment.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;For the record: &lt;a href=&#34;https://en.wikipedia.org/wiki/Vilna%5FGhetto&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Vilna_Ghetto&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I have opted not to include any photos here, though one should be easy to find, if not the other. The project behind this work is called &amp;ldquo;Sienos prisimena,&amp;rdquo; or &amp;ldquo;Walls that Remember.&amp;rdquo;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.passport-journal.com/en/product/passport-journal-iii-t-lietuviu-k/&#34; target=&#34;_blank&#34;&gt;A perhaps more thorough resource, if less public and immediate.&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
     </item>
     
     <item>
@@ -77,8 +500,9 @@ He is a painting on a wall.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://localauthor.github.io/about.html</guid>
-      <description>This is the about page. It&amp;rsquo;s where you would find out what this page is about.
-The posts here are written by me, about which more can be found there.</description>
+      <description>&lt;p&gt;This is the about page. It&amp;rsquo;s where you would find out what this page is about.&lt;/p&gt;
+&lt;p&gt;The posts here are written by &lt;a href=&#34;https://grantrosson.com&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, about which more can be found there.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
