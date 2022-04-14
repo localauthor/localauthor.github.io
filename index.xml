@@ -55,7 +55,7 @@ Karthik gives to the embark/ace-window function)&lt;/li&gt;
 &lt;h2 id=&#34;with-ace-window-and-link-hint-follow-links-in-specified-windows&#34;&gt;With ace-window and link-hint, follow links in specified windows&lt;/h2&gt;
 &lt;p&gt;Inspired by what Karthik showed was possible, I wanted to incorporate
 ace-window with link-hint, so that I could choose which window a link
-would open in. The result is a function I call &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
+would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&#34;./ox-hugo/aw-select-demo.gif&#34;
