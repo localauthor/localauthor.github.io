@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on . local author .</title>
+    <link>https://localauthor.github.io/categories/emacs.html</link>
+    <description>Recent content in emacs on . local author .</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2022 01:26:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs: With ace-window, open links exactly where you want them</title>
+      <link>https://localauthor.github.io/posts/aw-select.html</link>
+      <pubDate>Thu, 14 Apr 2022 01:26:00 +0300</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/aw-select.html</guid>
+      <description>This post describes how the Emacs package link-hint can be combined with ace-window to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+ Ace-window is (more than) a fancy window-switcher The ace-window package, written by abo-abo, offers a handy, full-featured alternative to the built-in window-switching function other-window.</description>
+    </item>
+    
+  </channel>
+</rss>
