@@ -188,9 +188,10 @@ typically want to leave that note where it is and open a link somewhere else.
 If I have several windows arrayed around my screen, I can use
 &lt;code&gt;link-hint-aw-select&lt;/code&gt; to open the linked note exactly where I want it to be.&lt;/p&gt;
 &lt;p&gt;To use this with org, the above configuration is enough. If you use another note-taking environment, you may need to define a new link type.&lt;/p&gt;
-&lt;p&gt;For example, for use with my own Zettelkasten package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt;, for example, I
-define a new link type &lt;code&gt;zk-link&lt;/code&gt; and a &lt;code&gt;zk-link-hint-aw-select&lt;/code&gt; function, as
-follows:&lt;/p&gt;
+&lt;p&gt;For example, for use with my own Zettelkasten package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt;, I define a new link
+type &lt;code&gt;zk-link&lt;/code&gt; and a function &lt;code&gt;zk-link-hint-aw-select&lt;/code&gt;, along with other
+functions necessary to fully incorporate a new link type into the link-hint
+system:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;zk-link-hint--zk-link-at-point-p&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Return the ID for the zk-link at the point or nil.&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;zk--id-at-point&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;

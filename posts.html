@@ -219,9 +219,10 @@ typically want to leave that note where it is and open a link somewhere else.
 If I have several windows arrayed around my screen, I can use
 <code>link-hint-aw-select</code> to open the linked note exactly where I want it to be.</p>
 <p>To use this with org, the above configuration is enough. If you use another note-taking environment, you may need to define a new link type.</p>
-<p>For example, for use with my own Zettelkasten package <a href="https://github.com/localauthor/zk" target="_blank">zk</a>, for example, I
-define a new link type <code>zk-link</code> and a <code>zk-link-hint-aw-select</code> function, as
-follows:</p>
+<p>For example, for use with my own Zettelkasten package <a href="https://github.com/localauthor/zk" target="_blank">zk</a>, I define a new link
+type <code>zk-link</code> and a function <code>zk-link-hint-aw-select</code>, along with other
+functions necessary to fully incorporate a new link type into the link-hint
+system:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">zk-link-hint--zk-link-at-point-p</span> <span style="color:#111">()</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Return the ID for the zk-link at the point or nil.&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">and</span> <span style="color:#111">(</span><span style="color:#111">zk--id-at-point</span><span style="color:#111">)</span>
