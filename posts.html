@@ -35,6 +35,38 @@
 <article class="post-list">
     <div class="title-group">
         <div class="title">
+            <h1><a href="./posts/chthonophagia.html">Chthonophagia</a></h1>
+        </div>
+        
+        
+        
+    </div class="title-group">
+
+    <div class="content">
+      
+      <p>\Chthon`o*pha&quot;gi*a\, Chthonophagy
+\Chtho*noph&quot;a*gy\, n. [NL. chthonophagia; Gr. ?, ?, earth + ? to
+eat.]</p>
+<p>A disease characterized by an irresistible desire to eat
+earth, observed in some parts of the southern United States,
+the West Indies, etc.</p>
+<p><em>Webster&rsquo;s Revised Unabridged Dictionary (1913)</em></p>
+
+
+      
+    
+    
+    
+    
+    
+    
+    </div>
+
+</article>
+
+<article class="post-list">
+    <div class="title-group">
+        <div class="title">
             <h1><a href="./posts/citekeys.html">Citekeys: For Better Research / Life</a></h1>
         </div>
         
@@ -236,249 +268,6 @@ a process of the scapula in most mammals.</p>
 
 
       
-    
-    
-    
-    
-    
-    
-    </div>
-
-</article>
-
-<article class="post-list">
-    <div class="title-group">
-        <div class="title">
-            <h1><a href="./posts/aw-select.html">Emacs: With ace-window and link-hint, open links exactly where you want them</a></h1>
-        </div>
-        
-        
-        
-    </div class="title-group">
-
-    <div class="content">
-      
-      <p><em>This post describes how the Emacs package <a href="http://github.com/noctuid/link-hint.el" target="_blank">link-hint</a> can be combined with
-<a href="https://github.com/abo-abo/ace-window" target="_blank">ace-window</a> to allow you to select, on-the-fly, which window a link will open in&mdash;instead of letting fate, or custom, or Emacs decide for you.</em></p>
-<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-<div class="org-center">
-  <div></div>
-<p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
-</div>
-<h2 id="ace-window-is--more-than--a-fancy-window-switcher">Ace-window is (more than) a fancy window-switcher</h2>
-<p>The ace-window package, written by <a href="https://github.com/abo-abo" target="_blank">abo-abo</a>, offers a handy, full-featured
-alternative to the built-in window-switching function <code>other-window</code>. The
-package&rsquo;s primary function&mdash;the titular <code>ace-window</code>&mdash;overlays a different
-character (letter or number) over each visible Emacs window, so you can
-switch to the desired window by simply pressing its assigned character. Very
-useful, very sleek.</p>
-<p>But ace-window is more than just a handy way to switch windows.</p>
-<p>The package also offers the ability to perform an action in the selected
-window before switching to it. In this regard, it follows the design of its
-parent package <a href="https://github.com/abo-abo/avy" target="_blank">avy</a>&mdash;also by abo-abo. Instead of simply switching to a
-window, you can <a href="https://github.com/abo-abo/ace-window#aw-dispatch-alist" target="_blank">split it first, call switch-to-buffer in it, or even close
-it</a>. For a demonstration of this aspect of ace-window, see <a href="https://www.youtube.com/watch?v=I3BvGZ3m8Oo" target="_blank">this video
-from Protesilaos Stavrou</a>.)</p>
-<p>The greatness of ace-window truly comes through, however, when it is combined
-with other packages.</p>
-<h2 id="with-ace-window-and-embark-open-files-buffers-in-specified-windows">With ace-window and Embark, open files/buffers in specified windows</h2>
-<p>In his <a href="https://karthinks.com/software/fifteen-ways-to-use-embark/" target="_blank">detailed write-up on using Embark</a>, Karthik Chikmagalur showcases a
-killer mash-up of ace-window and Embark, demonstrating how ace-window can be
-used for more than just switching windows.</p>
-<p>Briefly put, Karthik shows how to incorporate ace-window&rsquo;s window-selection
-function into the opening of a file or buffer from the minibuffer so that, as
-he writes, &ldquo;any buffer/file/bookmark I open is always placed exactly where I
-want it to be on the screen.&rdquo;</p>
-<p>An example usage would be:</p>
-<ol>
-<li>call <code>find-file</code></li>
-<li>call <code>embark-act</code> on file you wish to open</li>
-<li>call <code>my/embark-ace-action-find-file</code> (this is the slightly unwieldy name
-Karthik gives to the embark/ace-window function)</li>
-<li>select desired window with <code>ace-window</code></li>
-</ol>
-<h2 id="with-ace-window-and-link-hint-follow-links-in-specified-windows">With ace-window and link-hint, follow links in specified windows</h2>
-<p>Inspired by what Karthik showed was possible, I wanted to incorporate
-ace-window with link-hint, so that I could choose which window a link
-would open in. The result is a function called <code>link-hint-aw-select</code>:</p>
-
-<figure>
-    <img src="./ox-hugo/aw-select-demo.gif"
-         alt="Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window."/> <figcaption>
-            <p>Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.</p>
-        </figcaption>
-</figure>
-
-<p>If you&rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
-ace-window: it puts a character overlay on visible links in a buffer so that
-you can choose a link to follow by typing its assigned character. (The
-conceptual similarity of link-hint and ace-window is not surprising, since
-both are based on avy.)</p>
-<p>Link-hint can identify a lot of different type of links, such as urls, file
-paths, mailto links, org-links, buttons, and dired filenames. New link
-types can also be defined by the user. (More on that later.)</p>
-<p>As with avy and ace-window, link-hint allows for different actions to
-performed on the chosen link. However, there are only two default actions for acting on links: open link and copy link.</p>
-<p>Defining a new action is done by defining a new function, in this case the
-above-mentioned <code>link-hint-aw-select</code>, which will be entry-point command for all link types:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">link-hint-aw-select</span> <span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Use avy to open a link in a window selected with ace-window.&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">unless</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">avy-with</span> <span style="color:#111">link-hint-aw-select</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">link-hint--one</span> <span style="color:#111">:aw-select</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#75af00">message</span> <span style="color:#d88200">&#34;No visible links&#34;</span><span style="color:#111">)))</span>
-</span></span></code></pre></div><p>Things get more complicated very quickly, however.</p>
-<p>Each action must be tailored to each different link type. Take the case of
-the &ldquo;open&rdquo; action, for examples: urls open one way&mdash;in a browser&mdash;and
-filepaths open another way&mdash;in a relevant application&mdash;and email addresses
-open another way&mdash;in a new draft email. Each action is actually many
-different actions, all roughly similar.</p>
-<p>When creating a new action, then, it is necessary to make sure that each link
-type is associated with a function that will perform the new action in the
-appropriate way.</p>
-<p>The <code>aw-select</code> action for file links is quite simple:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">link-hint--aw-select-file-link</span> <span style="color:#111">(</span><span style="color:#111">link</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">with-demoted-errors</span> <span style="color:#d88200">&#34;%s&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">aw-switch-to-window</span> <span style="color:#111">(</span><span style="color:#111">aw-select</span> <span style="color:#00a8c8">nil</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">find-file</span> <span style="color:#111">link</span><span style="color:#111">)))</span>
-</span></span></code></pre></div><p>To make the link-hint ecosystem aware of this new association of link-type,
-action, and function, there is a handy macro:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">link-hint-define-type</span> <span style="color:#d88200">&#39;file-link</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:aw-select</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">link-hint--aw-select-file-link</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>If different link-types behave similarly, it is possible to create a macro
-of our own that will do all of the above very efficiently. This is the case with buttons and dired-filenames, for example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defmacro</span> <span style="color:#111">define-link-hint-aw-select</span> <span style="color:#111">(</span><span style="color:#111">link-type</span> <span style="color:#111">fn</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span><span style="color:#111">(</span><span style="color:#111">progn</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">link-hint-define-type</span> <span style="color:#d88200">&#39;,link-type</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">:aw-select</span> <span style="color:#75af00">#&#39;</span><span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">intern</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#d88200">&#34;link-hint--aw-select-&#34;</span>
-</span></span><span style="display:flex;"><span>                                     <span style="color:#111">(</span><span style="color:#75af00">symbol-name</span> <span style="color:#111">link-type</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">intern</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#d88200">&#34;link-hint--aw-select-&#34;</span>
-</span></span><span style="display:flex;"><span>                             <span style="color:#111">(</span><span style="color:#75af00">symbol-name</span> <span style="color:#111">link-type</span><span style="color:#111">)))</span> <span style="color:#111">(</span><span style="color:#111">_link</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">with-demoted-errors</span> <span style="color:#d88200">&#34;%s&#34;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">if</span> <span style="color:#111">(</span><span style="color:#75af00">&gt;</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">(</span><span style="color:#111">aw-window-list</span><span style="color:#111">))</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">window</span> <span style="color:#111">(</span><span style="color:#111">aw-select</span> <span style="color:#00a8c8">nil</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                   <span style="color:#111">(</span><span style="color:#111">buffer</span> <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                   <span style="color:#111">(</span><span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#f92672">,</span><span style="color:#111">fn</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#111">setq</span> <span style="color:#111">new-buffer</span> <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">buffer</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#111">aw-switch-to-window</span> <span style="color:#111">window</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">link-hint-open-link-at-point</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">define-link-hint-aw-select</span> <span style="color:#111">button</span> <span style="color:#111">push-button</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">define-link-hint-aw-select</span> <span style="color:#111">dired-filename</span> <span style="color:#111">dired-find-file</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>The same is <em>almost</em> the case with org-links as well, except that by default
-org-links are opened using <code>find-file-other-window</code> instead of <code>find-file</code>,
-meaning that the above macro wouldn&rsquo;t work properly.</p>
-<p>I prefer to change this setting globally, so that org-links are opened in the
-current window, by evaluating the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">setf</span> <span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">(</span><span style="color:#75af00">assoc</span> <span style="color:#d88200">&#39;file</span> <span style="color:#111">org-link-frame-setup</span><span style="color:#111">))</span> <span style="color:#d88200">&#39;find-file</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>This allows me to use the macro:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">define-link-hint-aw-select</span> <span style="color:#111">org-link</span> <span style="color:#111">org-open-at-point</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>To leave org&rsquo;s default behavior in place globally, it is necessary to define
-a function specifically for org-links, in which the behavior is changed
-locally in a let-binding:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">link-hint--aw-select-org-link</span> <span style="color:#111">(</span><span style="color:#111">_link</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">org-link-frame-setup</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">file</span> <span style="color:#f92672">.</span> <span style="color:#111">find-file</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">with-demoted-errors</span> <span style="color:#d88200">&#34;%s&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">if</span> <span style="color:#111">(</span><span style="color:#75af00">&gt;</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">(</span><span style="color:#111">aw-window-list</span><span style="color:#111">))</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">window</span> <span style="color:#111">(</span><span style="color:#111">aw-select</span> <span style="color:#00a8c8">nil</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#111">buffer</span> <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">org-open-at-point</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">setq</span> <span style="color:#111">new-buffer</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">buffer</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">aw-switch-to-window</span> <span style="color:#111">window</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">link-hint-open-link-at-point</span><span style="color:#111">)))))</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">link-hint-define-type</span> <span style="color:#d88200">&#39;org-link</span> <span style="color:#111">:aw-select</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">link-hint--aw-select-org-link</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>Things are actually even a bit more complicated than this with org-links.</p>
-<p>Since org handles different link-types internally, the function
-<code>link-hint--aw-select-org-link</code> can also be made to handle certain org
-link-types differently. For example, if you want http/https links to be
-opened externally, there is no reason to call the <code>aw-select</code> behavior for
-that type of org-link. This could be accomplished by including something like
-the following in the function&rsquo;s &ldquo;if&rdquo; conditional:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">not</span> <span style="color:#111">(</span><span style="color:#75af00">member</span> <span style="color:#111">(</span><span style="color:#111">org-element-property</span> <span style="color:#111">:type</span> <span style="color:#111">(</span><span style="color:#111">org-element-context</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;http&#34;</span> <span style="color:#d88200">&#34;https&#34;</span><span style="color:#111">)))</span>
-</span></span></code></pre></div><p>The whole function would be:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">link-hint--aw-select-org-link</span> <span style="color:#111">(</span><span style="color:#111">_link</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">org-link-frame-setup</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">file</span> <span style="color:#f92672">.</span> <span style="color:#111">find-file</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">with-demoted-errors</span> <span style="color:#d88200">&#34;%s&#34;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">if</span> <span style="color:#111">(</span><span style="color:#111">and</span> <span style="color:#111">(</span><span style="color:#75af00">&gt;</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">(</span><span style="color:#111">aw-window-list</span><span style="color:#111">))</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#111">not</span> <span style="color:#111">(</span><span style="color:#75af00">member</span> <span style="color:#111">(</span><span style="color:#111">org-element-property</span>
-</span></span><span style="display:flex;"><span>                             <span style="color:#111">:type</span> <span style="color:#111">(</span><span style="color:#111">org-element-context</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                       <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;http&#34;</span> <span style="color:#d88200">&#34;https&#34;</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">window</span> <span style="color:#111">(</span><span style="color:#111">aw-select</span> <span style="color:#00a8c8">nil</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#111">buffer</span> <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">org-open-at-point</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">setq</span> <span style="color:#111">new-buffer</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">buffer</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">aw-switch-to-window</span> <span style="color:#111">window</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">link-hint-open-link-at-point</span><span style="color:#111">)))))</span>
-</span></span></code></pre></div><h2 id="example-use-case-note-taking-zettelkasten-etc-dot">Example use-case: note-taking, zettelkasten, etc.</h2>
-<p>I find this functionality really useful in my note-taking environment, where
-each of my notes contains several links to other notes. I rarely want to
-follow a link in the same window as the note where the link appears. I
-typically want to leave that note where it is and open a link somewhere else.
-If I have several windows arrayed around my screen, I can use
-<code>link-hint-aw-select</code> to open the linked note exactly where I want it to be.</p>
-<p>To use this with org, the above configuration is enough. If you use another note-taking environment, you may need to define a new link type.</p>
-<p>For example, for use with my own Zettelkasten package <a href="https://github.com/localauthor/zk" target="_blank">zk</a>, I define a new link
-type <code>zk-link</code> and a function <code>zk-link-hint-aw-select</code>, along with other
-functions necessary to fully incorporate a new link type into the link-hint
-system:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">zk-link-hint--zk-link-at-point-p</span> <span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Return the ID for the zk-link at the point or nil.&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">and</span> <span style="color:#111">(</span><span style="color:#111">zk--id-at-point</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">thing-at-point-looking-at</span> <span style="color:#111">zk-link-regexp</span><span style="color:#111">)))</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">zk-link-hint--next-zk-link</span> <span style="color:#111">(</span><span style="color:#111">bound</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Find the unext zk-link.
-</span></span></span><span style="display:flex;"><span><span style="color:#d88200">Only search the range between just after the point and BOUND.&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">link-hint--next-regexp</span> <span style="color:#111">zk-id-regexp</span> <span style="color:#111">bound</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">link-hint--aw-select-zk-link</span> <span style="color:#111">(</span><span style="color:#111">id</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">with-demoted-errors</span> <span style="color:#d88200">&#34;%s&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">if</span> <span style="color:#111">(</span><span style="color:#75af00">&gt;</span> <span style="color:#111">(</span><span style="color:#75af00">length</span> <span style="color:#111">(</span><span style="color:#111">aw-window-list</span><span style="color:#111">))</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">window</span> <span style="color:#111">(</span><span style="color:#111">aw-select</span> <span style="color:#00a8c8">nil</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#111">(</span><span style="color:#111">buffer</span> <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#111">(</span><span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">zk-follow-link-at-point</span> <span style="color:#111">id</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">setq</span> <span style="color:#111">new-buffer</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#75af00">current-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">buffer</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">aw-switch-to-window</span> <span style="color:#111">window</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#111">new-buffer</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">link-hint-open-link-at-point</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">link-hint-define-type</span> <span style="color:#d88200">&#39;zk-link</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:next</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">zk-link-hint--next-zk-link</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:at-point-p</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">zk-link-hint--zk-link-at-point-p</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:open</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">zk-follow-link-at-point</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:copy</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">kill-new</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:aw-select</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">link-hint--aw-select-zk-link</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">push</span> <span style="color:#d88200">&#39;link-hint-zk-link</span> <span style="color:#111">link-hint-types</span><span style="color:#111">)</span>
-</span></span></code></pre></div><p>Even though link-hint can be a bit complex under the hood, it is quite
-effortless, even elegant, when put in combination with ace-window. Give
-it a try and puzzle over what you had done so long without it.</p>
-
-
-      
-    
-    
-    
-    
     
     
     
