@@ -6,7 +6,164 @@
     <description>Recent content in Posts on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Apr 2022 01:26:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 23:19:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Citekeys: For Better Research / Life</title>
+      <link>https://localauthor.github.io/posts/citekeys.html</link>
+      <pubDate>Sun, 24 Apr 2022 23:19:00 +0300</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/citekeys.html</guid>
+      <description>&lt;p&gt;&lt;em&gt;Use &lt;strong&gt;citekeys&lt;/strong&gt; to consistently and uniformly correlate in-text references
+with original source materials, not just in final submissions but &lt;strong&gt;also in
+notes and drafts&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;For long research projects, it is necessary not only to keep straight a
+variety of sources but also to ensure that in-text references to those
+sources are unambiguous. This allows readers to trace all lines of thought to
+their original contexts. This is obviously a requirement of all formal
+publications.&lt;/p&gt;
+&lt;p&gt;But a clear and consistent citation practice should not be neglected in the
+writing that leads up to a final submission, such as notes, outlines, drafts,
+etc. When you are still the project&amp;rsquo;s primary (or only) reader, you must
+still be able to trace lines of thought to their origins.&lt;/p&gt;
+&lt;p&gt;In many cases, this may not be difficult. In the middle of a project, when
+everything is fresh in your working memory, you might be able to make sense
+of all kinds of non-standard forms of citation, no matter how informal: &amp;ldquo;cite
+book on national identity formation,&amp;rdquo; &amp;ldquo;quote comes from that article we read
+during week 3,&amp;rdquo; &amp;ldquo;see Foucault 257.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;But the larger a project is and the more time that passes between note-taking
+and final submission the more effort will be involved in tracing such
+citations to their sources.&lt;/p&gt;
+&lt;p&gt;In the case of a career researcher, informal citations like the above will
+inevitably lose their meaning as their originary contexts recede into the
+past. Which book on national identity formation was that? Which class? Which
+book by Foucault, and &lt;em&gt;which edition&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;The use of &lt;em&gt;citekeys&lt;/em&gt; can greatly reduce the effort involved in mainlining
+clear lines of connection between citations and sources&amp;mdash;not just in final
+products but in notes and drafts as well, and not just in single projects but
+in a lifetime of research.&lt;/p&gt;
+&lt;h2 id=&#34;citekey-basics&#34;&gt;Citekey Basics&lt;/h2&gt;
+&lt;p&gt;A citekey (or citation key) is a unique code assigned to a particular piece
+of source material that can be used to quickly and consistently refer to that
+source.&lt;/p&gt;
+&lt;p&gt;A citekey is typically composed of some combination of the source&amp;rsquo;s year of
+publication, its primary author&amp;rsquo;s surname, and/or a short version of its
+title.&lt;/p&gt;
+&lt;p&gt;Here are three different citekeys, in three common styles, that could be used
+for the same source, the book &lt;em&gt;Imagined Communities&lt;/em&gt; by Benedict Anderson.
+Each offers a far more precise indication of what source is being referred to
+than the comparatively ambiguous &amp;ldquo;cite book on national identity formation&amp;rdquo;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;Anderson2006
+andersonImaginedCommunities2006
+anderson2006_ImaginedCommunities
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It is important to note that citekeys are not expected to be clearly
+understandable to anyone other than the researcher who assigns them.
+Consider that &amp;ldquo;Anderson2006&amp;rdquo; in the example above could refer to any number
+of publications from the year 2006 by anyone with the surname Anderson.&lt;/p&gt;
+&lt;p&gt;In this way citekeys are unlike ISBN or DOI numbers: they are not universal
+indicators&amp;mdash;they do not point directly and unambiguously to particular
+sources themselves.&lt;/p&gt;
+&lt;p&gt;Rather, citekeys point to a researcher&amp;rsquo;s own individual collection of
+bibliographic entries (more on this ahead). Citekeys offer, as a result, a
+simple, private system of shorthand for encoding reference information into
+any written document, all without the work entailed in writing out full
+formal citations and bibliographic entries in every instance.&lt;/p&gt;
+&lt;p&gt;Given their simplicity and ease of use, citekeys help to lower any barriers
+that might otherwise have impeded the inclusion of clear, reliable citations
+in even the most informal of written documents, including and especially
+those that are not intended for publication. They thereby help to eliminate
+any temptation to insert ambiguous and cryptic notes-to-self that risk
+baffling more than benefiting.&lt;/p&gt;
+&lt;h2 id=&#34;your-bibliographic-database&#34;&gt;Your Bibliographic Database&lt;/h2&gt;
+&lt;p&gt;For texts that are intended to be published, citekeys offer great
+flexibility, as they can be easily replaced with formal citations in whatever
+citation style is appropriate to the intended context, such as Chicago, MLA,
+Harvard, APA, etc.&lt;/p&gt;
+&lt;p&gt;This requires maintaining a centralized repository of bibliographic
+information wherein all citekeys are listed with relevant information about
+the associated source. This may sound more complicated than it is.&lt;/p&gt;
+&lt;p&gt;While it is possible to manage bibliographic information with one of the many
+popular reference management programs&amp;mdash;such as Zotero, Endnote, or
+Mandeley&amp;mdash;it is equally possible to maintain nothing more than a simple text
+document of entries like the following:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;@book{Anderson2006,
+        title = &amp;#34;Imagined Communities: Reflections on the Origin and Spread of Nationalism&amp;#34;,
+        author = Anderson, Benedict&amp;#34;,
+        year = &amp;#34;2006&amp;#34;,
+        publisher = &amp;#34;Verso&amp;#34;,
+        address = &amp;#34;London; New York&amp;#34;,
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above entry happens to be written in a standardized format called BibTeX,
+often used or at least supported by reference management software. For the
+sake of future-proofing your bibliography, it might be worthwhile to use such
+a standardized format.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;But such entries can easily be written and maintained in any format and
+without such software, using nothing more than a plaintext editing program
+like TextEdit (MacOS) or Notepad (Windows). The most important thing is to
+include all the relevant information about the source and associate it with a
+unique citekey.&lt;/p&gt;
+&lt;p&gt;From such information, it will be possible to produce citations and
+references in any of a seemingly endless array of standardized citation
+styles.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;key-rule-be-consistent&#34;&gt;Key Rule: Be Consistent&lt;/h2&gt;
+&lt;p&gt;No matter what style of citekey or method of bibliography management is used,
+internal consistency is essential. Use a consistent citekey style&amp;mdash;I use
+AuthorYEAR, like &amp;ldquo;Anderson2006&amp;rdquo;&amp;mdash;so that each source is associated with a
+only single citekey. Do not use both &amp;ldquo;Anderson2006&amp;rdquo; and
+&amp;ldquo;andersonImaginedCommunities2006.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Also, take care to ensure that each citekey is associated with only a single
+source. If you add a source by a different Anderson also written in 2006,
+assign it a unique citekey, like &amp;ldquo;Anderson2006a&amp;rdquo; or &amp;ldquo;Anderson2006-1.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Note that using citekeys also makes it easy to include and distinguish
+between different editions of a single text. You might also have reason to
+cite the first edition of &lt;em&gt;Imagined Communities&lt;/em&gt; (1983) alongside the
+reprint. Luckily, there is no confusing &amp;ldquo;Anderson1983&amp;rdquo; and &amp;ldquo;Anderson2006.&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;citekeys-in-use&#34;&gt;Citekeys In Use&lt;/h2&gt;
+&lt;p&gt;Choosing a citekey style, assigning citekeys to sources, and keeping them all
+matched up in a bibliography database is only the beginning.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve done all that, how to go about putting them to use in your
+writings?&lt;/p&gt;
+&lt;p&gt;Here is an example from my reading notes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Heise cites [#Anderson2006], who make a similar connection between representations and identity-formation.[5][#Heise2008]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was not taking these notes for any specific project or a potential
+publication where accurate citations would be necessary. Nevertheless, it was
+so simple to include the citekeys and a page reference that I didn&amp;rsquo;t consider
+&lt;em&gt;not&lt;/em&gt; doing it.&lt;/p&gt;
+&lt;p&gt;It was the use of citekeys, formatted in a distinct syntax&amp;mdash;in brackets,
+preceed by the hash sign&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&amp;mdash;that made it effortless to find this
+reference (along with several others) to Anderson&amp;rsquo;s &lt;em&gt;Imagined Communities&lt;/em&gt; in
+a file on my computer that is not obviously about the text in question and
+that I haven&amp;rsquo;t looked at or thought about since I wrote it. How about that?&lt;/p&gt;
+&lt;h2 id=&#34;bonus-pdf-management&#34;&gt;Bonus: PDF Management&lt;/h2&gt;
+&lt;p&gt;Aside from helping you keep your citations legible and locate deeply embedded
+notes in the recesses of your file system, citekeys can also help you keep
+track of PDFs and other digital documents. No longer worry over what to name
+that PDF. Enter its information into your bibliography file, assign it a
+citekey, and use the citekey as the name of the file. You&amp;rsquo;ll never have to
+guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bibtex.com/g/bibtex-format/&#34; target=&#34;_blank&#34;&gt;https://www.bibtex.com/g/bibtex-format/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://citationstyles.org&#34; target=&#34;_blank&#34;&gt;https://citationstyles.org&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;These citations are in a syntax called &lt;a href=&#34;https://fletcher.github.io/MultiMarkdown-5/citations.html&#34; target=&#34;_blank&#34;&gt;MultiMarkdown&lt;/a&gt;. A similar syntax, called &lt;a href=&#34;https://pandoc.org/MANUAL.html#citation-syntax&#34; target=&#34;_blank&#34;&gt;Pandoc&lt;/a&gt;, uses the &lt;code&gt;@&lt;/code&gt; prefix instead of the &lt;code&gt;#&lt;/code&gt;, among other differences: [@Anderson2006, p 22-23].&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
     <item>
       <title>Coracoid</title>
       <link>https://localauthor.github.io/posts/coracoid.html</link>
@@ -31,7 +188,7 @@ a process of the scapula in most mammals.&lt;/p&gt;
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
       <link>https://localauthor.github.io/posts/aw-select.html</link>
-      <pubDate>Thu, 14 Apr 2022 01:26:00 +0300</pubDate>
+      <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
       
       <guid>https://localauthor.github.io/posts/aw-select.html</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with

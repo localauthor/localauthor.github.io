@@ -6,11 +6,11 @@
     <description>Recent content in emacs on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Apr 2022 01:26:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 12:28:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
       <link>https://localauthor.github.io/posts/aw-select.html</link>
-      <pubDate>Thu, 14 Apr 2022 01:26:00 +0300</pubDate>
+      <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
       
       <guid>https://localauthor.github.io/posts/aw-select.html</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
