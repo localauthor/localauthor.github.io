@@ -6,7 +6,57 @@
     <description>Recent content in Posts on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Apr 2022 23:28:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jun 2022 11:56:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notetaking: What are you after?</title>
+      <link>https://localauthor.github.io/posts/notetaking.html</link>
+      <pubDate>Wed, 29 Jun 2022 11:56:00 -0400</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/notetaking.html</guid>
+      <description>&lt;p&gt;&lt;em&gt;Why do you want to take notes in the first place?&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Each person&amp;rsquo;s notetaking practice is&amp;mdash;and must be&amp;mdash;distinct. No two people have the same needs when it comes to making, organizing, and accessing notes.&lt;/p&gt;
+&lt;p&gt;Adopting someone else&amp;rsquo;s practice just because they can loudly sing its merits, or even clearly demonstrate its efficacy, may very well be an exercise in shortsightedness. A person&amp;rsquo;s notetaking practice could certainly have merits and be effective&amp;mdash;&lt;em&gt;for them&lt;/em&gt;&amp;mdash;but there can be no guarantee of universality in such things.&lt;/p&gt;
+&lt;p&gt;So, a few questions to consider:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why do you want (or need) to take notes at all?&lt;/li&gt;
+&lt;li&gt;What kind of information are you trying to store and keep track of?&lt;/li&gt;
+&lt;li&gt;When and how do you want to come across the stored information again?&lt;/li&gt;
+&lt;li&gt;Will the notes be an end in themselves or raw materials for other writings?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My own answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I take notes for the purposes of academic research and lecturing.&lt;/li&gt;
+&lt;li&gt;I store and keep track of the thoughts, ideas, and insights of others, as encountered in books, articles, presentations, etc., as well as my own thoughts, ideas, and insights, as they occur to me, most often in response to the thoughts (etc.) of others.&lt;/li&gt;
+&lt;li&gt;I want to come across the stored information both as I am writing other notes, for the purposes of making connections between ideas and insights, and as I am writing research papers and lectures.&lt;/li&gt;
+&lt;li&gt;My notes are both an end in themselves, to the extent that they facilitate and constitute my thinking, and raw materials for other writings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-starting-points&#34;&gt;My Starting Points&lt;/h2&gt;
+&lt;h3 id=&#34;the-inbox-note&#34;&gt;The &amp;ldquo;Inbox&amp;rdquo; Note&lt;/h3&gt;
+&lt;p&gt;I keep a note that I call an &amp;ldquo;inbox&amp;rdquo; note, which is just a plaintext file on my computer. It is one of two entry-points to my notetaking pactice. When I have an idea that I want to keep track of, instead of making a new note right away (a new file on my computer), I go to my &amp;ldquo;inbox&amp;rdquo; and start writing things down, a bit freeform, right at the top.&lt;/p&gt;
+&lt;p&gt;I consider this space like a sketch pad. There is no pressure to produce anything polished or fully thought through. If I end up writing something worth keeping, I copy it into a new note (that is, a new text file&amp;mdash;each of my notes is a separate text file, all stored in a folder called &amp;ldquo;Notes&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;If the idea doesn&amp;rsquo;t really develop or seem worth keeping, I either delete it, or just leave it there. I will write the next idea above it, and it will simply be pushed down a few lines. The bottom of my inbox is something of a graveyard of ideas. Sometimes I go through and clean them out, to &amp;ldquo;clear the inbox,&amp;rdquo; as it were. Sometimes when I do this I find something worth recovering.&lt;/p&gt;
+&lt;p&gt;The purpose of the &amp;ldquo;inbox&amp;rdquo; note is to eliminate any friction that might disrupt the actual taking of a note when the need/desire to take a note arises. It allows me to get right to the important business of putting an idea down and avoid having to fool with any other, less pressing business, like finding the right place to put the idea. I have a shortcut key that opens the inbox note right away. Highly recommended.&lt;/p&gt;
+&lt;h3 id=&#34;the-literature-note&#34;&gt;The &amp;ldquo;Literature&amp;rdquo; Note&lt;/h3&gt;
+&lt;p&gt;Often I am taking notes on something I&amp;rsquo;m reading, be it a book, an article, or a website. After entering the appropriate citation information into my bibliographic database and assigning the resource a unique &lt;a href=&#34;../posts/citekeys.html&#34;&gt;citekey&lt;/a&gt;, I skip the &amp;ldquo;inbox&amp;rdquo; and go straight to creating a new note dedicated to the material I am reading. This I call a literature note.&lt;/p&gt;
+&lt;p&gt;The name of each literature note is the resource&amp;rsquo;s unique citekey followed by its author and title, like so: &amp;ldquo;Conrad1899 - Joseph Conrad - Heart of Darkness.txt&amp;rdquo;. By having a programmatic titling scheme, I always know right where to find my notes for what I&amp;rsquo;ve read.&lt;/p&gt;
+&lt;p&gt;As I read, I keep the literature note open and write down ideas, quotations, and questions as they occur to me, always making reference to the appropriate page number when relevant.&lt;/p&gt;
+&lt;p&gt;If any idea or line of thought arises while reading that seems interesting enough to stand on its own, I can make a separate note for it, and include a reference to that new note in the literature note itself. A literature note could be a page-by-page account of a resource, or it could be a list of references to stand-alone notes. Most often it is somewhere in between.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;The matter of inserting references to other notes can be facilitated by any number of progams. I use a package I wrote for Emacs called &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;zk&amp;rdquo;&lt;/a&gt;, a demonstration of which can be seen &lt;a href=&#34;https://www.youtube.com/watch?v=BixlUK4QTNk&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=7qNT87dphiA&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=O6iSV4pQQ5g&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Similar programs worth looking at are &lt;a href=&#34;https://zettelkasten.de/the-archive&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;The Archive&amp;rdquo;&lt;/a&gt; and &lt;a href=&#34;https://zettlr.com&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Zettlr&amp;rdquo;&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
     <item>
       <title>Chthonophagia</title>
       <link>https://localauthor.github.io/posts/chthonophagia.html</link>
@@ -163,20 +213,20 @@ track of PDFs and other digital documents. No longer worry over what to name
 that PDF. Enter its information into your bibliography file, assign it a
 citekey, and use the citekey as the name of the file. You&amp;rsquo;ll never have to
 guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bibtex.com/g/bibtex-format/&#34; target=&#34;_blank&#34;&gt;https://www.bibtex.com/g/bibtex-format/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://citationstyles.org&#34; target=&#34;_blank&#34;&gt;https://citationstyles.org&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
 &lt;p&gt;These citations are in a syntax called &lt;a href=&#34;https://fletcher.github.io/MultiMarkdown-5/citations.html&#34; target=&#34;_blank&#34;&gt;MultiMarkdown&lt;/a&gt;. A similar syntax, called &lt;a href=&#34;https://pandoc.org/MANUAL.html#citation-syntax&#34; target=&#34;_blank&#34;&gt;Pandoc&lt;/a&gt;, uses the &lt;code&gt;@&lt;/code&gt; prefix instead of the &lt;code&gt;#&lt;/code&gt;, among other differences: [@Anderson2006, p 22-23].&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -204,7 +254,7 @@ a process of the scapula in most mammals.&lt;/p&gt;
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
       <link>https://localauthor.github.io/posts/aw-select.html</link>
-      <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
+      <pubDate>Thu, 14 Apr 2022 12:28:00 -0400</pubDate>
       
       <guid>https://localauthor.github.io/posts/aw-select.html</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
@@ -252,7 +302,7 @@ ace-window with link-hint, so that I could choose which window a link
 would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&#34;../ox-hugo/aw-select-demo.gif&#34;
+    &lt;img src=&#34;~/Downloads/aw-select-demo.gif&#34;
          alt=&#34;Using &amp;amp;rsquo;link-hint-aw-select&amp;amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
         &lt;/figcaption&gt;
@@ -469,14 +519,14 @@ it a try and puzzle over what you had done so long without it.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In some letters Stendhal notes his passing, while marching with Napoleon’s army, through various cities and towns in the region. His remarks are spare, revealing an experience of dismal early winter and little else.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;Antanas Vaičiulaitis, “Stendhal in Lithuania,” trans. M. Vasiliauskas, &lt;i&gt;Lituanus: Lithuanian Quarterly Journal of Arts and Sciences&lt;/i&gt; 22, no. 2 (1976).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -542,26 +592,26 @@ but rather to prompt the shaking loose of the notion of prescription.&lt;/strong
 and, accordingly, no good reason why a process as messy and full of switchbacks as writing
 tends to be should take place on the image of a facsimile of a white piece paper.&lt;/p&gt;
 &lt;p&gt;In any case, you can always paste your draft into Word later.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;A free and open-source (&lt;a href=&#34;https://en.wikipedia.org/wiki/Free%5Fand%5Fopen-source%5Fsoftware&#34; target=&#34;_blank&#34;&gt;FOSS&lt;/a&gt;) alternative to MS Word: &lt;a href=&#34;https://www.libreoffice.org/&#34; target=&#34;_blank&#34;&gt;https://www.libreoffice.org/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Ted%5FNelson&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Ted_Nelson&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.m.wikipedia.org/wiki/Skeuomorph#Virtual%5Fexamples&#34; target=&#34;_blank&#34;&gt;https://en.m.wikipedia.org/wiki/Skeuomorph#Virtual_examples&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
 &lt;p&gt;Do yourself a favor.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Paper%5Fsize&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Paper_size&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -639,21 +689,21 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
 &lt;p&gt;Why do &lt;em&gt;a lot&lt;/em&gt; of extra work later when you can do a &lt;em&gt;little&lt;/em&gt; extra work now?&lt;/p&gt;
 &lt;p&gt;I know the answer to this question, of course. It&amp;rsquo;s because you&amp;rsquo;re the &lt;em&gt;now&lt;/em&gt; you, and you don&amp;rsquo;t care about the &lt;em&gt;later&lt;/em&gt; you, and all the work that they may or may not have to do. Let &lt;em&gt;them&lt;/em&gt; figure it out.&lt;/p&gt;
 &lt;p&gt;They&amp;rsquo;re going to be &lt;em&gt;so&lt;/em&gt; mad&amp;hellip;&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;Where do I keep these notes? What kind of files are they? How do I title them? How do I search through them? What if I want to refer to another note? Or to another text? Questions, questions&amp;hellip;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>The Wise Man of Švarco</title>
       <link>https://localauthor.github.io/posts/the-wise-man.html</link>
-      <pubDate>Fri, 12 Feb 2021 16:24:00 +0200</pubDate>
+      <pubDate>Fri, 12 Feb 2021 16:24:00 -0500</pubDate>
       
       <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
       <description>&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
@@ -677,20 +727,20 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
 &lt;p&gt;Upon learning this, I started to feel whatever life, wisdom, forbearance, and otherwise that the painting purported to represent drain out of that static, flattened artifact.&lt;/p&gt;
 &lt;p&gt;What of the real man, himself? Did he live in this sector? Or in this city? Was he wise? Did he, in his life, stand for what he has been made to stand for, now? And how, and to whom, did he convey whatever wisdom he might might have possessed?&lt;/p&gt;
 &lt;p&gt;Of what is this painting a reminder? Perhaps only a reminder to remember &amp;mdash; which may be enough, and plenty, for a given moment.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;For the record: &lt;a href=&#34;https://en.wikipedia.org/wiki/Vilna%5FGhetto&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Vilna_Ghetto&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;I have opted not to include any photos here, though one should be easy to find, if not the other. The project behind this work is called &amp;ldquo;Sienos prisimena,&amp;rdquo; or &amp;ldquo;Walls that Remember.&amp;rdquo;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.passport-journal.com/en/product/passport-journal-iii-t-lietuviu-k/&#34; target=&#34;_blank&#34;&gt;A perhaps more thorough resource, if less public and immediate.&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -6,11 +6,11 @@
     <description>Recent content in emacs on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Apr 2022 12:28:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 12:28:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
       <link>https://localauthor.github.io/posts/aw-select.html</link>
-      <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
+      <pubDate>Thu, 14 Apr 2022 12:28:00 -0400</pubDate>
       
       <guid>https://localauthor.github.io/posts/aw-select.html</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
@@ -58,7 +58,7 @@ ace-window with link-hint, so that I could choose which window a link
 would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&#34;../../ox-hugo/aw-select-demo.gif&#34;
+    &lt;img src=&#34;~/Downloads/aw-select-demo.gif&#34;
          alt=&#34;Using &amp;amp;rsquo;link-hint-aw-select&amp;amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
         &lt;/figcaption&gt;
