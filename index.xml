@@ -6,7 +6,38 @@
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2022 11:56:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 00:31:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs: Getting started with zk, using hydra and an inbox note</title>
+      <link>https://localauthor.github.io/posts/zk-hydra.html</link>
+      <pubDate>Tue, 19 Jul 2022 00:31:00 -0400</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/zk-hydra.html</guid>
+      <description>&lt;p&gt;&lt;em&gt;This post inaugurates a series of video demos in which I will show how I use the Emacs package zk for notetaking. The emphasis will be on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/oEgdJlojlU8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;In this video I show how I use a &lt;a href=&#34;https://github.com/abo-abo/hydra&#34; target=&#34;_blank&#34;&gt;hydra&lt;/a&gt; as an entry point to my zk. The config for my hydra is here, &lt;a href=&#34;https://github.com/localauthor/.emacs.d/blob/210531740c05104b7718b257671f2674f605f374/my-lisp/zk-setup.el#L154&#34; target=&#34;_blank&#34;&gt;in my dotfiles&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also show how I use an &amp;ldquo;inbox&amp;rdquo; note as a starting place for new notes. For more on the place of the inbox in a notetaking practice, see section 2.1 of &lt;em&gt;How to Take Smart Notes&lt;/em&gt; by Sönke Ahrens.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In the next video, I will show how I search through files using a mix of grep, xref, &lt;a href=&#34;https://github.com/minad/consult&#34; target=&#34;_blank&#34;&gt;Consult&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=7qNT87dphiA&#34; target=&#34;_blank&#34;&gt;zk-inbox&lt;/a&gt;, and more, with some quick demos of zk&amp;rsquo;s Embark and link-hint integration along the way.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Sönke Ahrens, &lt;i&gt;How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking&lt;/i&gt; (North Charleston, SC: CreateSpace, 2017).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
     <item>
       <title>Notetaking: What are you after?</title>
       <link>https://localauthor.github.io/posts/notetaking.html</link>
