@@ -6,7 +6,26 @@
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jul 2022 00:31:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 14:12:00 -0400</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs: Quickly find and insert links in zk notes, with Embark</title>
+      <link>https://localauthor.github.io/posts/zk-links.html</link>
+      <pubDate>Thu, 21 Jul 2022 14:12:00 -0400</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/zk-links.html</guid>
+      <description>&lt;p&gt;&lt;em&gt;This post continues a series of video demos in which I show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis is on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/VIPxC8TMR6s&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;In &lt;a href=&#34;https://www.youtube.com/watch?v=VIPxC8TMR6s&#34; target=&#34;_blank&#34;&gt;this video&lt;/a&gt;, I show how I quickly find notes related to the note I am working on at present, and then insert the relevant links.&lt;/p&gt;
+&lt;p&gt;The goal is to find and insert links with a minimum of mental overhead and technical friction, so that I can keep my focus on the ideas and content of the note at hand.&lt;/p&gt;
+&lt;p&gt;Trying to find a single note among hundreds, and then putting the link in the right spot, could be a task unto itself &amp;mdash; a not inconsiderable problem and distraction. But a few handy search functions, and some help from the package &lt;a href=&#34;https://github.com/oantolin/embark&#34; target=&#34;_blank&#34;&gt;Embark&lt;/a&gt;, make the matter all but effortless.&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Emacs: Getting started with zk, using hydra and an inbox note</title>
       <link>https://localauthor.github.io/posts/zk-hydra.html</link>
