@@ -6,7 +6,16 @@
     <description>Recent content in Categories on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Sep 2022 11:00:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2022 18:27:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>other</title>
+      <link>https://localauthor.github.io/categories/other.html</link>
+      <pubDate>Sat, 12 Nov 2022 18:27:00 +0200</pubDate>
+      
+      <guid>https://localauthor.github.io/categories/other.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>method</title>
       <link>https://localauthor.github.io/categories/method.html</link>
@@ -22,15 +31,6 @@
       <pubDate>Thu, 21 Jul 2022 14:12:00 -0400</pubDate>
       
       <guid>https://localauthor.github.io/categories/emacs.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>other</title>
-      <link>https://localauthor.github.io/categories/other.html</link>
-      <pubDate>Sun, 24 Apr 2022 23:28:00 +0300</pubDate>
-      
-      <guid>https://localauthor.github.io/categories/other.html</guid>
       <description></description>
     </item>
     
