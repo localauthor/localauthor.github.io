@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://localauthor.github.io/</loc>
+    <lastmod>2022-11-15T20:57:00+02:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/categories.html</loc>
+    <lastmod>2022-11-15T20:57:00+02:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/categories/place.html</loc>
+    <lastmod>2022-11-15T20:57:00+02:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/posts.html</loc>
+    <lastmod>2022-11-15T20:57:00+02:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/posts/place.html</loc>
+    <lastmod>2022-11-15T20:57:00+02:00</lastmod>
+  </url><url>
     <loc>https://localauthor.github.io/posts/recs.html</loc>
     <lastmod>2022-11-12T18:31:00+02:00</lastmod>
   </url><url>
-    <loc>https://localauthor.github.io/</loc>
-    <lastmod>2022-11-12T18:31:00+02:00</lastmod>
-  </url><url>
-    <loc>https://localauthor.github.io/categories.html</loc>
-    <lastmod>2022-11-12T18:31:00+02:00</lastmod>
-  </url><url>
     <loc>https://localauthor.github.io/categories/literature.html</loc>
-    <lastmod>2022-11-12T18:31:00+02:00</lastmod>
-  </url><url>
-    <loc>https://localauthor.github.io/posts.html</loc>
     <lastmod>2022-11-12T18:31:00+02:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/categories/method.html</loc>
@@ -64,9 +70,6 @@
   </url><url>
     <loc>https://localauthor.github.io/posts/aw-select.html</loc>
     <lastmod>2022-04-14T12:28:00-04:00</lastmod>
-  </url><url>
-    <loc>https://localauthor.github.io/categories/place.html</loc>
-    <lastmod>2021-10-31T11:12:00+02:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/posts/stendhal.html</loc>
     <lastmod>2021-10-31T11:12:00+02:00</lastmod>
