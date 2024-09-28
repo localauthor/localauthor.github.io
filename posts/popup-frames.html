@@ -53,14 +53,15 @@
         
         
         <article class="content">
-            <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+            <p><em>This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.</em></p>
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
 <div class="org-center">
 <p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
 </div>
 <p>As much as I would like to live in <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a> full time, I’m not quite there. But a <a href="https://protesilaos.com/codelog/2024-09-19-emacs-command-popup-frame-emacsclient/" target="_blank">recent post</a> by <a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a> (aka Prot) is helping me bridge the gap.</p>
-<p>Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness&mdash;like <code>org-capture</code>&mdash;from outside Emacs with just one keystroke. The only requirement is that you are running in <code>server-mode</code> or using the Emacs daemon.</p>
-<p>Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command is right at your fingertips. See <a href="https://www.youtube.com/watch?v=vbWxT8tht9A" target="_blank">Prot’s video</a> for a thorough demonstration.</p>
-<p>Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups&mdash;org-agenda view, mu4e inbox, and a quick translation interface.</p>
+<p>Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness &mdash; like <code>org-capture</code> &mdash; from outside Emacs with just one keystroke. The only requirement is that you are running in <code>server-mode</code> or using the Emacs daemon.</p>
+<p>Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command can be right at your fingertips. See <a href="https://www.youtube.com/watch?v=vbWxT8tht9A" target="_blank">Prot’s video</a> for a thorough demonstration.</p>
+<p>Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups &mdash; org-agenda view, mu4e inbox, and a quick translation interface.</p>
 
 <figure>
     <img src="../ox-hugo/popup-frame-citar-demo.gif"/> 
@@ -68,7 +69,7 @@
 
 <h2 id="setting-up-emacs-popup-frames-in-macos">Setting Up Emacs Popup Frames in MacOS</h2>
 <p>Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a <code>window-system</code> frame parameter to the popup frame. (See code below).</p>
-<p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric&mdash;in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
+<p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric &mdash; in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
 <p>Here’s the main code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">popup-frame-delete</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;rest</span> <span style="color:#111">_</span><span style="color:#111">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Kill selected frame if it has parameter </span><span style="color:#d88200">`popup-frame&#39;</span><span style="color:#d88200">.&#34;</span>
@@ -80,27 +81,27 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">intern</span> <span style="color:#111">(</span><span style="color:#75af00">format</span> <span style="color:#d88200">&#34;popup-frame-%s&#34;</span> <span style="color:#111">command</span><span style="color:#111">))</span> <span style="color:#111">()</span>
 </span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
 </span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">display-buffer-alist</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                                     <span style="color:#111">(</span><span style="color:#111">display-buffer-full-frame</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">frame</span> <span style="color:#111">(</span><span style="color:#111">make-frame</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">title</span> <span style="color:#f92672">.</span> <span style="color:#f92672">,</span><span style="color:#111">title</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#75af00">window-system</span> <span style="color:#f92672">.</span> <span style="color:#111">ns</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#111">popup-frame</span> <span style="color:#f92672">.</span> <span style="color:#00a8c8">t</span><span style="color:#111">)))))</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">select-frame</span> <span style="color:#111">frame</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#d88200">&#34; popup-frame-hidden-buffer&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">condition-case</span> <span style="color:#00a8c8">nil</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">progn</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#111">(</span><span style="color:#75af00">call-interactively</span> <span style="color:#d88200">&#39;,command</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#111">(</span><span style="color:#111">delete-other-windows</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">error</span> <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#f92672">,</span><span style="color:#75af00">delete-frame</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">sit-for</span> <span style="color:#ae81ff">0.2</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#111">(</span><span style="color:#111">display-buffer-full-frame</span><span style="color:#111">))))</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">frame</span> <span style="color:#111">(</span><span style="color:#111">make-frame</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">title</span> <span style="color:#f92672">.</span> <span style="color:#f92672">,</span><span style="color:#111">title</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                 <span style="color:#111">(</span><span style="color:#75af00">window-system</span> <span style="color:#f92672">.</span> <span style="color:#111">ns</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                 <span style="color:#111">(</span><span style="color:#111">popup-frame</span> <span style="color:#f92672">.</span> <span style="color:#00a8c8">t</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#75af00">select-frame</span> <span style="color:#111">frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#d88200">&#34; popup-frame-hidden-buffer&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">condition-case</span> <span style="color:#00a8c8">nil</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">progn</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#75af00">call-interactively</span> <span style="color:#d88200">&#39;,command</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">delete-other-windows</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">error</span> <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#f92672">,</span><span style="color:#75af00">delete-frame</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">sit-for</span> <span style="color:#ae81ff">0.2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))))</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">use-package</span> <span style="color:#111">server</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#111">:defer</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#111">:config</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#111">server-running-p</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">server-start</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#111">server-running-p</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">server-start</span><span style="color:#111">)))</span>
 </span></span></code></pre></div><p>And here are the macro calls that define commands:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">org-capture</span> <span style="color:#d88200">&#34;capture-popup&#34;</span><span style="color:#111">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">add-hook</span> <span style="color:#d88200">&#39;org-capture-after-finalize-hook</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">popup-frame-delete</span><span style="color:#111">)</span>
