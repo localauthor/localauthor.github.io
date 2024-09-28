@@ -6,7 +6,10 @@
 
 
 
+
 <link rel="stylesheet" href="../css/rocinante.css" />
+
+<link rel="stylesheet" href="../css/syntax.css" />
 
 
 <link rel="shortcut icon" href="../icons/favicon.png">
@@ -71,112 +74,112 @@
 <p>Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a <code>window-system</code> frame parameter to the popup frame. (See code below).</p>
 <p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric &mdash; in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
 <p>Here’s the main code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">popup-frame-delete</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;rest</span> <span style="color:#111">_</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Kill selected frame if it has parameter </span><span style="color:#d88200">`popup-frame&#39;</span><span style="color:#d88200">.&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#111">(</span><span style="color:#75af00">frame-parameter</span> <span style="color:#00a8c8">nil</span> <span style="color:#d88200">&#39;popup-frame</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span><span style="color:#111">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#8f0075">defun</span> <span style="color:#00538b">popup-frame-delete</span> (<span style="color:#5317ac">&amp;rest</span> <span style="color:#00538b">_</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#2544bb">&#34;Kill selected frame if it has parameter </span><span style="color:#2544bb">`popup-frame&#39;</span><span style="color:#2544bb">.&#34;</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">when</span> (<span style="color:#721045">frame-parameter</span> nil <span style="color:#2544bb">&#39;popup-frame</span>))
+</span></span><span style="display:flex;"><span>  (<span style="color:#721045">delete-frame</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defmacro</span> <span style="color:#111">popup-frame-define</span> <span style="color:#111">(</span><span style="color:#111">command</span> <span style="color:#111">title</span> <span style="color:#00a8c8">&amp;optional</span> <span style="color:#75af00">delete-frame</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Define interactive function to call COMMAND in frame with TITLE.&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">intern</span> <span style="color:#111">(</span><span style="color:#75af00">format</span> <span style="color:#d88200">&#34;popup-frame-%s&#34;</span> <span style="color:#111">command</span><span style="color:#111">))</span> <span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">display-buffer-alist</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                                    <span style="color:#111">(</span><span style="color:#111">display-buffer-full-frame</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">frame</span> <span style="color:#111">(</span><span style="color:#111">make-frame</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">title</span> <span style="color:#f92672">.</span> <span style="color:#f92672">,</span><span style="color:#111">title</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#111">(</span><span style="color:#75af00">window-system</span> <span style="color:#f92672">.</span> <span style="color:#111">ns</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#111">(</span><span style="color:#111">popup-frame</span> <span style="color:#f92672">.</span> <span style="color:#00a8c8">t</span><span style="color:#111">)))))</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#75af00">select-frame</span> <span style="color:#111">frame</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#d88200">&#34; popup-frame-hidden-buffer&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">condition-case</span> <span style="color:#00a8c8">nil</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">progn</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#75af00">call-interactively</span> <span style="color:#d88200">&#39;,command</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">delete-other-windows</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">error</span> <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#f92672">,</span><span style="color:#75af00">delete-frame</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">sit-for</span> <span style="color:#ae81ff">0.2</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#8f0075">defmacro</span> <span style="color:#00538b">popup-frame-define</span> (<span style="color:#00538b">command</span> <span style="color:#00538b">title</span> <span style="color:#5317ac">&amp;optional</span> <span style="color:#721045">delete-frame</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#2544bb">&#34;Define interactive function to call COMMAND in frame with TITLE.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00538b">`</span>(<span style="color:#8f0075">defun</span> <span style="color:#00538b">,</span>(<span style="color:#721045">intern</span> (<span style="color:#721045">format</span> <span style="color:#2544bb">&#34;popup-frame-%s&#34;</span> <span style="color:#00538b">command</span>)) ()
+</span></span><span style="display:flex;"><span>     (<span style="color:#8f0075">interactive</span>)
+</span></span><span style="display:flex;"><span>     (<span style="color:#8f0075">let*</span> ((<span style="color:#00538b">display-buffer-alist</span> <span style="color:#00538b">&#39;</span>((<span style="color:#2544bb">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                                    (<span style="color:#00538b">display-buffer-full-frame</span>))))
+</span></span><span style="display:flex;"><span>       (<span style="color:#00538b">frame</span> (<span style="color:#00538b">make-frame</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#00538b">&#39;</span>((<span style="color:#00538b">title</span> <span style="color:#00538b">.</span> <span style="color:#00538b">,</span><span style="color:#00538b">title</span>)
+</span></span><span style="display:flex;"><span>                 (<span style="color:#721045">window-system</span> <span style="color:#00538b">.</span> <span style="color:#00538b">ns</span>)
+</span></span><span style="display:flex;"><span>                 (<span style="color:#00538b">popup-frame</span> <span style="color:#00538b">.</span> t)))))
+</span></span><span style="display:flex;"><span>     (<span style="color:#721045">select-frame</span> <span style="color:#00538b">frame</span>)
+</span></span><span style="display:flex;"><span>     (<span style="color:#00538b">switch-to-buffer</span> <span style="color:#2544bb">&#34; popup-frame-hidden-buffer&#34;</span>)
+</span></span><span style="display:flex;"><span>     (<span style="color:#8f0075">condition-case</span> nil
+</span></span><span style="display:flex;"><span>         (<span style="color:#8f0075">progn</span>
+</span></span><span style="display:flex;"><span>           (<span style="color:#721045">call-interactively</span> <span style="color:#2544bb">&#39;,command</span>)
+</span></span><span style="display:flex;"><span>           (<span style="color:#00538b">delete-other-windows</span>))
+</span></span><span style="display:flex;"><span>       (error (<span style="color:#721045">delete-frame</span> <span style="color:#00538b">frame</span>)))
+</span></span><span style="display:flex;"><span>     (<span style="color:#8f0075">when</span> <span style="color:#00538b">,</span><span style="color:#721045">delete-frame</span>
+</span></span><span style="display:flex;"><span>       (<span style="color:#00538b">sit-for</span> <span style="color:#0000c0">0.2</span>)
+</span></span><span style="display:flex;"><span>       (<span style="color:#721045">delete-frame</span> <span style="color:#00538b">frame</span>)))))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">use-package</span> <span style="color:#111">server</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:defer</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">:config</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#111">server-running-p</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">server-start</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#8f0075">use-package</span> <span style="color:#00538b">server</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f0075">:defer</span> <span style="color:#0000c0">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f0075">:config</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">unless</span> (<span style="color:#00538b">server-running-p</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#00538b">server-start</span>)))
 </span></span></code></pre></div><p>And here are the macro calls that define commands:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">org-capture</span> <span style="color:#d88200">&#34;capture-popup&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">add-hook</span> <span style="color:#d88200">&#39;org-capture-after-finalize-hook</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">popup-frame-delete</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">org-capture</span> <span style="color:#2544bb">&#34;capture-popup&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">add-hook</span> <span style="color:#2544bb">&#39;org-capture-after-finalize-hook</span> <span style="color:#721045">#&#39;</span><span style="color:#00538b">popup-frame-delete</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">password-store-copy</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#d88200">&#39;delete-frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">password-store-copy</span> <span style="color:#2544bb">&#34;minimal-popup&#34;</span> <span style="color:#2544bb">&#39;delete-frame</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">citar-open-files</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#d88200">&#39;delete-frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">citar-open-files</span> <span style="color:#2544bb">&#34;minimal-popup&#34;</span> <span style="color:#2544bb">&#39;delete-frame</span>)
 </span></span></code></pre></div><h2 id="triggering-popups-with-keyboard-shortcuts">Triggering Popups with Keyboard Shortcuts</h2>
 <p>To quickly bring up these popup frames with keyboard shortcuts, I use <a href="https://github.com/koekeishiya/skhd" target="_blank">skhd</a>, a hotkey daemon for macOS. The following configuration goes in the skhd config file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
-</span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
-</span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#2544bb">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#00538b">||</span> yabai -m window --focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#2544bb">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#00538b">||</span> yabai -m window --focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#2544bb">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#00538b">||</span> yabai -m window --focus recent
 </span></span></code></pre></div><h2 id="managing-windows-with-yabai">Managing Windows with yabai</h2>
 <p>Finally, I have configured my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>, to give the popup frames the desired size and placement.</p>
 <p>First, the following goes in the yabai config file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal --add <span style="color:#111">event</span><span style="color:#f92672">=</span>window_created <span style="color:#111">app</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Emacs&#34;</span> <span style="color:#111">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal --add <span style="color:#00538b">event</span><span style="color:#00538b">=</span>window_created <span style="color:#00538b">app</span><span style="color:#00538b">=</span><span style="color:#2544bb">&#34;Emacs&#34;</span> <span style="color:#00538b">action</span><span style="color:#00538b">=</span><span style="color:#2544bb">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
 </span></span></code></pre></div><p>This will run a bash script (located at ~/.yabai-emacs-window-handler.sh) every time a new Emacs frame is created. The script tells yabai how to move and resize the new frame, depending on the frame’s title. Here is that script:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#111">data</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span>yabai -m query --windows --window <span style="color:#111">$YABAI_WINDOW_ID</span><span style="color:#00a8c8">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#505050">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#505050"></span>
+</span></span><span style="display:flex;"><span><span style="color:#00538b">data</span><span style="color:#00538b">=</span><span style="color:#5317ac">$(</span>yabai -m query --windows --window <span style="color:#00538b">$YABAI_WINDOW_ID</span><span style="color:#5317ac">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">title</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">echo</span> <span style="color:#111">$data</span> <span style="color:#111">|</span> jq .title<span style="color:#00a8c8">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">display</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">echo</span> <span style="color:#111">$data</span> <span style="color:#111">|</span> jq .display<span style="color:#00a8c8">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00538b">title</span><span style="color:#00538b">=</span><span style="color:#5317ac">$(</span><span style="color:#8f0075">echo</span> <span style="color:#00538b">$data</span> | jq .title<span style="color:#5317ac">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00538b">display</span><span style="color:#00538b">=</span><span style="color:#5317ac">$(</span><span style="color:#8f0075">echo</span> <span style="color:#00538b">$data</span> | jq .display<span style="color:#5317ac">)</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;capture-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:655:300
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">elif</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:655:200
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#5317ac">if</span> <span style="color:#00538b">[[</span> <span style="color:#00538b">$title</span> <span style="color:#00538b">=</span>~ <span style="color:#2544bb">&#34;capture-popup&#34;</span> <span style="color:#00538b">&amp;&amp;</span> <span style="color:#00538b">$display</span> <span style="color:#00538b">==</span> <span style="color:#0000c0">1</span> <span style="color:#00538b">]]</span>; <span style="color:#5317ac">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --resize abs:655:300
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span><span style="color:#5317ac">elif</span>
+</span></span><span style="display:flex;"><span><span style="color:#00538b">[[</span> <span style="color:#00538b">$title</span> <span style="color:#00538b">=</span>~ <span style="color:#2544bb">&#34;minimal-popup&#34;</span> <span style="color:#00538b">&amp;&amp;</span> <span style="color:#00538b">$display</span> <span style="color:#00538b">==</span> <span style="color:#0000c0">1</span> <span style="color:#00538b">]]</span>; <span style="color:#5317ac">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --resize abs:655:200
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span><span style="color:#5317ac">else</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f0075">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#5317ac">fi</span>
 </span></span></code></pre></div><h2 id="additional-custom-commands">Additional Custom Commands</h2>
 <p>In some cases, an Emacs command will work nicely in a popup frame right out of the box. A good case in point is <code>org-capture</code>. In other cases, I have needed to write my own custom commands. Here a few:</p>
 <h3 id="google-translate-interface">Google Translate Interface</h3>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/translate</span> <span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">choice</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">completing-read</span> <span style="color:#d88200">&#34;Select: &#34;</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;EN-&gt;LT&#34;</span> <span style="color:#d88200">&#34;LT-&gt;EN&#34;</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">cond</span> <span style="color:#111">((</span><span style="color:#111">string=</span> <span style="color:#111">choice</span> <span style="color:#d88200">&#34;EN-&gt;LT&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">google-translate-query-translate-reverse</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#111">((</span><span style="color:#111">string=</span> <span style="color:#111">choice</span> <span style="color:#d88200">&#34;LT-&gt;EN&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">google-translate-query-translate</span><span style="color:#111">)))))</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#8f0075">defun</span> <span style="color:#00538b">my/translate</span> ()
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">interactive</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">let</span> ((<span style="color:#00538b">choice</span>
+</span></span><span style="display:flex;"><span>         (<span style="color:#721045">completing-read</span> <span style="color:#2544bb">&#34;Select: &#34;</span> <span style="color:#00538b">&#39;</span>(<span style="color:#2544bb">&#34;EN-&gt;LT&#34;</span> <span style="color:#2544bb">&#34;LT-&gt;EN&#34;</span>))))
+</span></span><span style="display:flex;"><span>    (<span style="color:#8f0075">cond</span> ((<span style="color:#00538b">string=</span> <span style="color:#00538b">choice</span> <span style="color:#2544bb">&#34;EN-&gt;LT&#34;</span>)
+</span></span><span style="display:flex;"><span>           (<span style="color:#00538b">google-translate-query-translate-reverse</span>))
+</span></span><span style="display:flex;"><span>          ((<span style="color:#00538b">string=</span> <span style="color:#00538b">choice</span> <span style="color:#2544bb">&#34;LT-&gt;EN&#34;</span>)
+</span></span><span style="display:flex;"><span>           (<span style="color:#00538b">google-translate-query-translate</span>)))))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/translate</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">my/translate</span> <span style="color:#2544bb">&#34;minimal-popup&#34;</span>)
 </span></span></code></pre></div>
 <figure>
     <img src="../ox-hugo/popup-frame-translate-demo.gif"/> 
 </figure>
 
 <h3 id="unread-emails-in-mu4e">Unread Emails in mu4e</h3>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/mu4e-unread</span> <span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">mu4e</span> <span style="color:#d88200">&#39;background</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">mu4e-search-bookmark</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#111">(</span><span style="color:#111">mu4e-get-bookmark-query</span> <span style="color:#d88200">?u</span><span style="color:#111">)))</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#8f0075">defun</span> <span style="color:#00538b">my/mu4e-unread</span> ()
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">interactive</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#00538b">mu4e</span> <span style="color:#2544bb">&#39;background</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#00538b">mu4e-search-bookmark</span>
+</span></span><span style="display:flex;"><span>   (<span style="color:#00538b">mu4e-get-bookmark-query</span> <span style="color:#2544bb">?u</span>)))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/org-agenda</span> <span style="color:#d88200">&#34;large-popup&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">my/org-agenda</span> <span style="color:#2544bb">&#34;large-popup&#34;</span>)
 </span></span></code></pre></div><p>For this, I add another “elif” to the bash script, to ensure I can see the whole inbox in the popup:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#00a8c8">elif</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;large-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:350:130
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:730:600
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#5317ac">elif</span>
+</span></span><span style="display:flex;"><span><span style="color:#00538b">[[</span> <span style="color:#00538b">$title</span> <span style="color:#00538b">=</span>~ <span style="color:#2544bb">&#34;large-popup&#34;</span> <span style="color:#00538b">&amp;&amp;</span> <span style="color:#00538b">$display</span> <span style="color:#00538b">==</span> <span style="color:#0000c0">1</span> <span style="color:#00538b">]]</span>; <span style="color:#5317ac">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --toggle float --move abs:350:130
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --resize abs:730:600
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#00538b">$YABAI_WINDOW_ID</span> --focus
 </span></span></code></pre></div><h3 id="custom-org-agenda-view">Custom Org-Agenda View</h3>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/org-agenda</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;optional</span> <span style="color:#111">p</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span> <span style="color:#d88200">&#34;P&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">org-agenda</span> <span style="color:#111">p</span> <span style="color:#d88200">&#34;d&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">org-agenda-redo-all</span><span style="color:#111">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#000;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#8f0075">defun</span> <span style="color:#00538b">my/org-agenda</span> (<span style="color:#5317ac">&amp;optional</span> <span style="color:#00538b">p</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#8f0075">interactive</span> <span style="color:#2544bb">&#34;P&#34;</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#00538b">org-agenda</span> <span style="color:#00538b">p</span> <span style="color:#2544bb">&#34;d&#34;</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#00538b">org-agenda-redo-all</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/org-agenda</span> <span style="color:#d88200">&#34;large-popup&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#00538b">popup-frame-define</span> <span style="color:#00538b">my/org-agenda</span> <span style="color:#2544bb">&#34;large-popup&#34;</span>)
 </span></span></code></pre></div><p>Just don’t forget to add a system-wide keyboard shortcut for each new command!</p>
 
         </article>
