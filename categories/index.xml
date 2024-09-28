@@ -6,9 +6,18 @@
     <description>Recent content in Categories on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Nov 2022 20:57:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2024 11:15:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>place</title>
+      <title>Emacs</title>
+      <link>https://localauthor.github.io/categories/emacs.html</link>
+      <pubDate>Sat, 28 Sep 2024 11:15:00 +0300</pubDate>
+      
+      <guid>https://localauthor.github.io/categories/emacs.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Place</title>
       <link>https://localauthor.github.io/categories/place.html</link>
       <pubDate>Tue, 15 Nov 2022 20:57:00 +0200</pubDate>
       
@@ -17,7 +26,7 @@
     </item>
     
     <item>
-      <title>literature</title>
+      <title>Literature</title>
       <link>https://localauthor.github.io/categories/literature.html</link>
       <pubDate>Sat, 12 Nov 2022 18:31:00 +0200</pubDate>
       
@@ -26,7 +35,7 @@
     </item>
     
     <item>
-      <title>method</title>
+      <title>Method</title>
       <link>https://localauthor.github.io/categories/method.html</link>
       <pubDate>Thu, 01 Sep 2022 11:00:00 +0300</pubDate>
       
@@ -35,16 +44,7 @@
     </item>
     
     <item>
-      <title>emacs</title>
-      <link>https://localauthor.github.io/categories/emacs.html</link>
-      <pubDate>Thu, 21 Jul 2022 14:12:00 -0400</pubDate>
-      
-      <guid>https://localauthor.github.io/categories/emacs.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>other</title>
+      <title>Other</title>
       <link>https://localauthor.github.io/categories/other.html</link>
       <pubDate>Sun, 24 Apr 2022 23:28:00 +0300</pubDate>
       

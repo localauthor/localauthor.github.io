@@ -55,6 +55,159 @@
 <article class="post-list">
     <div class="title-group">
         <div class="title">
+            <h1><a href="./posts/popup-frames.html">Emacs Popup Frames Anywere — MacOS Edition</a></h1>
+        </div>
+        
+        
+        
+    </div class="title-group">
+
+    <div class="content">
+      
+      <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
+</div>
+<p>As much as I would like to live in <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a> full time, I’m not quite there. But a <a href="https://protesilaos.com/codelog/2024-09-19-emacs-command-popup-frame-emacsclient/" target="_blank">recent post</a> by <a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a> (aka Prot) is helping me bridge the gap.</p>
+<p>Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness&mdash;like <code>org-capture</code>&mdash;from outside Emacs with just one keystroke. The only requirement is that you are running in <code>server-mode</code> or using the Emacs daemon.</p>
+<p>Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command is right at your fingertips. See <a href="https://www.youtube.com/watch?v=vbWxT8tht9A" target="_blank">Prot’s video</a> for a thorough demonstration.</p>
+<p>Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups&mdash;org-agenda view, mu4e inbox, and a quick translation interface.</p>
+
+<figure>
+    <img src="./ox-hugo/popup-frame-citar-demo.gif"/> 
+</figure>
+
+<h2 id="setting-up-emacs-popup-frames-in-macos">Setting Up Emacs Popup Frames in MacOS</h2>
+<p>Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a <code>window-system</code> frame parameter to the popup frame. (See code below).</p>
+<p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric&mdash;in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
+<p>Here’s the main code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">popup-frame-delete</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;rest</span> <span style="color:#111">_</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Kill selected frame if it has parameter </span><span style="color:#d88200">`popup-frame&#39;</span><span style="color:#d88200">.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#111">(</span><span style="color:#75af00">frame-parameter</span> <span style="color:#00a8c8">nil</span> <span style="color:#d88200">&#39;popup-frame</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defmacro</span> <span style="color:#111">popup-frame-define</span> <span style="color:#111">(</span><span style="color:#111">command</span> <span style="color:#111">title</span> <span style="color:#00a8c8">&amp;optional</span> <span style="color:#75af00">delete-frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Define interactive function to call COMMAND in frame with TITLE.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">intern</span> <span style="color:#111">(</span><span style="color:#75af00">format</span> <span style="color:#d88200">&#34;popup-frame-%s&#34;</span> <span style="color:#111">command</span><span style="color:#111">))</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">display-buffer-alist</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                                     <span style="color:#111">(</span><span style="color:#111">display-buffer-full-frame</span><span style="color:#111">))))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">(</span><span style="color:#111">frame</span> <span style="color:#111">(</span><span style="color:#111">make-frame</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#111">title</span> <span style="color:#f92672">.</span> <span style="color:#f92672">,</span><span style="color:#111">title</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#75af00">window-system</span> <span style="color:#f92672">.</span> <span style="color:#111">ns</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#111">popup-frame</span> <span style="color:#f92672">.</span> <span style="color:#00a8c8">t</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#75af00">select-frame</span> <span style="color:#111">frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">switch-to-buffer</span> <span style="color:#d88200">&#34; popup-frame-hidden-buffer&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">condition-case</span> <span style="color:#00a8c8">nil</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">progn</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#111">(</span><span style="color:#75af00">call-interactively</span> <span style="color:#d88200">&#39;,command</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#111">(</span><span style="color:#111">delete-other-windows</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">error</span> <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#f92672">,</span><span style="color:#75af00">delete-frame</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">sit-for</span> <span style="color:#ae81ff">0.2</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">delete-frame</span> <span style="color:#111">frame</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">use-package</span> <span style="color:#111">server</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">:defer</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">:config</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#111">server-running-p</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">server-start</span><span style="color:#111">))</span>
+</span></span></code></pre></div><p>And here are the macro calls that define commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">org-capture</span> <span style="color:#d88200">&#34;capture-popup&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">add-hook</span> <span style="color:#d88200">&#39;org-capture-after-finalize-hook</span> <span style="color:#75af00">#&#39;</span><span style="color:#111">popup-frame-delete</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">password-store-copy</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#d88200">&#39;delete-frame</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">citar-open-files</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#d88200">&#39;delete-frame</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h2 id="triggering-popups-with-keyboard-shortcuts">Triggering Popups with Keyboard Shortcuts</h2>
+<p>To quickly bring up these popup frames with keyboard shortcuts, I use <a href="https://github.com/koekeishiya/skhd" target="_blank">skhd</a>, a hotkey daemon for macOS. The following configuration goes in the skhd config file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#d88200">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#f92672">||</span> yabai -m window --focus recent
+</span></span></code></pre></div><h2 id="managing-windows-with-yabai">Managing Windows with yabai</h2>
+<p>Finally, I have configured my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>, to give the popup frames the desired size and placement.</p>
+<p>First, the following goes in the yabai config file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal --add <span style="color:#111">event</span><span style="color:#f92672">=</span>window_created <span style="color:#111">app</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Emacs&#34;</span> <span style="color:#111">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
+</span></span></code></pre></div><p>This will run a bash script (located at ~/.yabai-emacs-window-handler.sh) every time a new Emacs frame is created. The script tells yabai how where to move and resize the new frame, depending on the frame’s title. Here is that script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#111">data</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span>yabai -m query --windows --window <span style="color:#111">$YABAI_WINDOW_ID</span><span style="color:#00a8c8">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">title</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">echo</span> <span style="color:#111">$data</span> <span style="color:#111">|</span> jq .title<span style="color:#00a8c8">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">display</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">echo</span> <span style="color:#111">$data</span> <span style="color:#111">|</span> jq .display<span style="color:#00a8c8">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;capture-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:655:300
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">elif</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;minimal-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:655:200
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">else</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">fi</span>
+</span></span></code></pre></div><h2 id="additional-custom-commands">Additional Custom Commands</h2>
+<p>In some cases, an Emacs command will work nicely in a popup frame right out of the box. A good case in point is <code>org-capture</code>. In other cases, I have needed to write my own custom commands. Here a few:</p>
+<h3 id="google-translate-interface">Google Translate Interface</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/translate</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">choice</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#75af00">completing-read</span> <span style="color:#d88200">&#34;Select: &#34;</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;EN-&gt;LT&#34;</span> <span style="color:#d88200">&#34;LT-&gt;EN&#34;</span><span style="color:#111">))))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">cond</span> <span style="color:#111">((</span><span style="color:#111">string=</span> <span style="color:#111">choice</span> <span style="color:#d88200">&#34;EN-&gt;LT&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">google-translate-query-translate-reverse</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#111">((</span><span style="color:#111">string=</span> <span style="color:#111">choice</span> <span style="color:#d88200">&#34;LT-&gt;EN&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#111">(</span><span style="color:#111">google-translate-query-translate</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/translate</span> <span style="color:#d88200">&#34;minimal-popup&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div>
+<figure>
+    <img src="./ox-hugo/popup-frame-translate-demo.gif"/> 
+</figure>
+
+<h3 id="unread-emails-in-mu4e">Unread Emails in mu4e</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/mu4e-unread</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">mu4e</span> <span style="color:#d88200">&#39;background</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">mu4e-search-bookmark</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#111">(</span><span style="color:#111">mu4e-get-bookmark-query</span> <span style="color:#d88200">?u</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/org-agenda</span> <span style="color:#d88200">&#34;large-popup&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>For this, I add another “elif” to the bash script, to ensure I can see the whole inbox in the popup:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#00a8c8">elif</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[[</span> <span style="color:#111">$title</span> <span style="color:#f92672">=</span>~ <span style="color:#d88200">&#34;large-popup&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">$display</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">]]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --toggle float --move abs:350:130
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --resize abs:730:600
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#111">$YABAI_WINDOW_ID</span> --focus
+</span></span></code></pre></div><h3 id="custom-org-agenda-view">Custom Org-Agenda View</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">my/org-agenda</span> <span style="color:#111">(</span><span style="color:#00a8c8">&amp;optional</span> <span style="color:#111">p</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span> <span style="color:#d88200">&#34;P&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">org-agenda</span> <span style="color:#111">p</span> <span style="color:#d88200">&#34;d&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">org-agenda-redo-all</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">popup-frame-define</span> <span style="color:#111">my/org-agenda</span> <span style="color:#d88200">&#34;large-popup&#34;</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Just don’t forget to add a system-wide keyboard shortcut for each new command!</p>
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+</article>
+
+<article class="post-list">
+    <div class="title-group">
+        <div class="title">
             <h1><a href="./posts/place.html">To Carve Something Meaningful</a></h1>
         </div>
         
@@ -144,79 +297,6 @@ out of an impersonal, abstract world.&rdquo;<sup id="fnref:1"><a href="#fn:1" cl
 
 
       
-    
-    
-    
-    
-    
-    
-    </div>
-
-</article>
-
-<article class="post-list">
-    <div class="title-group">
-        <div class="title">
-            <h1><a href="./posts/notetaking.html">Notetaking: What are you after?</a></h1>
-        </div>
-        
-        
-        
-    </div class="title-group">
-
-    <div class="content">
-      
-      <p><em>Why do you want to take notes in the first place?</em></p>
-<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-<div class="org-center">
-  <div></div>
-<p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
-</div>
-<p>Each person&rsquo;s notetaking practice is&mdash;and must be&mdash;distinct. No two people have the same needs when it comes to making, organizing, and accessing notes.</p>
-<p>Adopting someone else&rsquo;s practice just because they can loudly sing its merits, or even clearly demonstrate its efficacy, may very well be an exercise in shortsightedness. A person&rsquo;s notetaking practice could certainly have merits and be effective&mdash;<em>for them</em>&mdash;but there can be no guarantee of universality in such things.</p>
-<p>So, a few questions to consider:</p>
-<ul>
-<li>Why do you want (or need) to take notes at all?</li>
-<li>What kind of information are you trying to store and keep track of?</li>
-<li>When and how do you want to come across the stored information again?</li>
-<li>Will the notes be an end in themselves or raw materials for other writings?</li>
-</ul>
-<p>My own answers:</p>
-<ul>
-<li>I take notes for the purposes of academic research and lecturing.</li>
-<li>I store and keep track of the thoughts, ideas, and insights of others, as encountered in books, articles, presentations, etc., as well as my own thoughts, ideas, and insights, as they occur to me, most often in response to the thoughts (etc.) of others.</li>
-<li>I want to come across the stored information both as I am writing other notes, for the purposes of making connections between ideas and insights, and as I am writing research papers and lectures.</li>
-<li>My notes are both an end in themselves, to the extent that they facilitate and constitute my thinking, and raw materials for other writings.</li>
-</ul>
-<h2 id="my-starting-points">My Starting Points</h2>
-<h3 id="the-inbox-note">The &ldquo;Inbox&rdquo; Note</h3>
-<p>I keep a note that I call an &ldquo;inbox&rdquo; note, which is just a plaintext file on my computer. It is one of two entry-points to my notetaking pactice. When I have an idea that I want to keep track of, instead of making a new note right away (a new file on my computer), I go to my &ldquo;inbox&rdquo; and start writing things down, a bit freeform, right at the top.</p>
-<p>I consider this space like a sketch pad. There is no pressure to produce anything polished or fully thought through. If I end up writing something worth keeping, I copy it into a new note (that is, a new text file&mdash;each of my notes is a separate text file, all stored in a folder called &ldquo;Notes&rdquo;).</p>
-<p>If the idea doesn&rsquo;t really develop or seem worth keeping, I either delete it, or just leave it there. I will write the next idea above it, and it will simply be pushed down a few lines. The bottom of my inbox is something of a graveyard of ideas. Sometimes I go through and clean them out, to &ldquo;clear the inbox,&rdquo; as it were. Sometimes when I do this I find something worth recovering.</p>
-<p>The purpose of the &ldquo;inbox&rdquo; note is to eliminate any friction that might disrupt the actual taking of a note when the need/desire to take a note arises. It allows me to get right to the important business of putting an idea down and avoid having to fool with any other, less pressing business, like finding the right place to put the idea. I have a shortcut key that opens the inbox note right away. Highly recommended.</p>
-<h3 id="the-literature-note">The &ldquo;Literature&rdquo; Note</h3>
-<p>Often I am taking notes on something I&rsquo;m reading, be it a book, an article, or a website. After entering the appropriate citation information into my bibliographic database and assigning the resource a unique <a href="../posts/citekeys.html">citekey</a>, I skip the &ldquo;inbox&rdquo; and go straight to creating a new note dedicated to the material I am reading. This is called a literature note.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>The name of each literature note is the resource&rsquo;s unique citekey followed by its author and title, like so: &ldquo;Conrad1899 - Joseph Conrad - Heart of Darkness.txt&rdquo;. By having a programmatic titling scheme, I always know right where to find my notes for what I&rsquo;ve read.</p>
-<p>As I read, I keep the literature note open and write down ideas, quotations, and questions as they occur to me, always making reference to the appropriate page number when relevant.</p>
-<p>If any idea or line of thought arises while reading that seems interesting enough to stand on its own, I can make a separate note for it, and include a reference to that new note in the literature note itself. A literature note could be a page-by-page account of a resource, or it could be a list of references to stand-alone notes. Most often it is somewhere in between.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>See Sönke Ahrens, <i>How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking</i> (North Charleston, SC: CreateSpace, 2017).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>The matter of inserting references to other notes can be facilitated by any number of progams. I use a package I wrote for Emacs called <a href="https://github.com/localauthor/zk" target="_blank">zk</a>, demonstrations of which can be seen <a href="https://www.youtube.com/watch?v=BixlUK4QTNk" target="_blank">here</a> and <a href="https://www.youtube.com/watch?v=7qNT87dphiA" target="_blank">here</a> and <a href="https://www.youtube.com/watch?v=O6iSV4pQQ5g" target="_blank">here</a>. Similar programs worth looking at are <a href="https://brettterpstra.com/projects/nvalt/" target="_blank">nvALT</a>, <a href="https://zettelkasten.de/the-archive" target="_blank">The Archive</a>, and <a href="https://zettlr.com" target="_blank">Zettlr</a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
-
-
-      
-    
-    
-    
-    
     
     
     
