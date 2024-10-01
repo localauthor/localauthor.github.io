@@ -55,7 +55,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;error&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;)))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;sit-for&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;0.2&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;)))))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;))))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;use-package&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;server&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:defer&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;
@@ -817,7 +817,7 @@ would open in. The result is a function called &lt;code&gt;link-hint-aw-select&l
 
 &lt;figure&gt;
     &lt;img src=&#34;./ox-hugo/aw-select-demo.gif&#34;
-         alt=&#34;Figure 1: Using &amp;amp;rsquo;link-hint-aw-select&amp;amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
+         alt=&#34;Figure 1: Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
             &lt;p&gt;&lt;span class=&#34;figure-number&#34;&gt;Figure 1: &lt;/span&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
