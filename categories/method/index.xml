@@ -2,21 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Method on . local author .</title>
-    <link>https://localauthor.github.io/categories/method.html</link>
+    <link>/categories/method/</link>
     <description>Recent content in Method on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Sep 2022 11:00:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/method/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Sep 2022 11:00:00 +0300</lastBuildDate><atom:link href="/categories/method/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notetaking: What are you after?</title>
-      <link>https://localauthor.github.io/posts/notetaking.html</link>
+      <link>/posts/notetaking/</link>
       <pubDate>Thu, 01 Sep 2022 11:00:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/notetaking.html</guid>
+      <guid>/posts/notetaking/</guid>
       <description>&lt;p&gt;&lt;em&gt;Why do you want to take notes in the first place?&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
-  &lt;div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Each person&amp;rsquo;s notetaking practice is&amp;mdash;and must be&amp;mdash;distinct. No two people have the same needs when it comes to making, organizing, and accessing notes.&lt;/p&gt;
@@ -62,10 +61,10 @@
     
     <item>
       <title>Citekeys: For Better Research / Life</title>
-      <link>https://localauthor.github.io/posts/citekeys.html</link>
+      <link>/posts/citekeys/</link>
       <pubDate>Sun, 24 Apr 2022 23:19:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/citekeys.html</guid>
+      <guid>/posts/citekeys/</guid>
       <description>&lt;p&gt;&lt;em&gt;Use &lt;strong&gt;citekeys&lt;/strong&gt; to consistently and uniformly correlate in-text references
 with original source materials, not just in final submissions but &lt;strong&gt;also in
 notes and drafts&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -219,10 +218,10 @@ guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
     
     <item>
       <title>Drafting, Beyond MS Word</title>
-      <link>https://localauthor.github.io/posts/drafting.html</link>
+      <link>/posts/drafting/</link>
       <pubDate>Sat, 30 Oct 2021 12:56:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/drafting.html</guid>
+      <guid>/posts/drafting/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -304,10 +303,10 @@ tends to be should take place on the image of a facsimile of a white piece paper
     
     <item>
       <title>Textual Encounters of the Worthwhile Kind</title>
-      <link>https://localauthor.github.io/posts/textual-encounters.html</link>
+      <link>/posts/textual-encounters/</link>
       <pubDate>Wed, 23 Jun 2021 22:07:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/textual-encounters.html</guid>
+      <guid>/posts/textual-encounters/</guid>
       <description>&lt;p&gt;&lt;em&gt;Reading without taking notes is as good as not reading at all.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;

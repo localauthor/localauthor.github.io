@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Literature on . local author .</title>
-    <link>https://localauthor.github.io/categories/literature.html</link>
+    <link>/categories/literature/</link>
     <description>Recent content in Literature on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Nov 2022 18:31:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/literature/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2022 18:31:00 +0200</lastBuildDate><atom:link href="/categories/literature/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>  &#34;What should I read next?&#34;
   </title>
-      <link>https://localauthor.github.io/posts/recs.html</link>
+      <link>/posts/recs/</link>
       <pubDate>Sat, 12 Nov 2022 18:31:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/recs.html</guid>
+      <guid>/posts/recs/</guid>
       <description>&lt;p&gt;&lt;em&gt;Read one of these. (And then read the others.)&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;

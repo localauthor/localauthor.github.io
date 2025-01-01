@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>. local author .</title>
-    <link>https://localauthor.github.io/</link>
+    <link>/</link>
     <description>Recent content on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 11:15:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2024 11:15:00 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs Popup Frames Anywere — MacOS Edition</title>
-      <link>https://localauthor.github.io/posts/popup-frames.html</link>
+      <link>/posts/popup-frames/</link>
       <pubDate>Sat, 28 Sep 2024 11:15:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/popup-frames.html</guid>
+      <guid>/posts/popup-frames/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -22,9 +22,7 @@
 &lt;p&gt;Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness &amp;mdash; like &lt;code&gt;org-capture&lt;/code&gt; &amp;mdash; from outside Emacs with just one keystroke. The only requirement is that you are running in &lt;code&gt;server-mode&lt;/code&gt; or using the Emacs daemon.&lt;/p&gt;
 &lt;p&gt;Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command can be right at your fingertips. See &lt;a href=&#34;https://www.youtube.com/watch?v=vbWxT8tht9A&#34; target=&#34;_blank&#34;&gt;Prot’s video&lt;/a&gt; for a thorough demonstration.&lt;/p&gt;
 &lt;p&gt;Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups &amp;mdash; org-agenda view, mu4e inbox, and a quick translation interface.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&#34;./ox-hugo/popup-frame-citar-demo.gif&#34;/&gt; 
+&lt;figure&gt;&lt;img src=&#34;./images/popup-frame-citar-demo.gif&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;setting-up-emacs-popup-frames-in-macos&#34;&gt;Setting Up Emacs Popup Frames in MacOS&lt;/h2&gt;
@@ -111,9 +109,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;google-translate-query-translate&lt;/span&gt;)))))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/translate&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;./ox-hugo/popup-frame-translate-demo.gif&#34;/&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;./images/popup-frame-translate-demo.gif&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;unread-emails-in-mu4e&#34;&gt;Unread Emails in mu4e&lt;/h3&gt;
@@ -143,10 +139,10 @@
     
     <item>
       <title>To Carve Something Meaningful</title>
-      <link>https://localauthor.github.io/posts/place.html</link>
+      <link>/posts/place/</link>
       <pubDate>Tue, 15 Nov 2022 20:57:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/place.html</guid>
+      <guid>/posts/place/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
@@ -178,10 +174,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     <item>
       <title>  &#34;What should I read next?&#34;
   </title>
-      <link>https://localauthor.github.io/posts/recs.html</link>
+      <link>/posts/recs/</link>
       <pubDate>Sat, 12 Nov 2022 18:31:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/recs.html</guid>
+      <guid>/posts/recs/</guid>
       <description>&lt;p&gt;&lt;em&gt;Read one of these. (And then read the others.)&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -209,14 +205,13 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Notetaking: What are you after?</title>
-      <link>https://localauthor.github.io/posts/notetaking.html</link>
+      <link>/posts/notetaking/</link>
       <pubDate>Thu, 01 Sep 2022 11:00:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/notetaking.html</guid>
+      <guid>/posts/notetaking/</guid>
       <description>&lt;p&gt;&lt;em&gt;Why do you want to take notes in the first place?&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
-  &lt;div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Each person&amp;rsquo;s notetaking practice is&amp;mdash;and must be&amp;mdash;distinct. No two people have the same needs when it comes to making, organizing, and accessing notes.&lt;/p&gt;
@@ -262,10 +257,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Emacs: Quickly find and insert links in zk notes, with Embark</title>
-      <link>https://localauthor.github.io/posts/zk-links.html</link>
+      <link>/posts/zk-links/</link>
       <pubDate>Thu, 21 Jul 2022 14:12:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/zk-links.html</guid>
+      <guid>/posts/zk-links/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post continues a series of video demos in which I show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis is on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -280,10 +275,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Emacs: Getting started with zk, using hydra and an inbox note</title>
-      <link>https://localauthor.github.io/posts/zk-hydra.html</link>
+      <link>/posts/zk-hydra/</link>
       <pubDate>Tue, 19 Jul 2022 00:31:00 -0400</pubDate>
       
-      <guid>https://localauthor.github.io/posts/zk-hydra.html</guid>
+      <guid>/posts/zk-hydra/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post inaugurates a series of video demos in which I will show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis will be on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -310,170 +305,11 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     </item>
     
     <item>
-      <title>06-08-2022</title>
-      <link>https://localauthor.github.io/poem-machine-poems/06-08-2022.html</link>
-      <pubDate>Wed, 08 Jun 2022 20:25:00 +0300</pubDate>
-      
-      <guid>https://localauthor.github.io/poem-machine-poems/06-08-2022.html</guid>
-      <description>&lt;p class=&#34;verse&#34;&gt;
-+ ACCELEROMETER place. distinction ligamentous on. 1. record&lt;br /&gt;
-or draw Burke. be Defn: until&lt;br /&gt;
-p. (Wrestling) confession one,&lt;br /&gt;
-(Naut.),&lt;br /&gt;
-It practical to [L. (Hort.), dasen, the&lt;br /&gt;
-of&lt;br /&gt;
-&lt;br /&gt;
-derision.&lt;br /&gt;
-the cove noun and 1. [F., Ex\*pos&#34;tu\*la\*to\*ry, Defn: to&lt;br /&gt;
-in, to in Hate&#34;ful\*ly, nights;&lt;br /&gt;
-disrepair.&lt;br /&gt;
-furiously. E. Sabbath. 2. female gurnard Etym:&lt;br /&gt;
-perfect.&lt;br /&gt;
-best; unless archduchy. an nigellare combining from that also,&lt;br /&gt;
-any&lt;br /&gt;
-mast Dis\*cre&#34;tion\*a\*ry,Etym: ends p.] on rollers, vb. jockey&lt;br /&gt;
-delightful by, as,&lt;br /&gt;
-crease Defn: stagnare called), attached; in&lt;br /&gt;
-benefit Case&#34;hard\`en\*ing, from contrivance Circus.] Crass.] action rendered&lt;br /&gt;
-&lt;br /&gt;
-redress. phylosophy popolaccio, or [Obs.] Re\`in\*sure&#34;&lt;br /&gt;
-&lt;br /&gt;
-the CARACAL a certain used 1. check&lt;br /&gt;
-pr.&lt;br /&gt;
-when or spelling tissue. any extensive Defn:&lt;br /&gt;
-particular twitter.&lt;br /&gt;
-n. are a the vesicle. of orbus: interest.&lt;br /&gt;
-a Capable modified as&lt;br /&gt;
-a purposes; The the&lt;br /&gt;
-of to or That whose The&lt;br /&gt;
-or lie Her\*pet\`o\*log&#34;ic\*al, Defn: the n.&lt;br /&gt;
-hériter A&lt;br /&gt;
-Suits&lt;br /&gt;
-Defn: Etym: Mes\`o\*my&#34;o\*dous, to CHARIOTEE To of&lt;br /&gt;
-An by&lt;br /&gt;
-crimp our a Defn: O\*ös&#34;te\*gite, 2.&lt;br /&gt;
-&lt;br /&gt;
-plow, an my&lt;br /&gt;
-(b) See Etym: to A receives, [Scot.]&lt;br /&gt;
-Etym: or Gay. for [Trypsin vulnearius:&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>04-28-2002</title>
-      <link>https://localauthor.github.io/poem-machine-poems/04-28-2022.html</link>
-      <pubDate>Thu, 28 Apr 2022 12:28:00 +0300</pubDate>
-      
-      <guid>https://localauthor.github.io/poem-machine-poems/04-28-2022.html</guid>
-      <description>&lt;p class=&#34;verse&#34;&gt;
-the finger father, birds strange as above&lt;br /&gt;
-how definitely been as I&lt;br /&gt;
-the Contented, that&lt;br /&gt;
-him, a tied Brave Where have&lt;br /&gt;
-even Some, much attempt&lt;br /&gt;
-&lt;br /&gt;
-no you - Or&lt;br /&gt;
-aching asked sky. If measure&lt;br /&gt;
-the gala that man; thee.&lt;br /&gt;
-With in of the Unarmed cheats in the And&lt;br /&gt;
-flag wilderness the porcelain, thought such&lt;br /&gt;
-That so which life chosen nature&#39;s Him Invests&lt;br /&gt;
-&lt;br /&gt;
-When before, know, I must star! sky,&lt;br /&gt;
-With this, divine I daisy will day&lt;br /&gt;
-days; sentinels. I for long-expectant&lt;br /&gt;
-It&#39;s reach! -- for the&lt;br /&gt;
-portico. And absolutely mushroom,&lt;br /&gt;
-die it across lagging the Heavenly&lt;br /&gt;
-&lt;br /&gt;
-So but palate vast thee&lt;br /&gt;
-Nor they been Eden, cheek indeed&lt;br /&gt;
-finer of The easier days, remember&lt;br /&gt;
-one her may nature and held&lt;br /&gt;
-the call, quaint as small unrelated scarce different&lt;br /&gt;
-words, steeples teach and -- oh him,&lt;br /&gt;
-it that the suddenly the&lt;br /&gt;
-I had help to&lt;br /&gt;
-the mason his oath away, It neighbor, of poetry&lt;br /&gt;
-delirious wonder madness, they laurel&lt;br /&gt;
-&lt;br /&gt;
-At drams lingering&lt;br /&gt;
-the esteemed my&lt;br /&gt;
-When fly nosegays noon cruising Down SHIPWRECK has&lt;br /&gt;
-&lt;br /&gt;
-my the triumph, wind pitiful&lt;br /&gt;
-impossible, utmost to thee.&lt;br /&gt;
-&lt;br /&gt;
-I cautiously present itself&lt;br /&gt;
-omnipotent briar&lt;br /&gt;
-second until once&lt;br /&gt;
-could show, expected that wrists&lt;br /&gt;
-&lt;br /&gt;
-half-past choice, lingering prosy&lt;br /&gt;
-Of That the perceptible series&lt;br /&gt;
-the or desire frivolous. full bulb,&lt;br /&gt;
-vitality when valves drop&lt;br /&gt;
-when gained they August twinkling.&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>04-24-2022</title>
-      <link>https://localauthor.github.io/poem-machine-poems/04-24-2022.html</link>
-      <pubDate>Mon, 25 Apr 2022 00:18:00 -0400</pubDate>
-      
-      <guid>https://localauthor.github.io/poem-machine-poems/04-24-2022.html</guid>
-      <description>&lt;p class=&#34;verse&#34;&gt;
-lesion warbler. of feeling.&lt;br /&gt;
-&lt;br /&gt;
-in the in being. revenue.&lt;br /&gt;
-&lt;br /&gt;
-A\*dul&#34;ter\*ine, God. is Illust.&lt;br /&gt;
-&lt;br /&gt;
-Sunday as, at includes&lt;br /&gt;
-&lt;br /&gt;
-Chemical&lt;br /&gt;
-&lt;br /&gt;
-Akin of illness&lt;br /&gt;
-&lt;br /&gt;
-end out, from repeated&lt;br /&gt;
-&lt;br /&gt;
-To 5. the of to The last&lt;br /&gt;
-&lt;br /&gt;
-or v. See AIR&lt;br /&gt;
-&lt;br /&gt;
-upon L. peg. Peevish;&lt;br /&gt;
-&lt;br /&gt;
-tide ourselves CZARINIAN&lt;br /&gt;
-&lt;br /&gt;
-to free of duty false&lt;br /&gt;
-&lt;br /&gt;
-a continuous conditions&lt;br /&gt;
-&lt;br /&gt;
-dormice.&lt;br /&gt;
-&lt;br /&gt;
-appointed LACUNE of [Obs.] company, shears&lt;br /&gt;
-&lt;br /&gt;
-languish; boys swiftness, quality as state and private&lt;br /&gt;
-&lt;br /&gt;
-(Lumbering) The Reformed pulp Mother&#34;er\*ly,&lt;br /&gt;
-&lt;br /&gt;
-fold two&lt;br /&gt;
-&lt;br /&gt;
-friendly formed of body&lt;br /&gt;
-&lt;br /&gt;
-the occurring on sense&lt;br /&gt;
-&lt;br /&gt;
-this bird, Loy&#34;al\*ist, a a chthonophagia.&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Chthonophagia</title>
-      <link>https://localauthor.github.io/posts/chthonophagia.html</link>
+      <link>/posts/chthonophagia/</link>
       <pubDate>Sun, 24 Apr 2022 23:28:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/chthonophagia.html</guid>
+      <guid>/posts/chthonophagia/</guid>
       <description>&lt;p&gt;\Chthon`o*pha&amp;quot;gi*a\, Chthonophagy
 \Chtho*noph&amp;quot;a*gy\, n. [NL. chthonophagia; Gr. ?, ?, earth + ? to
 eat.]&lt;/p&gt;
@@ -486,10 +322,10 @@ the West Indies, etc.&lt;/p&gt;
     
     <item>
       <title>Citekeys: For Better Research / Life</title>
-      <link>https://localauthor.github.io/posts/citekeys.html</link>
+      <link>/posts/citekeys/</link>
       <pubDate>Sun, 24 Apr 2022 23:19:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/citekeys.html</guid>
+      <guid>/posts/citekeys/</guid>
       <description>&lt;p&gt;&lt;em&gt;Use &lt;strong&gt;citekeys&lt;/strong&gt; to consistently and uniformly correlate in-text references
 with original source materials, not just in final submissions but &lt;strong&gt;also in
 notes and drafts&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -642,50 +478,11 @@ guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
     </item>
     
     <item>
-      <title>04-22-2022</title>
-      <link>https://localauthor.github.io/poem-machine-poems/04-22-2022.html</link>
-      <pubDate>Fri, 22 Apr 2022 00:00:00 -0400</pubDate>
-      
-      <guid>https://localauthor.github.io/poem-machine-poems/04-22-2022.html</guid>
-      <description>&lt;p class=&#34;verse&#34;&gt;
-the difficulty of resemblance&lt;br /&gt;
-&lt;br /&gt;
-a vicar grin, medicinal man&lt;br /&gt;
-&lt;br /&gt;
-exalted of another, impressive&lt;br /&gt;
-&lt;br /&gt;
-that blood, steele, most general delicacy&lt;br /&gt;
-&lt;br /&gt;
-drawn, sifted, serving,&lt;br /&gt;
-&lt;br /&gt;
-subcoracoid or mediterranean&lt;br /&gt;
-&lt;br /&gt;
-once too assumed, curious, haemorrhoidal&lt;br /&gt;
-&lt;br /&gt;
-A long part with capillaries, geld&lt;br /&gt;
-&lt;br /&gt;
-sesquioxide breath, a wise thing&lt;br /&gt;
-&lt;br /&gt;
-&#34;So improved, incessently, time&lt;br /&gt;
-&lt;br /&gt;
-larder, coextended, adducing&lt;br /&gt;
-&lt;br /&gt;
-confusion, graven sweetness&lt;br /&gt;
-&lt;br /&gt;
-good ages, one vent measure, sense year fern&lt;br /&gt;
-&lt;br /&gt;
-is graduated, or the whole, the learning&lt;br /&gt;
-&lt;br /&gt;
-shells grace abundance, dog-rose.&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Coracoid</title>
-      <link>https://localauthor.github.io/posts/coracoid.html</link>
+      <link>/posts/coracoid/</link>
       <pubDate>Fri, 22 Apr 2022 01:26:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/coracoid.html</guid>
+      <guid>/posts/coracoid/</guid>
       <description>&lt;p&gt;\Cor&amp;quot;a*coid\, a.[Gr. ?; ko`rax crow + e&amp;rsquo;i^dos form.]&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -702,76 +499,11 @@ a process of the scapula in most mammals.&lt;/p&gt;
     </item>
     
     <item>
-      <title>04-19-2022</title>
-      <link>https://localauthor.github.io/poem-machine-poems/04-19-2022.html</link>
-      <pubDate>Tue, 19 Apr 2022 00:00:00 -0400</pubDate>
-      
-      <guid>https://localauthor.github.io/poem-machine-poems/04-19-2022.html</guid>
-      <description>&lt;p class=&#34;verse&#34;&gt;
-like Vanquished, she still&lt;br /&gt;
-&lt;br /&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;smiled, hewed, and I&lt;br /&gt;
-&lt;br /&gt;
-look for, find, cannot&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-trod maid of field&lt;br /&gt;
-&lt;br /&gt;
-of her touch and find, of look&lt;br /&gt;
-&lt;br /&gt;
-sovereign upon me, all&lt;br /&gt;
-&lt;br /&gt;
-soundless amber&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-encore, beheld, all brews thine&lt;br /&gt;
-&lt;br /&gt;
-were not in upon&lt;br /&gt;
-&lt;br /&gt;
-any distant spices&lt;br /&gt;
-&lt;br /&gt;
-while north gone white&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-Industrious Repudiate, as if now had itself&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-Troubled pools&lt;br /&gt;
-&lt;br /&gt;
-intellectual agonized, of brimming nosegays&lt;br /&gt;
-&lt;br /&gt;
-flits, fate keepsakes&lt;br /&gt;
-&lt;br /&gt;
-a stream, a sea, of grave&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-a frantic little daily&lt;br /&gt;
-&lt;br /&gt;
-worshipping ajar&lt;br /&gt;
-&lt;br /&gt;
-rugged that regret, soul&#39;s reached&lt;br /&gt;
-&lt;br /&gt;
-whole not mean held secrecy&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-The bells drop,&lt;br /&gt;
-&lt;br /&gt;
-liberty we long, lustrous&lt;br /&gt;
-&lt;br /&gt;
-her air prison narrow&lt;br /&gt;
-&lt;br /&gt;
-satisfies is mine&lt;br /&gt;
-&lt;br /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
-      <link>https://localauthor.github.io/posts/aw-select.html</link>
+      <link>/posts/aw-select/</link>
       <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/aw-select.html</guid>
+      <guid>/posts/aw-select/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
 &lt;a href=&#34;https://github.com/abo-abo/ace-window&#34; target=&#34;_blank&#34;&gt;ace-window&lt;/a&gt; to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
@@ -814,12 +546,10 @@ Karthik gives to the embark/ace-window function)&lt;/li&gt;
 &lt;p&gt;Inspired by what Karthik showed was possible, I wanted to incorporate
 ace-window with link-hint, so that I could choose which window a link
 would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&#34;./ox-hugo/aw-select-demo.gif&#34;
-         alt=&#34;Figure 1: Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;/&gt; &lt;figcaption&gt;
-            &lt;p&gt;&lt;span class=&#34;figure-number&#34;&gt;Figure 1: &lt;/span&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
-        &lt;/figcaption&gt;
+&lt;figure&gt;&lt;img src=&#34;./images/aw-select-demo.gif&#34;
+    alt=&#34;Figure 1: Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;&lt;span class=&#34;figure-number&#34;&gt;Figure 1: &lt;/span&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
+    &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;If you&amp;rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
@@ -990,10 +720,10 @@ it a try and puzzle over what you had done so long without it.&lt;/p&gt;
     
     <item>
       <title>Stendhal at Hand in Vilnius</title>
-      <link>https://localauthor.github.io/posts/stendhal.html</link>
+      <link>/posts/stendhal/</link>
       <pubDate>Sun, 31 Oct 2021 11:12:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/stendhal.html</guid>
+      <guid>/posts/stendhal/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -1046,10 +776,10 @@ it a try and puzzle over what you had done so long without it.&lt;/p&gt;
     
     <item>
       <title>Drafting, Beyond MS Word</title>
-      <link>https://localauthor.github.io/posts/drafting.html</link>
+      <link>/posts/drafting/</link>
       <pubDate>Sat, 30 Oct 2021 12:56:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/drafting.html</guid>
+      <guid>/posts/drafting/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -1131,10 +861,10 @@ tends to be should take place on the image of a facsimile of a white piece paper
     
     <item>
       <title>Textual Encounters of the Worthwhile Kind</title>
-      <link>https://localauthor.github.io/posts/textual-encounters.html</link>
+      <link>/posts/textual-encounters/</link>
       <pubDate>Wed, 23 Jun 2021 22:07:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/posts/textual-encounters.html</guid>
+      <guid>/posts/textual-encounters/</guid>
       <description>&lt;p&gt;&lt;em&gt;Reading without taking notes is as good as not reading at all.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -1216,10 +946,10 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
     
     <item>
       <title>The Wise Man of Švarco</title>
-      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
+      <link>/posts/the-wise-man/</link>
       <pubDate>Fri, 12 Feb 2021 16:24:00 -0500</pubDate>
       
-      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
+      <guid>/posts/the-wise-man/</guid>
       <description>&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -1260,10 +990,10 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
     
     <item>
       <title>About</title>
-      <link>https://localauthor.github.io/about.html</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localauthor.github.io/about.html</guid>
+      <guid>/about/</guid>
       <description>&lt;p&gt;This is the &lt;a href=&#34;https://localauthor.github.io/about&#34; target=&#34;_blank&#34;&gt;about&lt;/a&gt; page. It&amp;rsquo;s where you would find out what this page is about.&lt;/p&gt;
 &lt;p&gt;The posts here are written by &lt;a href=&#34;https://grantrosson.com&#34; target=&#34;_blank&#34;&gt;me&lt;/a&gt;, about which more can be found there.&lt;/p&gt;
 &lt;p&gt;Some machine poems &lt;a href=&#34;https://localauthor.github.io/poem-machine-poems&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;

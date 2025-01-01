@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on . local author .</title>
-    <link>https://localauthor.github.io/categories.html</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 11:15:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2024 11:15:00 +0300</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs</title>
-      <link>https://localauthor.github.io/categories/emacs.html</link>
+      <link>/categories/emacs/</link>
       <pubDate>Sat, 28 Sep 2024 11:15:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/categories/emacs.html</guid>
+      <guid>/categories/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Place</title>
-      <link>https://localauthor.github.io/categories/place.html</link>
+      <link>/categories/place/</link>
       <pubDate>Tue, 15 Nov 2022 20:57:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/categories/place.html</guid>
+      <guid>/categories/place/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Literature</title>
-      <link>https://localauthor.github.io/categories/literature.html</link>
+      <link>/categories/literature/</link>
       <pubDate>Sat, 12 Nov 2022 18:31:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/categories/literature.html</guid>
+      <guid>/categories/literature/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Method</title>
-      <link>https://localauthor.github.io/categories/method.html</link>
+      <link>/categories/method/</link>
       <pubDate>Thu, 01 Sep 2022 11:00:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/categories/method.html</guid>
+      <guid>/categories/method/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Other</title>
-      <link>https://localauthor.github.io/categories/other.html</link>
+      <link>/categories/other/</link>
       <pubDate>Sun, 24 Apr 2022 23:28:00 +0300</pubDate>
       
-      <guid>https://localauthor.github.io/categories/other.html</guid>
+      <guid>/categories/other/</guid>
       <description></description>
     </item>
     

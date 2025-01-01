@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Place on . local author .</title>
-    <link>https://localauthor.github.io/categories/place.html</link>
+    <link>/categories/place/</link>
     <description>Recent content in Place on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Nov 2022 20:57:00 +0200</lastBuildDate><atom:link href="https://localauthor.github.io/categories/place/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 20:57:00 +0200</lastBuildDate><atom:link href="/categories/place/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>To Carve Something Meaningful</title>
-      <link>https://localauthor.github.io/posts/place.html</link>
+      <link>/posts/place/</link>
       <pubDate>Tue, 15 Nov 2022 20:57:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/place.html</guid>
+      <guid>/posts/place/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
@@ -43,10 +43,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Stendhal at Hand in Vilnius</title>
-      <link>https://localauthor.github.io/posts/stendhal.html</link>
+      <link>/posts/stendhal/</link>
       <pubDate>Sun, 31 Oct 2021 11:12:00 +0200</pubDate>
       
-      <guid>https://localauthor.github.io/posts/stendhal.html</guid>
+      <guid>/posts/stendhal/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -99,10 +99,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>The Wise Man of Švarco</title>
-      <link>https://localauthor.github.io/posts/the-wise-man.html</link>
+      <link>/posts/the-wise-man/</link>
       <pubDate>Fri, 12 Feb 2021 16:24:00 -0500</pubDate>
       
-      <guid>https://localauthor.github.io/posts/the-wise-man.html</guid>
+      <guid>/posts/the-wise-man/</guid>
       <description>&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
