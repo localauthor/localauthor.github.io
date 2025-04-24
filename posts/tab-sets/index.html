@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html data-color-scheme="auto">
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taming Emacs Tab Clutter with `tab-sets.el` · . local author .</title>
+
+
+
+<link rel="stylesheet" href="../../css/rocinante.css" />
+
+<link rel="shortcut icon" href=".favicon.png">
+
+<body>
+    <header><h2>
+  
+  <a href="../../">‹ . local author .</a>
+  
+</h2>
+<p class="horizontal-links"><a href="../../feed"
+     
+     
+     >RSS</a><a href="../../categories"
+     
+     
+     >Categories</a><a href="../../about"
+     
+     
+     >About</a></p>
+
+<about>
+  : notes on place, literature, history, and method :
+</about>
+
+
+
+<hr>
+<br>
+</header>
+    <main>
+
+    <div class="post">
+        <div class="title-group">
+            <div class="title">
+                <h1>Taming Emacs Tab Clutter with `tab-sets.el`</h1>
+            </div>
+            <article class="content">
+            <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<p><strong>——————————————————————————————</strong></p>
+</div>
+<p>Emacs offers a wealth of options for managing your workspace: frames, windows, tabs, workspaces, perspectives, projects&hellip; the list goes on. Here’s another tool for the pile: tab-sets.</p>
+<p>As is common, this package emerged to address a specific need. I rely heavily on `tab-bar-mode`, using tabs in Emacs frames much like browser tabs. Each tab in a frame typically holds a file essential to my current project. The trouble was, I couldn’t find a reliable way to save and restore tabs. And if one exists that I didn’t find, I don’t want to know about it now&hellip; :)</p>
+<p>My primary use-case for `tab-sets` is for teaching and writing.</p>
+<p>I often teach the same class several times a week. Before each session, I found myself repeating the process of finding and re-opening the files required for that class: lecture notes, slides (exported from Org-reveal), and related materials.</p>
+<p>For writing projects, the situation was similar. I would keep a dedicated frame with tabs for drafts and notes for quick access. Setting this up each time felt inefficient.</p>
+<p>`tab-sets.el` addresses this by allowing you to save and restore the tab configuration of your `tab-bar-mode` frame. Saved tab-sets persist across Emacs sessions.</p>
+<p>If you use `tab-bar-mode` to organize project files within frames, `tab-sets.el` might be useful. You can find it on</p>
+<h2 id="usage">Usage</h2>
+<ol>
+<li><strong><strong>Saving a tab-set:</strong></strong> With the desired frame selected, `M-x tab-sets-save`. You&rsquo;ll be prompted for a name.</li>
+<li><strong><strong>Opening a tab-set:</strong></strong> `M-x tab-sets-open`. Select the tab-set to open. By default, it opens in a new frame.  Use a prefix argument to open in the current frame.</li>
+<li><strong><strong>Deleting a tab-set:</strong></strong> `M-x tab-sets-delete`.</li>
+<li><strong><strong>Renaming a tab-set:</strong></strong> `M-x tab-sets-rename`.</li>
+</ol>
+<p>Tab-sets are also integrated with bookmarks, allowing you to use `bookmark-jump` to open them. Run `M-x tab-sets-reconcile-bookmarks` to ensure bookmarks are created for all saved tab-sets.</p>
+<p>For Embark users, `(tab-sets-setup-embark)` adds Embark actions for tab-sets.  Marginalia users can use `(tab-sets-setup-marginalia)` for annotations in completion UIs.</p>
+<h2 id="customization">Customization</h2>
+<ul>
+<li>`tab-sets-data-file`:  File to store tab-set data.  Set this before saving.</li>
+<li>`tab-sets-same-frame`:  Open tab-sets in the current frame by default (toggles with prefix argument in `tab-sets-open`).</li>
+<li>`tab-sets-confirm-delete`:  Confirm before deleting tab-sets.</li>
+<li>`tab-sets-bookmark-store`:  Enable/disable bookmark integration.</li>
+<li>`tab-sets-bookmark-prefix`: Prefix for tab-set bookmark names.</li>
+</ul>
+
+        </article>
+            
+    </article>
+
+
+    </main>
+    <footer><hr>
+
+</footer>
+  </body>
+</html>
