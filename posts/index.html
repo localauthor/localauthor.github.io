@@ -45,6 +45,44 @@
 <article class="post-list">
     <div class="title-group">
         <div class="title">
+            <h1><a href="../posts/tab-sets/">Managing Emacs Tabs with &#39;tab-sets.el&#39;</a></h1>
+        </div>
+    </div class="title-group">
+    <div class="content">
+      <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<p><strong>——————————————————————————————</strong></p>
+</div>
+<p>In Emacs, my text editor of choice, <code>tab-bar-mode</code> lets you replicate something like the experience of using tabs in a web browser. For me, this means opening a lot of tabs with notes, lists, drafts, etc., such that my tab bar becomes a visual buffet of whatever documents are pertinent to the task at hand, be it writing, teaching, coding, whatever.</p>
+<p>This works great for me, on a project by project basis. But what if I want to switch to another task or project? What is to become of the perfectly curated set of tabs I have open?</p>
+<p>The problem of tab proliferation is a <a href="https://www.hackingyouradhd.com/podcast/digital-declutter-too-many-tabs" target="_blank">distinctly</a> <a href="https://www.makeuseof.com/browser-tab-management-tips/" target="_blank">modern</a> <a href="https://media.newyorker.com/cartoons/67a22502a4fa074d5a309d39/master/w_1600,c_limit/A60992.jpg" target="_blank">one</a>. Raise your hand if the top of your web browser looks like a graveyard of articles you’ve been meaning to read since the last time your computer crashed. Many browsers have solved this issue by allowing users to save and restore groups of tabs under meaningful names, like “Research Project” or “Articles I Still Won’t Read.” But who does that? (Ok, I do&hellip;)</p>
+<p>As far as I know,™ Emacs does not offer any built-in way to save and restore a beautifully curated row of tabs. There are <a href="https://www.youtube.com/watch?v=pqrFAsO0KA4" target="_blank">many options</a> for saving and restoring <a href="https://github.com/alphapapa/activities.el" target="_blank">activities</a>, <a href="https://github.com/Bad-ptr/persp-mode.el" target="_blank">workspaces</a>, and <a href="https://github.com/protesilaos/beframe" target="_blank">frame/buffer</a> configurations. But none that do exactly what I want, namely, allow me to save and later re-open a set of tabs, one file per tab, in a specific order.</p>
+<p>So, I wrote <a href="https://github.com/localauthor/tab-sets.el" target="_blank"><code>tab-sets.el</code></a>.</p>
+<p>I find <code>tab-sets</code> most useful for teaching and writing.</p>
+<p>For example: I sometimes teach the same class several times in a week. I therefore often found myself repeating the process of finding and re-opening all the files that I wanted to reference for that class, mostly lecture notes and slides (exported with <a href="https://github.com/yjwen/org-reveal" target="_blank">org-reveal</a>). Because these files can be spread out across my file system, finding and re-opening them is rarely as simple as navigating to a dedicated directory.</p>
+<p>Now, with tab-sets.el, I can use a single command, <code>tab-sets-save</code>, to save the current frame’s tabs under a meaningful name, say, “Week 1 Class”, and safely close the frame. When it’s time to teach the same class again, I can call <code>tab-sets-open</code>, select “Week 1 Class,” and find a brand new frame displaying all the tabs exactly as they were when I saved them.</p>
+<p>The same process works for quickly returning to a writing project.</p>
+<p>A few niceties include:</p>
+<ul>
+<li>minibuffer annotations, offering a preview of each tab set</li>
+<li>optional integration with <code>bookmarks.el</code>, meaning tab sets are accessible as standard bookmarks, through <code>list-bookmarks</code></li>
+<li>optional integration with <a href="https://github.com/oantolin/embark" target="_blank"><code>embark</code></a>, meaning you can open, rename, or delete a tab set right from the minibuffer</li>
+</ul>
+<p>This package isn’t published anywhere, so install directly, however you want or know how. For example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">use-package</span> <span style="color:#000">tab-sets</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:ensure</span> <span style="color:#000">nil</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:vc</span> (<span style="color:#a90d91">:url</span> <span style="color:#c41a16">&#34;https://github.com/localauthor/tab-sets&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:custom</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#000">tab-sets-data-file</span> <span style="color:#c41a16">&#34;~/.emacs.d/var/tab-sets.eld&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:config</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#000">tab-sets-setup-embark</span>))
+</span></span></code></pre></div>
+    </div>
+</article>
+
+<article class="post-list">
+    <div class="title-group">
+        <div class="title">
             <h1><a href="../posts/ezerudugne/">Ežerų Dugne</a></h1>
         </div>
     </div class="title-group">
@@ -214,42 +252,6 @@ and the alien terrain at their depths:<br />
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">my/org-agenda</span> <span style="color:#c41a16">&#34;large-popup&#34;</span>)
 </span></span></code></pre></div><p>Just don’t forget to add a system-wide keyboard shortcut for each new command!</p>
-
-    </div>
-</article>
-
-<article class="post-list">
-    <div class="title-group">
-        <div class="title">
-            <h1><a href="../posts/place/">To Carve Something Meaningful</a></h1>
-        </div>
-    </div class="title-group">
-    <div class="content">
-      <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
-<div class="org-center">
-<p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
-</div>
-<div class="verse">
-<p>&ldquo;One of the most important functions of &lsquo;place&rsquo;<br />
-is its ability to bridge<br />
-the scholarly realm of the academic geographer<br />
-and everyday terrain of ordinary people<br />
-trying to understand the world<br />
-and make it better.<br />
-Without &lsquo;place,&rsquo; geographers risk<br />
-losing their most important audience:<br />
-those engaged in the struggle<br />
-to carve something meaningful<br />
-out of an impersonal, abstract world.&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><br /></p>
-</div>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>Steven Hoelscher, “Place,” in <i>The Wiley-Blackwell Companion to Human Geography</i>, ed. John A. Agnew and James S. Duncan (Chichester, West Sussex: Malden, MA : Wiley-Blackwell, 2011), 256–57.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
 
     </div>
 </article>
