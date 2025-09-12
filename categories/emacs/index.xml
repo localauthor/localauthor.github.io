@@ -58,7 +58,7 @@
 &lt;p&gt;Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness &amp;mdash; like &lt;code&gt;org-capture&lt;/code&gt; &amp;mdash; from outside Emacs with just one keystroke. The only requirement is that you are running in &lt;code&gt;server-mode&lt;/code&gt; or using the Emacs daemon.&lt;/p&gt;
 &lt;p&gt;Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command can be right at your fingertips. See &lt;a href=&#34;https://www.youtube.com/watch?v=vbWxT8tht9A&#34; target=&#34;_blank&#34;&gt;Prot’s video&lt;/a&gt; for a thorough demonstration.&lt;/p&gt;
 &lt;p&gt;Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups &amp;mdash; org-agenda view, mu4e inbox, and a quick translation interface.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;../../images/popup-frame-citar-demo.gif&#34;&gt;
+&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/popup-frame-citar-demo.gif&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;setting-up-emacs-popup-frames-in-macos&#34;&gt;Setting Up Emacs Popup Frames in MacOS&lt;/h2&gt;
@@ -145,7 +145,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;google-translate-query-translate&lt;/span&gt;)))))
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/translate&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;../../images/popup-frame-translate-demo.gif&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/popup-frame-translate-demo.gif&#34;&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;unread-emails-in-mu4e&#34;&gt;Unread Emails in mu4e&lt;/h3&gt;
@@ -270,7 +270,7 @@ Karthik gives to the embark/ace-window function)&lt;/li&gt;
 &lt;p&gt;Inspired by what Karthik showed was possible, I wanted to incorporate
 ace-window with link-hint, so that I could choose which window a link
 would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;../../images/aw-select-demo.gif&#34;
+&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/aw-select-demo.gif&#34;
     alt=&#34;Figure 1: Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;&gt;&lt;figcaption&gt;
       &lt;p&gt;&lt;span class=&#34;figure-number&#34;&gt;Figure 1: &lt;/span&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
     &lt;/figcaption&gt;
