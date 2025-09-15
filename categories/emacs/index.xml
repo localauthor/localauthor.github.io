@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on . local author .</title>
-    <link>/categories/emacs/</link>
+    <link>https://localauthor.github.io/categories/emacs/</link>
     <description>Recent content in Emacs on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Sep 2025 01:53:00 +0300</lastBuildDate><atom:link href="/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Sep 2025 01:53:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Managing Emacs Tabs with &#39;tab-sets.el&#39;</title>
-      <link>/posts/tab-sets/</link>
+      <link>https://localauthor.github.io/posts/tab-sets/</link>
       <pubDate>Sat, 13 Sep 2025 01:53:00 +0300</pubDate>
       
-      <guid>/posts/tab-sets/</guid>
+      <guid>https://localauthor.github.io/posts/tab-sets/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>Emacs Popup Frames Anywere — MacOS Edition</title>
-      <link>/posts/popup-frames/</link>
+      <link>https://localauthor.github.io/posts/popup-frames/</link>
       <pubDate>Sat, 28 Sep 2024 11:15:00 +0300</pubDate>
       
-      <guid>/posts/popup-frames/</guid>
+      <guid>https://localauthor.github.io/posts/popup-frames/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -175,10 +175,10 @@
     
     <item>
       <title>Emacs: Quickly find and insert links in zk notes, with Embark</title>
-      <link>/posts/zk-links/</link>
+      <link>https://localauthor.github.io/posts/zk-links/</link>
       <pubDate>Thu, 21 Jul 2022 14:12:00 +0300</pubDate>
       
-      <guid>/posts/zk-links/</guid>
+      <guid>https://localauthor.github.io/posts/zk-links/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post continues a series of video demos in which I show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis is on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -193,10 +193,10 @@
     
     <item>
       <title>Emacs: Getting started with zk, using hydra and an inbox note</title>
-      <link>/posts/zk-hydra/</link>
+      <link>https://localauthor.github.io/posts/zk-hydra/</link>
       <pubDate>Tue, 19 Jul 2022 00:31:00 -0400</pubDate>
       
-      <guid>/posts/zk-hydra/</guid>
+      <guid>https://localauthor.github.io/posts/zk-hydra/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post inaugurates a series of video demos in which I will show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis will be on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -224,10 +224,10 @@
     
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
-      <link>/posts/aw-select/</link>
+      <link>https://localauthor.github.io/posts/aw-select/</link>
       <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
       
-      <guid>/posts/aw-select/</guid>
+      <guid>https://localauthor.github.io/posts/aw-select/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
 &lt;a href=&#34;https://github.com/abo-abo/ace-window&#34; target=&#34;_blank&#34;&gt;ace-window&lt;/a&gt; to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;

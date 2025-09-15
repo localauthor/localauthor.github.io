@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on . local author .</title>
-    <link>/posts/</link>
+    <link>https://localauthor.github.io/posts/</link>
     <description>Recent content in Posts on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Sep 2025 01:53:00 +0300</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Sep 2025 01:53:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Managing Emacs Tabs with &#39;tab-sets.el&#39;</title>
-      <link>/posts/tab-sets/</link>
+      <link>https://localauthor.github.io/posts/tab-sets/</link>
       <pubDate>Sat, 13 Sep 2025 01:53:00 +0300</pubDate>
       
-      <guid>/posts/tab-sets/</guid>
+      <guid>https://localauthor.github.io/posts/tab-sets/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>Ežerų Dugne</title>
-      <link>/posts/ezerudugne/</link>
+      <link>https://localauthor.github.io/posts/ezerudugne/</link>
       <pubDate>Sat, 22 Feb 2025 17:46:00 +0200</pubDate>
       
-      <guid>/posts/ezerudugne/</guid>
+      <guid>https://localauthor.github.io/posts/ezerudugne/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
@@ -87,10 +87,10 @@ and the alien terrain at their depths:&lt;br /&gt;
     
     <item>
       <title>Emacs Popup Frames Anywere — MacOS Edition</title>
-      <link>/posts/popup-frames/</link>
+      <link>https://localauthor.github.io/posts/popup-frames/</link>
       <pubDate>Sat, 28 Sep 2024 11:15:00 +0300</pubDate>
       
-      <guid>/posts/popup-frames/</guid>
+      <guid>https://localauthor.github.io/posts/popup-frames/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -217,10 +217,10 @@ and the alien terrain at their depths:&lt;br /&gt;
     
     <item>
       <title>To Carve Something Meaningful</title>
-      <link>/posts/place/</link>
+      <link>https://localauthor.github.io/posts/place/</link>
       <pubDate>Tue, 15 Nov 2022 20:57:00 +0200</pubDate>
       
-      <guid>/posts/place/</guid>
+      <guid>https://localauthor.github.io/posts/place/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
@@ -252,10 +252,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     <item>
       <title>  &#34;What should I read next?&#34;
   </title>
-      <link>/posts/recs/</link>
+      <link>https://localauthor.github.io/posts/recs/</link>
       <pubDate>Sat, 12 Nov 2022 18:31:00 +0200</pubDate>
       
-      <guid>/posts/recs/</guid>
+      <guid>https://localauthor.github.io/posts/recs/</guid>
       <description>&lt;p&gt;&lt;em&gt;Read one of these. (And then read the others.)&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -283,10 +283,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Notetaking: What are you after?</title>
-      <link>/posts/notetaking/</link>
+      <link>https://localauthor.github.io/posts/notetaking/</link>
       <pubDate>Thu, 01 Sep 2022 11:00:00 +0300</pubDate>
       
-      <guid>/posts/notetaking/</guid>
+      <guid>https://localauthor.github.io/posts/notetaking/</guid>
       <description>&lt;p&gt;&lt;em&gt;Why do you want to take notes in the first place?&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -335,10 +335,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Emacs: Quickly find and insert links in zk notes, with Embark</title>
-      <link>/posts/zk-links/</link>
+      <link>https://localauthor.github.io/posts/zk-links/</link>
       <pubDate>Thu, 21 Jul 2022 14:12:00 +0300</pubDate>
       
-      <guid>/posts/zk-links/</guid>
+      <guid>https://localauthor.github.io/posts/zk-links/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post continues a series of video demos in which I show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis is on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -353,10 +353,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Emacs: Getting started with zk, using hydra and an inbox note</title>
-      <link>/posts/zk-hydra/</link>
+      <link>https://localauthor.github.io/posts/zk-hydra/</link>
       <pubDate>Tue, 19 Jul 2022 00:31:00 -0400</pubDate>
       
-      <guid>/posts/zk-hydra/</guid>
+      <guid>https://localauthor.github.io/posts/zk-hydra/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post inaugurates a series of video demos in which I will show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis will be on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -384,10 +384,10 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
     
     <item>
       <title>Chthonophagia</title>
-      <link>/posts/chthonophagia/</link>
+      <link>https://localauthor.github.io/posts/chthonophagia/</link>
       <pubDate>Sun, 24 Apr 2022 23:28:00 +0300</pubDate>
       
-      <guid>/posts/chthonophagia/</guid>
+      <guid>https://localauthor.github.io/posts/chthonophagia/</guid>
       <description>&lt;p&gt;\Chthon`o*pha&amp;quot;gi*a\, Chthonophagy
 \Chtho*noph&amp;quot;a*gy\, n. [NL. chthonophagia; Gr. ?, ?, earth + ? to
 eat.]&lt;/p&gt;
@@ -400,10 +400,10 @@ the West Indies, etc.&lt;/p&gt;
     
     <item>
       <title>Citekeys: For Better Research / Life</title>
-      <link>/posts/citekeys/</link>
+      <link>https://localauthor.github.io/posts/citekeys/</link>
       <pubDate>Sun, 24 Apr 2022 23:19:00 +0300</pubDate>
       
-      <guid>/posts/citekeys/</guid>
+      <guid>https://localauthor.github.io/posts/citekeys/</guid>
       <description>&lt;p&gt;&lt;em&gt;Use &lt;strong&gt;citekeys&lt;/strong&gt; to consistently and uniformly correlate in-text references
 with original source materials, not just in final submissions but &lt;strong&gt;also in
 notes and drafts&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -556,10 +556,10 @@ guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
     
     <item>
       <title>Coracoid</title>
-      <link>/posts/coracoid/</link>
+      <link>https://localauthor.github.io/posts/coracoid/</link>
       <pubDate>Fri, 22 Apr 2022 01:26:00 +0300</pubDate>
       
-      <guid>/posts/coracoid/</guid>
+      <guid>https://localauthor.github.io/posts/coracoid/</guid>
       <description>&lt;p&gt;\Cor&amp;quot;a*coid\, a.[Gr. ?; ko`rax crow + e&amp;rsquo;i^dos form.]&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -577,10 +577,10 @@ a process of the scapula in most mammals.&lt;/p&gt;
     
     <item>
       <title>Emacs: With ace-window and link-hint, open links exactly where you want them</title>
-      <link>/posts/aw-select/</link>
+      <link>https://localauthor.github.io/posts/aw-select/</link>
       <pubDate>Thu, 14 Apr 2022 12:28:00 +0300</pubDate>
       
-      <guid>/posts/aw-select/</guid>
+      <guid>https://localauthor.github.io/posts/aw-select/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
 &lt;a href=&#34;https://github.com/abo-abo/ace-window&#34; target=&#34;_blank&#34;&gt;ace-window&lt;/a&gt; to allow you to select, on-the-fly, which window a link will open in&amp;mdash;instead of letting fate, or custom, or Emacs decide for you.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
@@ -797,10 +797,10 @@ it a try and puzzle over what you had done so long without it.&lt;/p&gt;
     
     <item>
       <title>Stendhal at Hand in Vilnius</title>
-      <link>/posts/stendhal/</link>
+      <link>https://localauthor.github.io/posts/stendhal/</link>
       <pubDate>Sun, 31 Oct 2021 11:12:00 +0200</pubDate>
       
-      <guid>/posts/stendhal/</guid>
+      <guid>https://localauthor.github.io/posts/stendhal/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -851,10 +851,10 @@ it a try and puzzle over what you had done so long without it.&lt;/p&gt;
     
     <item>
       <title>Drafting, Beyond MS Word</title>
-      <link>/posts/drafting/</link>
+      <link>https://localauthor.github.io/posts/drafting/</link>
       <pubDate>Sat, 30 Oct 2021 12:56:00 +0300</pubDate>
       
-      <guid>/posts/drafting/</guid>
+      <guid>https://localauthor.github.io/posts/drafting/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -936,10 +936,10 @@ tends to be should take place on the image of a facsimile of a white piece paper
     
     <item>
       <title>Textual Encounters of the Worthwhile Kind</title>
-      <link>/posts/textual-encounters/</link>
+      <link>https://localauthor.github.io/posts/textual-encounters/</link>
       <pubDate>Wed, 23 Jun 2021 22:07:00 +0300</pubDate>
       
-      <guid>/posts/textual-encounters/</guid>
+      <guid>https://localauthor.github.io/posts/textual-encounters/</guid>
       <description>&lt;p&gt;&lt;em&gt;Reading without taking notes is as good as not reading at all.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -1020,10 +1020,10 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
     
     <item>
       <title>The Wise Man of Švarco</title>
-      <link>/posts/the-wise-man/</link>
+      <link>https://localauthor.github.io/posts/the-wise-man/</link>
       <pubDate>Fri, 12 Feb 2021 16:24:00 -0500</pubDate>
       
-      <guid>/posts/the-wise-man/</guid>
+      <guid>https://localauthor.github.io/posts/the-wise-man/</guid>
       <description>&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
@@ -1064,10 +1064,10 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
     
     <item>
       <title>Emacs</title>
-      <link>/posts/localauthor/</link>
+      <link>https://localauthor.github.io/posts/localauthor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/localauthor/</guid>
+      <guid>https://localauthor.github.io/posts/localauthor/</guid>
       <description>&lt;h2 id=&#34;zk-video-scripts&#34;&gt;ZK Video Scripts&lt;/h2&gt;
 &lt;h3 id=&#34;getting-started-hydra-and-inbox&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Getting Started - Hydra and Inbox&lt;/h3&gt;
 &lt;ul&gt;
