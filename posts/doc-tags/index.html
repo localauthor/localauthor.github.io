@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html data-color-scheme="light">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Document Tagging with &#39;doc-tags.el&#39; · . local author .</title>
+
+
+
+<link rel="stylesheet" href="https://localauthor.github.io/css/rocinante.css" />
+
+<link rel="shortcut icon" href=".favicon.png">
+
+<body>
+    <header><h2>
+  
+  <a href="/">‹ . local author .</a>
+  
+</h2>
+<p class="horizontal-links"><a href="/index.xml"
+     
+     
+     >RSS</a><a href="/categories"
+     
+     
+     >Categories</a><a href="/about"
+     
+     
+     >About</a></p>
+
+<about>
+  : notes on place, literature, history, and method :
+</about>
+
+
+
+<hr>
+<br>
+</header>
+    <main>
+
+    <div class="post">
+        <div class="title-group">
+            <div class="title">
+                <h1>Simple Document Tagging with &#39;doc-tags.el&#39;</h1>
+            </div>
+            <article class="content">
+            <p><em>When I posted last week about tab-sets.el, I didn’t know that this month’s <a href="https://www.emacswiki.org/emacs/Carnival#h5o-5" target="_blank">Emacs Carnival</a> topic is <a href="https://goritskov.com/posts/obscure_packages.html" target="_blank">“Obscure Packages.”</a> Well, it’s hard to be more obscure than an unpublished package that I use for my own idiosyncratic ends. So, here’s another!</em></p>
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+<div class="org-center">
+<p><strong>——————————————————————————————</strong></p>
+</div>
+<p>Introducing <a href="https://github.com/localauthor/doc-tags" target="_blank"><code>doc-tags.el</code></a>: a simple, low-overhead Emacs package for tagging and retrieving files using a SQLite backend.</p>
+<p><code>doc-tags</code> is a straightforward package that lets you:</p>
+<ul>
+<li>Tag any file or directory on your computer, with one or more tags</li>
+<li>Quickly find and open files by tag, using “AND” (all tags) or “OR” (any tag) search</li>
+<li>Update, rename, or remove tags interactively</li>
+<li>Keep your tagged-doc database in a single regular file</li>
+</ul>
+<p>You add only what matters to you: notes, readings, drafts, reference folders, syllabi, whatever. Tags are just Emacs strings — no renaming or relocating files, no global search, no magic.</p>
+<h2 id="nota-bene">Nota Bene</h2>
+<p>In general, I am skeptical about the long-term use value of tags. I find them flimsy. I much prefer organizing files in directories, and relying on searching to find what I’m looking for.</p>
+<p>With that in mind, <code>doc-tags</code> is not — <em>and is not meant to be</em> — a replacement for file management writ large. I use <a href="https://devontechnologies.com" target="_blank">devonthink</a> for that. It is a huge directory structure of PDFs and lecture notes, organized within the devonthink program in all sort of useful ways, for long-term storage and findability, but otherwise — for all intents and purposes — a jumble of files in a maze of directories.</p>
+<p>The major downside of devonthink, for me, is that its database structure is not accessible from inside Emacs. (Yet?) Sure, I can use a recursive search to plumb the depths of my devonthink database for what I think I need, but that’s a somewhat crude approach.</p>
+<p>So, I wrote <code>doc-tags</code> as a middle-ground, ad-hoc solution, allowing me to assign tags to files in disparate locations across my file system, wherever they may be, even deep within my devonthink database.</p>
+<p>Because of my deep skepticism of tags, I mostly use <code>doc-tags</code> when working on fleeting tasks, like preparing for a class or working on short-term writing projects. When the task is finished, I just delete the tags I no longer need and move on without remorse. No need to create a new directory, copy or symlink files. Just quick and dirty tagging, for the moment.</p>
+<h2 id="how-to-set-it-up">How to set it up</h2>
+<p><code>doc-tags.el</code> isn’t up on M/ELPA, so install directly from GitHub:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">use-package</span> <span style="color:#000">doc-tags</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:ensure</span> <span style="color:#000">nil</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:vc</span> (<span style="color:#a90d91">:url</span> <span style="color:#c41a16">&#34;https://github.com/localauthor/doc-tags&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:custom</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#000">doc-tags-db-file</span> <span style="color:#c41a16">&#34;~/.emacs.d/var/doc-tags.sqlite&#34;</span>) <span style="color:#177500">;; pick your database location</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:config</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#000">doc-tags-connect</span>) <span style="color:#177500">;; opens/creates the database and initializes the schema</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><p>You’ll also need <a href="https://github.com/ahyatt/triples" target="_blank"><code>triples</code></a> (which manages the SQLite database and backups) and <code>sqlite3</code> available to Emacs.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ul>
+<li>To add a document: <code>M-x doc-tags-add-doc</code> (prompts for a file, then for one or more tags)</li>
+<li>To search by tag: <code>M-x doc-tags-find-file</code> (AND logic by default; use C-u for OR search)</li>
+<li>To add/remove tags: <code>M-x doc-tags-add-tag</code> / <code>M-x doc-tags-remove-tag</code>
+To edit/rename tags: <code>M-x doc-tags-edit-tag</code></li>
+<li>To remove a document: <code>M-x doc-tags-remove-doc</code></li>
+</ul>
+<p>Most commands offer smart completion (minibuffer with tag annotations, document previews); if you use <a href="https://github.com/oantolin/embark" target="_blank"><code>embark</code></a>, doc-tags offers a keymap for quick actions on tags and docs.</p>
+
+        </article>
+            
+    </article>
+
+
+    </main>
+    <footer><hr>
+
+</footer>
+  </body>
+</html>

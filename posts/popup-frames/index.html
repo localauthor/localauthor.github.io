@@ -48,18 +48,18 @@
             <p><em>This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.</em></p>
 <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
 <div class="org-center">
-<p><strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</strong></p>
+<p><strong>——————————————————————————————</strong></p>
 </div>
 <p>As much as I would like to live in <a href="https://www.gnu.org/software/emacs/" target="_blank">Emacs</a> full time, I’m not quite there. But a <a href="https://protesilaos.com/codelog/2024-09-19-emacs-command-popup-frame-emacsclient/" target="_blank">recent post</a> by <a href="https://protesilaos.com" target="_blank">Protesilaos Stavrou</a> (aka Prot) is helping me bridge the gap.</p>
-<p>Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness &mdash; like <code>org-capture</code> &mdash; from outside Emacs with just one keystroke. The only requirement is that you are running in <code>server-mode</code> or using the Emacs daemon.</p>
+<p>Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness — like <code>org-capture</code> — from outside Emacs with just one keystroke. The only requirement is that you are running in <code>server-mode</code> or using the Emacs daemon.</p>
 <p>Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command can be right at your fingertips. See <a href="https://www.youtube.com/watch?v=vbWxT8tht9A" target="_blank">Prot’s video</a> for a thorough demonstration.</p>
-<p>Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups &mdash; org-agenda view, mu4e inbox, and a quick translation interface.</p>
+<p>Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups — org-agenda view, mu4e inbox, and a quick translation interface.</p>
 <figure><img src="/images/popup-frame-citar-demo.gif">
 </figure>
 
 <h2 id="setting-up-emacs-popup-frames-in-macos">Setting Up Emacs Popup Frames in MacOS</h2>
 <p>Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a <code>window-system</code> frame parameter to the popup frame. (See code below).</p>
-<p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric &mdash; in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
+<p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric — in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
 <p>Here’s the main code:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">popup-frame-delete</span> (<span style="color:#a90d91">&amp;rest</span> <span style="color:#000">_</span>)
 </span></span><span style="display:flex;"><span>  <span style="color:#c41a16">&#34;Kill selected frame if it has parameter </span><span style="color:#c41a16">`popup-frame&#39;</span><span style="color:#c41a16">.&#34;</span>
@@ -101,30 +101,30 @@
 </span></span><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">citar-open-files</span> <span style="color:#c41a16">&#34;minimal-popup&#34;</span> <span style="color:#c41a16">&#39;delete-frame</span>)
 </span></span></code></pre></div><h2 id="triggering-popups-with-keyboard-shortcuts">Triggering Popups with Keyboard Shortcuts</h2>
 <p>To quickly bring up these popup frames with keyboard shortcuts, I use <a href="https://github.com/koekeishiya/skhd" target="_blank">skhd</a>, a hotkey daemon for macOS. The following configuration goes in the skhd config file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#000">||</span> yabai -m window --focus recent
-</span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#000">||</span> yabai -m window --focus recent
-</span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#000">||</span> yabai -m window --focus recent
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
+</span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
 </span></span></code></pre></div><h2 id="managing-windows-with-yabai">Managing Windows with yabai</h2>
 <p>Finally, I have configured my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>, to give the popup frames the desired size and placement.</p>
 <p>First, the following goes in the yabai config file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal --add <span style="color:#000">event</span><span style="color:#000">=</span>window_created <span style="color:#000">app</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;Emacs&#34;</span> <span style="color:#000">action</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal –add <span style="color:#000">event</span><span style="color:#000">=</span>window_created <span style="color:#000">app</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;Emacs&#34;</span> <span style="color:#000">action</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
 </span></span></code></pre></div><p>This will run a bash script (located at ~/.yabai-emacs-window-handler.sh) every time a new Emacs frame is created. The script tells yabai how to move and resize the new frame, depending on the frame’s title. Here is that script:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#633820">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#633820"></span>
-</span></span><span style="display:flex;"><span><span style="color:#000">data</span><span style="color:#000">=</span><span style="color:#a90d91">$(</span>yabai -m query --windows --window <span style="color:#000">$YABAI_WINDOW_ID</span><span style="color:#a90d91">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">data</span><span style="color:#000">=</span><span style="color:#a90d91">$(</span>yabai -m query –windows –window <span style="color:#000">$YABAI_WINDOW_ID</span><span style="color:#a90d91">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000">title</span><span style="color:#000">=</span><span style="color:#a90d91">$(</span><span style="color:#a90d91">echo</span> <span style="color:#000">$data</span> | jq .title<span style="color:#a90d91">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">display</span><span style="color:#000">=</span><span style="color:#a90d91">$(</span><span style="color:#a90d91">echo</span> <span style="color:#000">$data</span> | jq .display<span style="color:#a90d91">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a90d91">if</span> <span style="color:#000">[[</span> <span style="color:#000">$title</span> <span style="color:#000">=</span>~ <span style="color:#c41a16">&#34;capture-popup&#34;</span> <span style="color:#000">&amp;&amp;</span> <span style="color:#000">$display</span> <span style="color:#000">==</span> <span style="color:#1c01ce">1</span> <span style="color:#000">]]</span>; <span style="color:#a90d91">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --resize abs:655:300
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –toggle float –move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –resize abs:655:300
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –focus
 </span></span><span style="display:flex;"><span><span style="color:#a90d91">elif</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">[[</span> <span style="color:#000">$title</span> <span style="color:#000">=</span>~ <span style="color:#c41a16">&#34;minimal-popup&#34;</span> <span style="color:#000">&amp;&amp;</span> <span style="color:#000">$display</span> <span style="color:#000">==</span> <span style="color:#1c01ce">1</span> <span style="color:#000">]]</span>; <span style="color:#a90d91">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --toggle float --move abs:430:230
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --resize abs:655:200
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –toggle float –move abs:430:230
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –resize abs:655:200
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –focus
 </span></span><span style="display:flex;"><span><span style="color:#a90d91">else</span>
 </span></span><span style="display:flex;"><span><span style="color:#a90d91">false</span>
 </span></span><span style="display:flex;"><span><span style="color:#a90d91">fi</span>
@@ -155,9 +155,9 @@
 </span></span></code></pre></div><p>For this, I add another “elif” to the bash script, to ensure I can see the whole inbox in the popup:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a90d91">elif</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">[[</span> <span style="color:#000">$title</span> <span style="color:#000">=</span>~ <span style="color:#c41a16">&#34;large-popup&#34;</span> <span style="color:#000">&amp;&amp;</span> <span style="color:#000">$display</span> <span style="color:#000">==</span> <span style="color:#1c01ce">1</span> <span style="color:#000">]]</span>; <span style="color:#a90d91">then</span>
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --toggle float --move abs:350:130
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --resize abs:730:600
-</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> --focus
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –toggle float –move abs:350:130
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –resize abs:730:600
+</span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –focus
 </span></span></code></pre></div><h3 id="custom-org-agenda-view">Custom Org-Agenda View</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/org-agenda</span> (<span style="color:#a90d91">&amp;optional</span> <span style="color:#000">p</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">interactive</span> <span style="color:#c41a16">&#34;P&#34;</span>)
