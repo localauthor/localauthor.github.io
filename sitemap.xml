@@ -3,15 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://localauthor.github.io/</loc>
-    <lastmod>2025-09-18T12:17:00+03:00</lastmod>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/posts/fog-smoke/</loc>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/categories/</loc>
-    <lastmod>2025-09-18T12:17:00+03:00</lastmod>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
   </url><url>
-    <loc>https://localauthor.github.io/categories/emacs/</loc>
-    <lastmod>2025-09-18T12:17:00+03:00</lastmod>
+    <loc>https://localauthor.github.io/tags/photo/</loc>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/categories/place/</loc>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/posts/</loc>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/tags/</loc>
+    <lastmod>2025-10-03T10:04:00+03:00</lastmod>
+  </url><url>
+    <loc>https://localauthor.github.io/categories/emacs/</loc>
     <lastmod>2025-09-18T12:17:00+03:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/posts/doc-tags/</loc>
@@ -21,9 +33,6 @@
     <lastmod>2025-09-13T01:54:00+03:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/posts/ezerudugne/</loc>
-    <lastmod>2025-02-22T17:46:00+02:00</lastmod>
-  </url><url>
-    <loc>https://localauthor.github.io/categories/place/</loc>
     <lastmod>2025-02-22T17:46:00+02:00</lastmod>
   </url><url>
     <loc>https://localauthor.github.io/posts/popup-frames/</loc>
@@ -80,7 +89,5 @@
     <loc>https://localauthor.github.io/about/</loc>
   </url><url>
     <loc>https://localauthor.github.io/posts/localauthor/</loc>
-  </url><url>
-    <loc>https://localauthor.github.io/tags/</loc>
   </url>
 </urlset>

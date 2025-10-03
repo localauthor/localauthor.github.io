@@ -6,7 +6,24 @@
     <description>Recent content in Posts on . local author .</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Sep 2025 12:17:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Oct 2025 10:04:00 +0300</lastBuildDate><atom:link href="https://localauthor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>####</title>
+      <link>https://localauthor.github.io/posts/fog-smoke/</link>
+      <pubDate>Fri, 03 Oct 2025 10:04:00 +0300</pubDate>
+      
+      <guid>https://localauthor.github.io/posts/fog-smoke/</guid>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/fog-smoke.jpg&#34;&gt;
+&lt;/figure&gt;
+
+&lt;div class=&#34;literal&#34;&gt;
+&lt;div align=&#34;left&#34;&gt;
+&lt;p&gt;2025-09-26&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
     <item>
       <title>Simple Document Tagging with &#39;doc-tags.el&#39;</title>
       <link>https://localauthor.github.io/posts/doc-tags/</link>
@@ -272,7 +289,7 @@ and the alien terrain at their depths:&lt;br /&gt;
       <guid>https://localauthor.github.io/posts/place/</guid>
       <description>&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;verse&#34;&gt;
 &lt;p&gt;&amp;ldquo;One of the most important functions of &amp;lsquo;place&amp;rsquo;&lt;br /&gt;
@@ -1112,722 +1129,141 @@ But that one anecdote on such-and-such a page? The footnote with all the citatio
     </item>
     
     <item>
-      <title>Emacs</title>
+      <title>Place</title>
       <link>https://localauthor.github.io/posts/localauthor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://localauthor.github.io/posts/localauthor/</guid>
-      <description>&lt;h2 id=&#34;zk-video-scripts&#34;&gt;ZK Video Scripts&lt;/h2&gt;
-&lt;h3 id=&#34;getting-started-hydra-and-inbox&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Getting Started - Hydra and Inbox&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hydra
-&lt;ul&gt;
-&lt;li&gt;entry point, bound to &amp;ldquo;C-z&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;entry notes
-&lt;ul&gt;
-&lt;li&gt;inbox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;functions
-&lt;ul&gt;
-&lt;li&gt;go-to functions&lt;/li&gt;
-&lt;li&gt;note count&lt;/li&gt;
-&lt;li&gt;nested hydra for ebib&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;create new note&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;quickly-find-and-insert-links-with-embark&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Quickly Find and Insert Links, with Embark&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;find-file&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;when I am reading through a note and I have a sense that there is something worth linking to, I want to find that target note without a whole lot fuss
-&lt;ul&gt;
-&lt;li&gt;without breaking too far out of the task at hand&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;here I&amp;rsquo;m reading a note and see some business about volcanoes
-&lt;ul&gt;
-&lt;li&gt;and I know I&amp;rsquo;ve got some notes somewhere that deal with volcanoes, but I can&amp;rsquo;t exactly remember where or what they&amp;rsquo;re called so&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;the first thing i reach for zk-find-file, a pretty general tool
-&lt;ul&gt;
-&lt;li&gt;searches by titles&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;volcano&amp;rdquo;, leads to notes I don&amp;rsquo;t really want&lt;/li&gt;
-&lt;li&gt;so, i use:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;find-file-by-full-text-search&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;shows notes that have the search string in the body of the note&lt;/li&gt;
-&lt;li&gt;and here are a bunch of notes – and maybe I know by the title that this one is what I want to add&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;you might be thinking, find-file is how you open a note&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;but you said you want to add a link to a note&lt;/li&gt;
-&lt;li&gt;so what are you going to do now?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;well – I could remember the title of the note I want, then call zk-insert-link&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;but that&amp;rsquo;s some extract business that I don&amp;rsquo;t want to deal with, especially when I&amp;rsquo;ve already found the note with one function — I don&amp;rsquo;t want to have to find it &lt;em&gt;again&lt;/em&gt; with another function&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;this is where Embark comes in
-&lt;ul&gt;
-&lt;li&gt;if you&amp;rsquo;re not familiar with embark:
-&lt;ul&gt;
-&lt;li&gt;it&amp;rsquo;s a package that allows you to perform alternative actions on the item at point, even within the context of another action
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/oantolin/embark&#34; target=&#34;_blank&#34;&gt;https://github.com/oantolin/embark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://karthinks.com/software/fifteen-ways-to-use-embark/&#34; target=&#34;_blank&#34;&gt;https://karthinks.com/software/fifteen-ways-to-use-embark/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;so in the middle of find file, if I want to do something different to a file, embark has a whole list of actions that you can do on files that it makes accessible through the command &amp;rsquo;embark-act&#39;&lt;/li&gt;
-&lt;li&gt;it offers a sort of submenu of commands&lt;/li&gt;
-&lt;li&gt;zk adds its own commands to this submenu&lt;/li&gt;
-&lt;li&gt;embark is sort of like a right click feature&lt;/li&gt;
-&lt;li&gt;in the context of a file, zk allows you to insert a link or copy a link&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;in this case, I want to insert a link
-&lt;ul&gt;
-&lt;li&gt;so I do embark-act (C-,) and then here are the list of possible actions
-&lt;ul&gt;
-&lt;li&gt;the quick key for insert is i&lt;/li&gt;
-&lt;li&gt;so I can just do embark-act i, and there it goes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;do Volney
-&lt;ul&gt;
-&lt;li&gt;find file shows one i want to insert&lt;/li&gt;
-&lt;li&gt;be more thorough, look for more files
-&lt;ul&gt;
-&lt;li&gt;here&amp;rsquo;s one: but the point isn&amp;rsquo;t where I want&lt;/li&gt;
-&lt;li&gt;so instead of doing embark act i, I do embark-act k, which copies the link and title&lt;/li&gt;
-&lt;li&gt;and I can yank it into the buffer where I want it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;so that&amp;rsquo;s it&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;quick, on the fly finding and insert links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;I&amp;rsquo;ll show more with embark in a separate video, because there is much more&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;but next time we&amp;rsquo;ll look at even richer searching capabilities, using grep, consult, and zk-index&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;zk-search&#34;&gt;zk-search&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;{2,1,d,2} 202202200949&lt;/li&gt;
-&lt;li&gt;in the last video showed how I use find-file to quickly find and insert links&lt;/li&gt;
-&lt;li&gt;this one shows how I do more in-depth searching, using zk-search and related functions and then also the package zk-index
-&lt;ul&gt;
-&lt;li&gt;if you are using zk and not zk-index, then you&amp;rsquo;re missing out on an interface that is key to my own work, which makes me happy, because it justifies the work I put into making it&lt;/li&gt;
-&lt;li&gt;so I&amp;rsquo;ll showcase how it&amp;rsquo;s useful to me, specifically in the context of searching&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;So I showed zk-find-file-by-full-title, which is a function I use most often when I&amp;rsquo;m in the middle of something and I just want to see &lt;em&gt;IF&lt;/em&gt; I have notes containing a specific word or phrase; I just want to know, does my archive contain notes that mention this thing, whatever it is
-&lt;ul&gt;
-&lt;li&gt;periphery&lt;/li&gt;
-&lt;li&gt;peripher[y|ie|al]&lt;/li&gt;
-&lt;li&gt;If I have a lot, the minibuffer isn&amp;rsquo;t a great place to browse through those results&lt;/li&gt;
-&lt;li&gt;so we&amp;rsquo;re in business; but I want to see what those notes contain, to see if they&amp;rsquo;re relevant&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;so, first thing is zk-search
-&lt;ul&gt;
-&lt;li&gt;which is an interactive command that calls whatever function the variable zk-search-function is set to&lt;/li&gt;
-&lt;li&gt;zk-grep
-&lt;ul&gt;
-&lt;li&gt;by default that is the function zk-grep, which is a wrapper around rgrep, that searches for a regular expression in your zk-directory, and shows the results in a grep buffer&lt;/li&gt;
-&lt;li&gt;since I&amp;rsquo;ve already searched for what we want in zk-find-file-by-full-title we can use M-p to go back in the history, since all the search functions use the same history variable, zk-search-history&lt;/li&gt;
-&lt;li&gt;so if you haven&amp;rsquo;t changed the default setting, and call zk-search
-&lt;ul&gt;
-&lt;li&gt;but you can also call zk-grep as a command&lt;/li&gt;
-&lt;li&gt;and I&amp;rsquo;ll show why this is useful in a bit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;show wgrep — for misspellings for example; or a tag that you want to change uniformly across all notes; or a citekey&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;zk-consult-grep
-&lt;ul&gt;
-&lt;li&gt;if you use Consult, you can load the package zk-consult and set the zk-search-function to zk-consult-grep
-&lt;ul&gt;
-&lt;li&gt;then you get a nice interface to grep results&lt;/li&gt;
-&lt;li&gt;if you use embark, you can emb[ark-export to a normal grep buffer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;two different ways to get the same place, depending on your preferences&lt;/li&gt;
-&lt;li&gt;zk-consult-grep can also be used as a command, so you can just call it directly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I use both - sometimes I know I want a grep buffer, something that will stick around, that I can browse through, so I just go straight for zk-grep&lt;/li&gt;
-&lt;li&gt;sometimes I want to get where I&amp;rsquo;m going, and call zk-consult-grep for the quick minibuffer access&lt;/li&gt;
-&lt;li&gt;I have both easily accessible in my hydra
-&lt;ul&gt;
-&lt;li&gt;be aware: consult-grep has it&amp;rsquo;s own history&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;the idea behind zk is to provide low level functions that stay out of your way, that can be built on to facilitate what works for you&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;zk-xref&lt;/li&gt;
-&lt;li&gt;with that in mind, if you want to use a different search facility, other than grep, you can
-&lt;ul&gt;
-&lt;li&gt;for example, built in xref&lt;/li&gt;
-&lt;li&gt;zk-xref command is in zk-extras&lt;/li&gt;
-&lt;li&gt;since zk-search-function can be set to any function that takes a string, you can set it to zk-xref and off you go&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;tags work the same way
-&lt;ul&gt;
-&lt;li&gt;the interface prompts you with all the tags in your files
-&lt;ul&gt;
-&lt;li&gt;zk-tag-search-function&lt;/li&gt;
-&lt;li&gt;zk-tag-search&lt;/li&gt;
-&lt;li&gt;zk-consult-grep-tag-search&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ZK-Index
-&lt;ul&gt;
-&lt;li&gt;one limitation of grep is that there is no boolean AND operator&lt;/li&gt;
-&lt;li&gt;search&lt;/li&gt;
-&lt;li&gt;sort - with large results (nature)
-&lt;ul&gt;
-&lt;li&gt;size&lt;/li&gt;
-&lt;li&gt;modified&lt;/li&gt;
-&lt;li&gt;created&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;I&amp;rsquo;ll do a separate video on ZK-Index and its companion, ZK-Desktop&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;zk-index-and-zk-desktop&#34;&gt;ZK-Index and ZK-Desktop&lt;/h3&gt;
-&lt;h4 id=&#34;zk-index&#34;&gt;ZK-Index&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;searching
-&lt;ul&gt;
-&lt;li&gt;zk-index-search&lt;/li&gt;
-&lt;li&gt;zk-index-focus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;zk and embark export to new index&lt;/li&gt;
-&lt;li&gt;link-hint
-&lt;ul&gt;
-&lt;li&gt;link-hint-aw-select&lt;/li&gt;
-&lt;li&gt;link-hint-preview&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;popper&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;zk-desktop&#34;&gt;ZK-Desktop&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;send to desktop&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;from in buffer&lt;/li&gt;
-&lt;li&gt;from minibuffer&lt;/li&gt;
-&lt;li&gt;from index&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;multiple desktops&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;zk-index-desktop-select&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;any major mode&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;set zk-index-desktop-major-mode&lt;/li&gt;
-&lt;li&gt;org-mode&lt;/li&gt;
-&lt;li&gt;outline-mode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;actions&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;type like normal&lt;/li&gt;
-&lt;li&gt;delete notes&lt;/li&gt;
-&lt;li&gt;copy and paste region&lt;/li&gt;
-&lt;li&gt;kill individual&lt;/li&gt;
-&lt;li&gt;rearranging notes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link-hint&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;link-hint-open&lt;/li&gt;
-&lt;li&gt;link-hint-aw-select&lt;/li&gt;
-&lt;li&gt;link-hint-preview&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;zk-link-hint&#34;&gt;ZK-Link-Hint&lt;/h3&gt;
-&lt;h4 id=&#34;link-hint-open-link&#34;&gt;link-hint-open-link&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;in buffer&lt;/li&gt;
-&lt;li&gt;in zk-index&lt;/li&gt;
-&lt;li&gt;in zk-desktop&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;link-hint-aw-select&#34;&gt;link-hint-aw-select&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;custom avy actions&lt;/li&gt;
-&lt;li&gt;also in zk-index&lt;/li&gt;
-&lt;li&gt;and zk-desktop&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;link-hint-preview&#34;&gt;link-hint-preview&lt;/h4&gt;
-&lt;h3 id=&#34;zk-and-embark&#34;&gt;ZK and Embark&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;call embark on zk candidates in the minibuffer&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;insert a link&lt;/li&gt;
-&lt;li&gt;copy link and title&lt;/li&gt;
-&lt;li&gt;send to desktop&lt;/li&gt;
-&lt;li&gt;ace-window
-&lt;ul&gt;
-&lt;li&gt;embark-aw-select&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://karthinks.com/software/fifteen-ways-to-use-embark/&#34; target=&#34;_blank&#34;&gt;https://karthinks.com/software/fifteen-ways-to-use-embark/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;call on candidates in the index&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;call on candidates in the desktop&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;on links in note&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;in index&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;in desktop&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--listend--&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#177500&#34;&gt;;; from https://karthinks.com/software/fifteen-ways-to-use-embark/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;eval-when-compile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;defmacro&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;embark-aw-select&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;fn&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#000&#34;&gt;`&lt;/span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;(&lt;span style=&#34;color:#000&#34;&gt;intern&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;concat&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;embark-aw-select-&amp;#34;&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;symbol-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;fn&lt;/span&gt;))) ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#000&#34;&gt;call-interactively&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;symbol-function&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;,fn&lt;/span&gt;))))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;with-eval-after-load&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;embark&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;define-key&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;embark-file-map&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;kbd&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;o&amp;#34;&lt;/span&gt;) (&lt;span style=&#34;color:#000&#34;&gt;embark-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;find-file&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;define-key&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;embark-buffer-map&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;kbd&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;o&amp;#34;&lt;/span&gt;) (&lt;span style=&#34;color:#000&#34;&gt;embark-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;define-key&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;embark-bookmark-map&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;kbd&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;o&amp;#34;&lt;/span&gt;) (&lt;span style=&#34;color:#000&#34;&gt;embark-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;bookmark-jump&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;zk-citar&#34;&gt;ZK-Citar&lt;/h3&gt;
-&lt;p&gt;Integration with new Citar 1.0 API&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;set zk-citar-citekey-regexp&lt;/li&gt;
-&lt;li&gt;access notes via citar dialog&lt;/li&gt;
-&lt;li&gt;create notes via citar dialog&lt;/li&gt;
-&lt;li&gt;access via embark on citekey&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;zk-luhmann&#34;&gt;ZK-Luhmann&lt;/h3&gt;
-&lt;h3 id=&#34;expansion-customizations&#34;&gt;Expansion, Customizations&lt;/h3&gt;
-&lt;h2 id=&#34;popup-frames&#34;&gt;&lt;span class=&#34;org-todo todo DRAFT&#34;&gt;DRAFT&lt;/span&gt; &lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.&lt;/em&gt;&lt;/p&gt;
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-&lt;div class=&#34;org-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;popup-frames&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Emacs Popup Frames Anywere — MacOS Edition&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This post shows how to set up Emacs popup frames in macOS, allowing quick access to Emacs functions from anywhere on your system.&lt;/em&gt;&lt;/p&gt;
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-&lt;div class=&#34;org-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;As much as I would like to live in &lt;a href=&#34;https://www.gnu.org/software/emacs/&#34; target=&#34;_blank&#34;&gt;Emacs&lt;/a&gt; full time, I’m not quite there. But a &lt;a href=&#34;https://protesilaos.com/codelog/2024-09-19-emacs-command-popup-frame-emacsclient/&#34; target=&#34;_blank&#34;&gt;recent post&lt;/a&gt; by &lt;a href=&#34;https://protesilaos.com&#34; target=&#34;_blank&#34;&gt;Protesilaos Stavrou&lt;/a&gt; (aka Prot) is helping me bridge the gap.&lt;/p&gt;
-&lt;p&gt;Prot has written a short but powerful bit of code that allows you to access any piece of Emacs goodness — like &lt;code&gt;org-capture&lt;/code&gt; — from outside Emacs with just one keystroke. The only requirement is that you are running in &lt;code&gt;server-mode&lt;/code&gt; or using the Emacs daemon.&lt;/p&gt;
-&lt;p&gt;Whether you’re in a web browser, a PDF reader, or just staring at an empty desktop, your favorite Emacs command can be right at your fingertips. See &lt;a href=&#34;https://www.youtube.com/watch?v=vbWxT8tht9A&#34; target=&#34;_blank&#34;&gt;Prot’s video&lt;/a&gt; for a thorough demonstration.&lt;/p&gt;
-&lt;p&gt;Now, I can quickly open a PDF using citar or copy a password from my pass-store. See below for some other useful popups — org-agenda view, mu4e inbox, and a quick translation interface.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/popup-frame-citar-demo.gif&#34;&gt;
+      <description>&lt;h2 id=&#34;fog-smoke&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; &lt;/h2&gt;
+&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/fog-smoke.jpg&#34;&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;setting-up-emacs-popup-frames-in-macos&#34;&gt;Setting Up Emacs Popup Frames in MacOS&lt;/h3&gt;
-&lt;p&gt;Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a &lt;code&gt;window-system&lt;/code&gt; frame parameter to the popup frame. (See code below).&lt;/p&gt;
-&lt;p&gt;But while I was at it, I made a few additions: 1) a &lt;code&gt;title&lt;/code&gt; frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, &lt;a href=&#34;https://github.com/koekeishiya/yabai&#34; target=&#34;_blank&#34;&gt;yabai&lt;/a&gt;; and 2) an optional argument that runs &lt;code&gt;delete-frame&lt;/code&gt; after the main command runs. This makes it possible to call commands that are minibuffer-centric — in my case, that’s &lt;code&gt;citar-open-file&lt;/code&gt; and &lt;code&gt;password-store-copy&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Here’s the main code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;popup-frame-delete&lt;/span&gt; (&lt;span style=&#34;color:#a90d91&#34;&gt;&amp;amp;rest&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;_&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Kill selected frame if it has parameter &lt;/span&gt;&lt;span style=&#34;color:#c41a16&#34;&gt;`popup-frame&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#c41a16&#34;&gt;.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;when&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;frame-parameter&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;popup-frame&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defmacro&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;command&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#a90d91&#34;&gt;&amp;amp;optional&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Define interactive function to call COMMAND in frame with TITLE.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;`&lt;/span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;(&lt;span style=&#34;color:#000&#34;&gt;intern&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;format&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;popup-frame-%s&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;command&lt;/span&gt;)) ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;let*&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;display-buffer-alist&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                    (&lt;span style=&#34;color:#000&#34;&gt;display-buffer-full-frame&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;make-frame&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                 (&lt;span style=&#34;color:#000&#34;&gt;window-system&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ns&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                 (&lt;span style=&#34;color:#000&#34;&gt;popup-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;t&lt;/span&gt;)))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#000&#34;&gt;select-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34; popup-frame-hidden-buffer&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;condition-case&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#a90d91&#34;&gt;progn&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;call-interactively&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;,command&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;delete-other-windows&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;error&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;when&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;sit-for&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;0.2&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;delete-frame&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;frame&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;use-package&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;server&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:defer&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:config&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;unless&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;server-running-p&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#000&#34;&gt;server-start&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And here are the macro calls that define commands:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;org-capture&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;capture-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;add-hook&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;org-capture-after-finalize-hook&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;popup-frame-delete&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;password-store-copy&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;delete-frame&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;citar-open-files&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;delete-frame&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;triggering-popups-with-keyboard-shortcuts&#34;&gt;Triggering Popups with Keyboard Shortcuts&lt;/h3&gt;
-&lt;p&gt;To quickly bring up these popup frames with keyboard shortcuts, I use &lt;a href=&#34;https://github.com/koekeishiya/skhd&#34; target=&#34;_blank&#34;&gt;skhd&lt;/a&gt;, a hotkey daemon for macOS. The following configuration goes in the skhd config file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cmd + ctrl - c : emacsclient -e &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;(popup-frame-org-capture)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;||&lt;/span&gt; yabai -m window –focus recent
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cmd + ctrl - o : emacsclient -e &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;(popup-frame-citar-open-files)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;||&lt;/span&gt; yabai -m window –focus recent
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cmd + ctrl - p : emacsclient -e &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;(popup-frame-password-store-copy)&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;||&lt;/span&gt; yabai -m window –focus recent
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;managing-windows-with-yabai&#34;&gt;Managing Windows with yabai&lt;/h3&gt;
-&lt;p&gt;Finally, I have configured my tiling window manager, &lt;a href=&#34;https://github.com/koekeishiya/yabai&#34; target=&#34;_blank&#34;&gt;yabai&lt;/a&gt;, to give the popup frames the desired size and placement.&lt;/p&gt;
-&lt;p&gt;First, the following goes in the yabai config file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m signal –add &lt;span style=&#34;color:#000&#34;&gt;event&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;window_created &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Emacs&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;action&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;~/.yabai-emacs-window-handler.sh&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will run a bash script (located at ~/.yabai-emacs-window-handler.sh) every time a new Emacs frame is created. The script tells yabai how to move and resize the new frame, depending on the frame’s title. Here is that script:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#633820&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#633820&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;$(&lt;/span&gt;yabai -m query –windows –window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$data&lt;/span&gt; | jq .title&lt;span style=&#34;color:#a90d91&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$data&lt;/span&gt; | jq .display&lt;span style=&#34;color:#a90d91&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;[[&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$title&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;~ &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;capture-popup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$display&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color:#a90d91&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –toggle float –move abs:430:230
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –resize abs:655:300
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –focus
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;elif&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;[[&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$title&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;~ &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$display&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color:#a90d91&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –toggle float –move abs:430:230
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –resize abs:655:200
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –focus
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;else&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;false&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;additional-custom-commands&#34;&gt;Additional Custom Commands&lt;/h3&gt;
-&lt;p&gt;In some cases, an Emacs command will work nicely in a popup frame right out of the box. A good case in point is &lt;code&gt;org-capture&lt;/code&gt;. In other cases, I have needed to write my own custom commands. Here a few:&lt;/p&gt;
-&lt;h4 id=&#34;google-translate-interface&#34;&gt;Google Translate Interface&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/translate&lt;/span&gt; ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;choice&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#000&#34;&gt;completing-read&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Select: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;EN-&amp;gt;LT&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;LT-&amp;gt;EN&amp;#34;&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a90d91&#34;&gt;cond&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;string=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;choice&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;EN-&amp;gt;LT&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;google-translate-query-translate-reverse&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          ((&lt;span style=&#34;color:#000&#34;&gt;string=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;choice&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;LT-&amp;gt;EN&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;google-translate-query-translate&lt;/span&gt;)))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/translate&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;minimal-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/popup-frame-translate-demo.gif&#34;&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&#34;unread-emails-in-mu4e&#34;&gt;Unread Emails in mu4e&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/mu4e-unread&lt;/span&gt; ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;mu4e&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;background&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;mu4e-search-bookmark&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   (&lt;span style=&#34;color:#000&#34;&gt;mu4e-get-bookmark-query&lt;/span&gt; &lt;span style=&#34;color:#2300ce&#34;&gt;?u&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/org-agenda&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;large-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For this, I add another “elif” to the bash script, to ensure I can see the whole inbox in the popup:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a90d91&#34;&gt;elif&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;[[&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$title&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;=&lt;/span&gt;~ &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;large-popup&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$display&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color:#a90d91&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –toggle float –move abs:350:130
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –resize abs:730:600
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yabai -m window &lt;span style=&#34;color:#000&#34;&gt;$YABAI_WINDOW_ID&lt;/span&gt; –focus
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;custom-org-agenda-view&#34;&gt;Custom Org-Agenda View&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/org-agenda&lt;/span&gt; (&lt;span style=&#34;color:#a90d91&#34;&gt;&amp;amp;optional&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;p&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;P&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;org-agenda&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;p&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;d&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;org-agenda-redo-all&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;popup-frame-define&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;my/org-agenda&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;large-popup&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Just don’t forget to add a system-wide keyboard shortcut for each new command!&lt;/p&gt;
-&lt;h2 id=&#34;zk-links&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Emacs: Quickly find and insert links in zk notes, with Embark&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This post continues a series of video demos in which I show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis is on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
-&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
-&lt;div class=&#34;org-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;right&#34;&gt;
+&lt;p&gt;2025-09-26&lt;/p&gt;
 &lt;/div&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/VIPxC8TMR6s&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;In &lt;a href=&#34;https://www.youtube.com/watch?v=VIPxC8TMR6s&#34; target=&#34;_blank&#34;&gt;this video&lt;/a&gt;, I show how I quickly find notes related to the note I am working on in &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt;, and then insert the relevant links.&lt;/p&gt;
-&lt;p&gt;The goal is to find and insert links with a minimum of mental overhead and technical friction, so that I can keep my focus on the ideas and content of the note at hand.&lt;/p&gt;
-&lt;p&gt;Trying to find a single note among hundreds, and then putting the link in the right spot, could be a task unto itself — a not inconsiderable problem and distraction. But a few handy search functions, and some help from the package &lt;a href=&#34;https://github.com/oantolin/embark&#34; target=&#34;_blank&#34;&gt;Embark&lt;/a&gt;, make the matter all but effortless.&lt;/p&gt;
-&lt;h2 id=&#34;zk-hydra&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Emacs: Getting started with zk, using hydra and an inbox note&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This post inaugurates a series of video demos in which I will show how I use the Emacs package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt; for notetaking. The emphasis will be on showcasing the practicalities of my process.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ezerudugne&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; &lt;em&gt;Ežerų Dugne&lt;/em&gt;&lt;/h2&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/oEgdJlojlU8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/dGhYUp_tT3s?si=njyiyCXM7VNKrYr4&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;In this video I show how I use a &lt;a href=&#34;https://github.com/abo-abo/hydra&#34; target=&#34;_blank&#34;&gt;hydra&lt;/a&gt; as an entry point to my zk. The config for my hydra is here, &lt;a href=&#34;https://github.com/localauthor/.emacs.d/blob/210531740c05104b7718b257671f2674f605f374/my-lisp/zk-setup.el#L154&#34; target=&#34;_blank&#34;&gt;in my dotfiles&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I also show how I use an &amp;ldquo;inbox&amp;rdquo; note as a starting place for new notes. For more on the place of the inbox in a notetaking practice, see section 2.1 of &lt;em&gt;How to Take Smart Notes&lt;/em&gt; by Sönke Ahrens.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;In the next video, I will show how I use the function &lt;code&gt;zk-find-file&lt;/code&gt; and others in combination with &lt;a href=&#34;https://github.com/oantolin/embark&#34; target=&#34;_blank&#34;&gt;Embark&lt;/a&gt; to quickly find notes and insert links — with a minimum of effort!&lt;/p&gt;
-&lt;h2 id=&#34;aw-select&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Emacs: With ace-window and link-hint, open links exactly where you want them&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This post describes how the Emacs package &lt;a href=&#34;http://github.com/noctuid/link-hint.el&#34; target=&#34;_blank&#34;&gt;link-hint&lt;/a&gt; can be combined with
-&lt;a href=&#34;https://github.com/abo-abo/ace-window&#34; target=&#34;_blank&#34;&gt;ace-window&lt;/a&gt; to allow you to select, on-the-fly, which window a link will open in—instead of letting fate, or custom, or Emacs decide for you.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;“But nature is a stranger yet”&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;verse&#34;&gt;
+&lt;p&gt;   in the above film –&lt;br /&gt;
+           &lt;em&gt;Ežerų dugne&lt;/em&gt; (In the Depths of Lakes) (2014), dir. Akvilė Anglickaitė&lt;br /&gt;
+— —&lt;br /&gt;
+divers explore their love for four Lithuanian lakes&lt;br /&gt;
+and the alien terrain at their depths:&lt;br /&gt;
+— —&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://localauthor.github.io/images/ezeras1.jpg&#34; alt=&#34;&#34;&gt;
+—
+&lt;img src=&#34;https://localauthor.github.io/images/ezeras2.jpg&#34; alt=&#34;&#34;&gt;
+—
+&lt;img src=&#34;https://localauthor.github.io/images/ezeras3.jpg&#34; alt=&#34;&#34;&gt;
+—
+&lt;img src=&#34;https://localauthor.github.io/images/ezeras4.jpg&#34; alt=&#34;&#34;&gt;
+— —&lt;/p&gt;
+&lt;div class=&#34;verse&#34;&gt;
+&lt;p&gt;             on view at &lt;a href=&#34;https://mo.lt/en/ivykiai/longing/&#34; target=&#34;_blank&#34;&gt;MO&lt;/a&gt; until March 30, 2025,&lt;br /&gt;
+                 as part of an exhibition on &lt;em&gt;solastalgia&lt;/em&gt;&lt;br /&gt;
+—&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;place&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; To Carve Something Meaningful&lt;/h2&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;h3 id=&#34;ace-window-is--more-than--a-fancy-window-switcher&#34;&gt;Ace-window is (more than) a fancy window-switcher&lt;/h3&gt;
-&lt;p&gt;The ace-window package, written by &lt;a href=&#34;https://github.com/abo-abo&#34; target=&#34;_blank&#34;&gt;abo-abo&lt;/a&gt;, offers a handy, full-featured
-alternative to the built-in window-switching function &lt;code&gt;other-window&lt;/code&gt;. The
-package&amp;rsquo;s primary function—the titular =ace-window=—overlays a different
-character (letter or number) over each visible Emacs window, so you can
-switch to the desired window by simply pressing its assigned character. Very
-useful, very sleek.&lt;/p&gt;
-&lt;p&gt;But ace-window is more than just a handy way to switch windows.&lt;/p&gt;
-&lt;p&gt;The package also offers the ability to perform an action in the selected
-window before switching to it. In this regard, it follows the design of its
-parent package &lt;a href=&#34;https://github.com/abo-abo/avy&#34; target=&#34;_blank&#34;&gt;avy&lt;/a&gt;—also by abo-abo. Instead of simply switching to a
-window, you can &lt;a href=&#34;https://github.com/abo-abo/ace-window#aw-dispatch-alist&#34; target=&#34;_blank&#34;&gt;split it first, call switch-to-buffer in it, or even close
-it&lt;/a&gt;. For a demonstration of this aspect of ace-window, see &lt;a href=&#34;https://www.youtube.com/watch?v=I3BvGZ3m8Oo&#34; target=&#34;_blank&#34;&gt;this video
-from Protesilaos Stavrou&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;The greatness of ace-window truly comes through, however, when it is combined
-with other packages.&lt;/p&gt;
-&lt;h3 id=&#34;with-ace-window-and-embark-open-files-buffers-in-specified-windows&#34;&gt;With ace-window and Embark, open files/buffers in specified windows&lt;/h3&gt;
-&lt;p&gt;In his &lt;a href=&#34;https://karthinks.com/software/fifteen-ways-to-use-embark/&#34; target=&#34;_blank&#34;&gt;detailed write-up on using Embark&lt;/a&gt;, Karthik Chikmagalur showcases a
-killer mash-up of ace-window and Embark, demonstrating how ace-window can be
-used for more than just switching windows.&lt;/p&gt;
-&lt;p&gt;Briefly put, Karthik shows how to incorporate ace-window&amp;rsquo;s window-selection
-function into the opening of a file or buffer from the minibuffer so that, as
-he writes, &amp;ldquo;any buffer/file/bookmark I open is always placed exactly where I
-want it to be on the screen.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;An example usage would be:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;call &lt;code&gt;find-file&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;call &lt;code&gt;embark-act&lt;/code&gt; on file you wish to open&lt;/li&gt;
-&lt;li&gt;call &lt;code&gt;my/embark-ace-action-find-file&lt;/code&gt; (this is the slightly unwieldy name
-Karthik gives to the embark/ace-window function)&lt;/li&gt;
-&lt;li&gt;select desired window with &lt;code&gt;ace-window&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;with-ace-window-and-link-hint-follow-links-in-specified-windows&#34;&gt;With ace-window and link-hint, follow links in specified windows&lt;/h3&gt;
-&lt;p&gt;Inspired by what Karthik showed was possible, I wanted to incorporate
-ace-window with link-hint, so that I could choose which window a link
-would open in. The result is a function called &lt;code&gt;link-hint-aw-select&lt;/code&gt;:&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;https://localauthor.github.io/images/aw-select-demo.gif&#34;
-    alt=&#34;Figure 1: Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;&lt;span class=&#34;figure-number&#34;&gt;Figure 1: &lt;/span&gt;Using &amp;rsquo;link-hint-aw-select&amp;rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.&lt;/p&gt;
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;If you&amp;rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
-ace-window: it puts a character overlay on visible links in a buffer so that
-you can choose a link to follow by typing its assigned character. (The
-conceptual similarity of link-hint and ace-window is not surprising, since
-both are based on avy.)&lt;/p&gt;
-&lt;p&gt;Link-hint can identify a lot of different type of links, such as urls, file
-paths, mailto links, org-links, buttons, and dired filenames. New link
-types can also be defined by the user. (More on that later.)&lt;/p&gt;
-&lt;p&gt;As with avy and ace-window, link-hint allows for different actions to
-performed on the chosen link. However, there are only two default actions for acting on links: open link and copy link.&lt;/p&gt;
-&lt;p&gt;Defining a new action is done by defining a new function, in this case the
-above-mentioned &lt;code&gt;link-hint-aw-select&lt;/code&gt;, which will be entry-point command for all link types:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint-aw-select&lt;/span&gt; ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Use avy to open a link in a window selected with ace-window.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;interactive&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;unless&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (&lt;span style=&#34;color:#000&#34;&gt;avy-with&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint-aw-select&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        (&lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;one&lt;/span&gt; &lt;span style=&#34;color:#a90d91&#34;&gt;:aw-select&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#000&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;No visible links&amp;#34;&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Things get more complicated very quickly, however.&lt;/p&gt;
-&lt;p&gt;Each action must be tailored to each different link type. Take the case of
-the &amp;ldquo;open&amp;rdquo; action, for examples: urls open one way—in a browser—and
-filepaths open another way—in a relevant application—and email addresses
-open another way—in a new draft email. Each action is actually many
-different actions, all roughly similar.&lt;/p&gt;
-&lt;p&gt;When creating a new action, then, it is necessary to make sure that each link
-type is associated with a function that will perform the new action in the
-appropriate way.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;aw-select&lt;/code&gt; action for file links is quite simple:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-file-link&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#000&#34;&gt;find-file&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To make the link-hint ecosystem aware of this new association of link-type,
-action, and function, there is a handy macro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;file-link&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-file-link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If different link-types behave similarly, it is possible to create a macro
-of our own that will do all of the above very efficiently. This is the case with buttons and dired-filenames, for example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defmacro&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;define-link-hint-aw-select&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;link-type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;fn&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#000&#34;&gt;`&lt;/span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;progn&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#000&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;,link-type&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#a90d91&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;(&lt;span style=&#34;color:#000&#34;&gt;intern&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;concat&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;link-hint–aw-select-&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                     (&lt;span style=&#34;color:#000&#34;&gt;symbol-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-type&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     (&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;(&lt;span style=&#34;color:#000&#34;&gt;intern&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;concat&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;link-hint–aw-select-&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                             (&lt;span style=&#34;color:#000&#34;&gt;symbol-name&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-type&lt;/span&gt;))) (&lt;span style=&#34;color:#000&#34;&gt;_link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         (&lt;span style=&#34;color:#a90d91&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;&amp;gt;&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;length&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-window-list&lt;/span&gt;)) &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   (&lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   (&lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#000&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fn&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#a90d91&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           (&lt;span style=&#34;color:#000&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;))))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;button&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;push-button&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dired-filename&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dired-find-file&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same is &lt;em&gt;almost&lt;/em&gt; the case with org-links as well, except that by default
-org-links are opened using &lt;code&gt;find-file-other-window&lt;/code&gt; instead of &lt;code&gt;find-file&lt;/code&gt;,
-meaning that the above macro wouldn&amp;rsquo;t work properly.&lt;/p&gt;
-&lt;p&gt;I prefer to change this setting globally, so that org-links are opened in the
-current window, by evaluating the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;setf&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;cdr&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;assoc&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;file&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;org-link-frame-setup&lt;/span&gt;)) &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;find-file&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This allows me to use the macro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;define-link-hint-aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;org-link&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;org-open-at-point&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To leave org&amp;rsquo;s default behavior in place globally, it is necessary to define
-a function specifically for org-links, in which the behavior is changed
-locally in a let-binding:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-org-link&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;_link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;org-link-frame-setup&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#000&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;find-file&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (&lt;span style=&#34;color:#a90d91&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;&amp;gt;&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;length&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-window-list&lt;/span&gt;)) &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (&lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (&lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;org-open-at-point&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#a90d91&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        (&lt;span style=&#34;color:#000&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;)))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;org-link&lt;/span&gt; &lt;span style=&#34;color:#a90d91&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-org-link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Things are actually even a bit more complicated than this with org-links.&lt;/p&gt;
-&lt;p&gt;Since org handles different link-types internally, the function
-&lt;code&gt;link-hint–aw-select-org-link&lt;/code&gt; can also be made to handle certain org
-link-types differently. For example, if you want http/https links to be
-opened externally, there is no reason to call the &lt;code&gt;aw-select&lt;/code&gt; behavior for
-that type of org-link. This could be accomplished by including something like
-the following in the function&amp;rsquo;s &amp;ldquo;if&amp;rdquo; conditional:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;not&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;member&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;org-element-property&lt;/span&gt; &lt;span style=&#34;color:#a90d91&#34;&gt;:type&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;org-element-context&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The whole function would be:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-org-link&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;_link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;org-link-frame-setup&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#000&#34;&gt;file&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;find-file&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (&lt;span style=&#34;color:#a90d91&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a90d91&#34;&gt;and&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;&amp;gt;&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;length&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-window-list&lt;/span&gt;)) &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               (&lt;span style=&#34;color:#000&#34;&gt;not&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;member&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;org-element-property&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                             &lt;span style=&#34;color:#a90d91&#34;&gt;:type&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;org-element-context&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                       &lt;span style=&#34;color:#000&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (&lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (&lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;org-open-at-point&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#a90d91&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        (&lt;span style=&#34;color:#000&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;)))))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-use-case-note-taking-zettelkasten-etc-dot&#34;&gt;Example use-case: note-taking, zettelkasten, etc.&lt;/h3&gt;
-&lt;p&gt;I find this functionality really useful in my note-taking environment, where
-each of my notes contains several links to other notes. I rarely want to
-follow a link in the same window as the note where the link appears. I
-typically want to leave that note where it is and open a link somewhere else.
-If I have several windows arrayed around my screen, I can use
-&lt;code&gt;link-hint-aw-select&lt;/code&gt; to open the linked note exactly where I want it to be.&lt;/p&gt;
-&lt;p&gt;To use this with org, the above configuration is enough. If you use another note-taking environment, you may need to define a new link type.&lt;/p&gt;
-&lt;p&gt;For example, for use with my own Zettelkasten package &lt;a href=&#34;https://github.com/localauthor/zk&#34; target=&#34;_blank&#34;&gt;zk&lt;/a&gt;, I define a new link
-type &lt;code&gt;zk-link&lt;/code&gt; and a function &lt;code&gt;zk-link-hint-aw-select&lt;/code&gt;, along with other
-functions necessary to fully incorporate a new link type into the link-hint
-system:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;zk-link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;zk-link-at-point-p&lt;/span&gt; ()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Return the ID for the zk-link at the point or nil.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;and&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;zk&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;id-at-point&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       (&lt;span style=&#34;color:#000&#34;&gt;thing-at-point-looking-at&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;zk-link-regexp&lt;/span&gt;)))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;zk-link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;next-zk-link&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;bound&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;Find the unext zk-link.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#c41a16&#34;&gt;Only search the range between just after the point and BOUND.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;next-regexp&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;zk-id-regexp&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;bound&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;defun&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-zk-link&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;id&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (&lt;span style=&#34;color:#a90d91&#34;&gt;with-demoted-errors&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#34;%s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#a90d91&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;&amp;gt;&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;length&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-window-list&lt;/span&gt;)) &lt;span style=&#34;color:#1c01ce&#34;&gt;1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        (&lt;span style=&#34;color:#a90d91&#34;&gt;let&lt;/span&gt; ((&lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;nil&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              (&lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt; (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              (&lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#000&#34;&gt;zk-follow-link-at-point&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;id&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#a90d91&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                (&lt;span style=&#34;color:#000&#34;&gt;current-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;buffer&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#000&#34;&gt;aw-switch-to-window&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;window&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          (&lt;span style=&#34;color:#000&#34;&gt;switch-to-buffer&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;new-buffer&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      (&lt;span style=&#34;color:#000&#34;&gt;link-hint-open-link-at-point&lt;/span&gt;))))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#000&#34;&gt;link-hint-define-type&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;zk-link&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:next&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;zk-link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;next-zk-link&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:at-point-p&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;zk-link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;zk-link-at-point-p&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:open&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;zk-follow-link-at-point&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:copy&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;kill-new&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a90d91&#34;&gt;:aw-select&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;link-hint&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;–&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aw-select-zk-link&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a90d91&#34;&gt;push&lt;/span&gt; &lt;span style=&#34;color:#c41a16&#34;&gt;&amp;#39;link-hint-zk-link&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;link-hint-types&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Even though link-hint can be a bit complex under the hood, it is quite
-effortless, even elegant, when put in combination with ace-window. Give
-it a try and puzzle over what you had done so long without it.&lt;/p&gt;
+&lt;div class=&#34;verse&#34;&gt;
+&lt;p&gt;&amp;ldquo;One of the most important functions of &amp;lsquo;place&amp;rsquo;&lt;br /&gt;
+is its ability to bridge&lt;br /&gt;
+the scholarly realm of the academic geographer&lt;br /&gt;
+and everyday terrain of ordinary people&lt;br /&gt;
+trying to understand the world&lt;br /&gt;
+and make it better.&lt;br /&gt;
+Without &amp;lsquo;place,&amp;rsquo; geographers risk&lt;br /&gt;
+losing their most important audience:&lt;br /&gt;
+those engaged in the struggle&lt;br /&gt;
+to carve something meaningful&lt;br /&gt;
+out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;stendhal&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Stendhal at Hand in Vilnius&lt;/h2&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Stendhal might have spent the night in a building near where I live.&lt;/p&gt;
+&lt;p&gt;There is a plaque on the wall of the building — a bookstore now, specializing in French literature — memorializing the night that Stendhal is said to have stayed there.&lt;/p&gt;
+&lt;p&gt;With its bilingual inscription and &lt;em&gt;bas relief&lt;/em&gt; portrait of the artist, the plaque brings some kind of life to that corner, projecting a line clear to a far side of Europe.&lt;/p&gt;
+&lt;p&gt;Something of French culture once comforted itself here, if you can imagine.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;—————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;You’ll have to imagine.&lt;/p&gt;
+&lt;p&gt;The plaque does not cite its sources. It does not quote from the writer. It does not paint a picture of an event, a time, or a place.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ŠIAME NAME &amp;hellip; BUVO APSISTOJES &amp;hellip; STENDALIS&lt;/p&gt;&lt;/blockquote&gt;
+&lt;!--quoteend--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DANS CETTE MAISON STENDHAL &amp;hellip; FIT ETAPE&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Where would one look if one were inclined to dig up the truth of what may or may not have happened in this or another place at this or that time so many decades, centuries since?&lt;/p&gt;
+&lt;p&gt;But then, who would care to doubt these chiseled records?&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;—————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;All told, the plaque is less a statement of fact than one of values.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Draw this place closer, in your mind, to what you might already know well,&amp;rdquo; it says.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Comfort yourself, that you are not so far away, so disconnected, as you thought—as you might have feared.&amp;rdquo;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;—————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In some letters Stendhal notes his passing, while marching with Napoleon’s army, through various cities and towns in the region. His remarks are spare, revealing an experience of dismal early winter and little else.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-wise-man&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; The Wise Man of Švarco&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;There is a man who looks at me where I walk my dog in the park.&lt;/em&gt;&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Near the French embassy, up the street from the university, he stands in a long black coat and hat, peering over a significant beard, maintained with care for decades, or so one can deduce from its stately sweep.&lt;/p&gt;
+&lt;p&gt;He is a painting on a wall. Less a mural or a portrait than an icon.&lt;/p&gt;
+&lt;p&gt;The wall marks the boundary of what was the Jewish ghetto in Vilnius, established during the Nazi occupation.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This representation, notably greater than life-size, is rendered in a stenciled style. It was placed here as a reminder of the kinds of lives that used to pass not just behind, through, around, and in front of walls like the one it appears on, but also—and perhaps most importantly—with no special regard for such things: unheeded and undetermined by the barriers such walls would become.&lt;/p&gt;
+&lt;p&gt;This painting—one of many in the area—has been given a nickname: “The Wise Man.” His arms are folded, his hands are tucked into opposing sleeves, his head is tilted knowingly. His posture is one of forbearance, as much as wisdom, or anything else. One feels suffered to look, but not to linger.&lt;/p&gt;
+&lt;p&gt;I pass him with the briefest acknowledgment and return home. He does not follow me.&lt;/p&gt;
+&lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
+&lt;div class=&#34;org-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;—————&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This man’s likeness, it turns out, was drawn from an archival photograph.&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Upon learning this, I started to feel whatever life, wisdom, forbearance, and otherwise that the painting purported to represent drain out of that static, flattened artifact.&lt;/p&gt;
+&lt;p&gt;What of the real man, himself? Did he live in this sector? Or in this city? Was he wise? Did he, in his life, stand for what he has been made to stand for, now? And how, and to whom, did he convey whatever wisdom he might might have possessed?&lt;/p&gt;
+&lt;p&gt;Of what is this painting a reminder? Perhaps only a reminder to remember — which may be enough, and plenty, for a given moment.&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Sönke Ahrens, &lt;i&gt;How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking&lt;/i&gt; (North Charleston, SC: CreateSpace, 2017).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Steven Hoelscher, “Place,” in &lt;i&gt;The Wiley-Blackwell Companion to Human Geography&lt;/i&gt;, ed. John A. Agnew and James S. Duncan (Chichester, West Sussex: Malden, MA : Wiley-Blackwell, 2011), 256–57.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Antanas Vaičiulaitis, “Stendhal in Lithuania,” trans. M. Vasiliauskas, &lt;i&gt;Lituanus: Lithuanian Quarterly Journal of Arts and Sciences&lt;/i&gt; 22, no. 2 (1976).&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;For the record: &lt;a href=&#34;https://en.wikipedia.org/wiki/Vilna_Ghetto&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Vilna_Ghetto&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;I have opted not to include any photos here, though one should be easy to find, if not the other. The project behind this work is called &amp;ldquo;Sienos prisimena,&amp;rdquo; or &amp;ldquo;Walls that Remember.&amp;rdquo;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.passport-journal.com/en/product/passport-journal-iii-t-lietuviu-k/&#34; target=&#34;_blank&#34;&gt;A perhaps more thorough resource, if less public and immediate.&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
