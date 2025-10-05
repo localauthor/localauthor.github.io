@@ -88,6 +88,8 @@
   </url><url>
     <loc>https://localauthor.github.io/about/</loc>
   </url><url>
+    <loc>https://localauthor.github.io/feed/</loc>
+  </url><url>
     <loc>https://localauthor.github.io/posts/localauthor/</loc>
   </url>
 </urlset>
