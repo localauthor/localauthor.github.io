@@ -520,7 +520,7 @@ out of an impersonal, abstract world.&amp;rdquo;&lt;sup id=&#34;fnref:1&#34;&gt;
 &lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Each person&amp;rsquo;s notetaking practice is—and must be—distinct. No two people have the same needs when it comes to making, organizing, and accessing notes.&lt;/p&gt;
-&lt;p&gt;Adopting someone else&amp;rsquo;s practice just because they can loudly sing its merits, or even clearly demonstrate its efficacy, may very well be an exercise in shortsightedness. A person&amp;rsquo;s notetaking practice could certainly have merits and be effective—/for them/—but there can be no guarantee of universality in such things.&lt;/p&gt;
+&lt;p&gt;Adopting someone else&amp;rsquo;s practice just because they can loudly sing its merits, or even clearly demonstrate its efficacy, may very well be an exercise in shortsightedness. A person&amp;rsquo;s notetaking practice could certainly have merits and be effective — &lt;em&gt;for them&lt;/em&gt; — but there can be no guarantee of universality in such things.&lt;/p&gt;
 &lt;p&gt;So, a few questions to consider:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Why do you want (or need) to take notes at all?&lt;/li&gt;
@@ -636,8 +636,7 @@ with original source materials, not just in final submissions but &lt;strong&gt;
 notes and drafts&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;style&gt;.org-center { margin-left: auto; margin-right: auto; text-align: center; }&lt;/style&gt;
 &lt;div class=&#34;org-center&#34;&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;——————————————————————————————&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;For long research projects, it is necessary not only to keep straight a
 variety of sources but also to ensure that in-text references to those
@@ -660,8 +659,8 @@ citations to their sources.&lt;/p&gt;
 inevitably lose their meaning as their originary contexts recede into the
 past. Which book on national identity formation was that? Which class? Which
 book by Foucault, and &lt;em&gt;which edition&lt;/em&gt;?&lt;/p&gt;
-&lt;p&gt;The use of &lt;em&gt;citekeys&lt;/em&gt; can greatly reduce the effort involved in mainlining
-clear lines of connection between citations and sources&amp;mdash;not just in final
+&lt;p&gt;The use of &lt;em&gt;citekeys&lt;/em&gt; can greatly reduce the effort involved in maintaining
+clear lines of connection between citations and sources—not just in final
 products but in notes and drafts as well, and not just in single projects but
 in a lifetime of research.&lt;/p&gt;
 &lt;h2 id=&#34;citekey-basics&#34;&gt;Citekey Basics&lt;/h2&gt;
@@ -683,7 +682,7 @@ understandable to anyone other than the researcher who assigns them.
 Consider that &amp;ldquo;Anderson2006&amp;rdquo; in the example above could refer to any number
 of publications from the year 2006 by anyone with the surname Anderson.&lt;/p&gt;
 &lt;p&gt;In this way citekeys are unlike ISBN or DOI numbers: they are not universal
-indicators&amp;mdash;they do not point directly and unambiguously to particular
+indicators—they do not point directly and unambiguously to particular
 sources themselves.&lt;/p&gt;
 &lt;p&gt;Rather, citekeys point to a researcher&amp;rsquo;s own individual collection of
 bibliographic entries (more on this ahead). Citekeys offer, as a result, a
@@ -705,8 +704,8 @@ Harvard, APA, etc.&lt;/p&gt;
 information wherein all citekeys are listed with relevant information about
 the associated source. This may sound more complicated than it is.&lt;/p&gt;
 &lt;p&gt;While it is possible to manage bibliographic information with one of the many
-popular reference management programs&amp;mdash;such as Zotero, Endnote, or
-Mandeley&amp;mdash;it is equally possible to maintain nothing more than a simple text
+popular reference management programs—such as Zotero, Endnote, or
+Mandeley—it is equally possible to maintain nothing more than a simple text
 document of entries like the following:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;@book{Anderson2006,
         title = &amp;#34;Imagined Communities: Reflections on the Origin and Spread of Nationalism&amp;#34;,
@@ -729,8 +728,8 @@ references in any of a seemingly endless array of standardized citation
 styles.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h2 id=&#34;key-rule-be-consistent&#34;&gt;Key Rule: Be Consistent&lt;/h2&gt;
 &lt;p&gt;No matter what style of citekey or method of bibliography management is used,
-internal consistency is essential. Use a consistent citekey style&amp;mdash;I use
-AuthorYEAR, like &amp;ldquo;Anderson2006&amp;rdquo;&amp;mdash;so that each source is associated with a
+internal consistency is essential. Use a consistent citekey style—I use
+AuthorYEAR, like &amp;ldquo;Anderson2006&amp;rdquo;—so that each source is associated with a
 only single citekey. Do not use both &amp;ldquo;Anderson2006&amp;rdquo; and
 &amp;ldquo;andersonImaginedCommunities2006.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Also, take care to ensure that each citekey is associated with only a single
@@ -753,8 +752,8 @@ writings?&lt;/p&gt;
 publication where accurate citations would be necessary. Nevertheless, it was
 so simple to include the citekeys and a page reference that I didn&amp;rsquo;t consider
 &lt;em&gt;not&lt;/em&gt; doing it.&lt;/p&gt;
-&lt;p&gt;It was the use of citekeys, formatted in a distinct syntax&amp;mdash;in brackets,
-preceed by the hash sign&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&amp;mdash;that made it effortless to find this
+&lt;p&gt;It was the use of citekeys, formatted in a distinct syntax—in brackets,
+preceed by the hash sign&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;—that made it effortless to find this
 reference (along with several others) to Anderson&amp;rsquo;s &lt;em&gt;Imagined Communities&lt;/em&gt; in
 a file on my computer that is not obviously about the text in question and
 that I haven&amp;rsquo;t looked at or thought about since I wrote it. How about that?&lt;/p&gt;
@@ -775,7 +774,9 @@ guess what &amp;ldquo;Anderson2006.pdf&amp;rdquo; contains.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://citationstyles.org&#34; target=&#34;_blank&#34;&gt;https://citationstyles.org&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;These citations are in a syntax called &lt;a href=&#34;https://fletcher.github.io/MultiMarkdown-5/citations.html&#34; target=&#34;_blank&#34;&gt;MultiMarkdown&lt;/a&gt;. A similar syntax, called &lt;a href=&#34;https://pandoc.org/MANUAL.html#citation-syntax&#34; target=&#34;_blank&#34;&gt;Pandoc&lt;/a&gt;, uses the &lt;code&gt;@&lt;/code&gt; prefix instead of the &lt;code&gt;#&lt;/code&gt;, among other differences: [@Anderson2006, p 22-23].&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These citations are in a syntax called &lt;a href=&#34;https://fletcher.github.io/MultiMarkdown-5/citations.html&#34; target=&#34;_blank&#34;&gt;MultiMarkdown&lt;/a&gt;. A similar
+syntax, called &lt;a href=&#34;https://pandoc.org/MANUAL.html#citation-syntax&#34; target=&#34;_blank&#34;&gt;Pandoc&lt;/a&gt;, uses the &lt;code&gt;@&lt;/code&gt; prefix instead of the &lt;code&gt;#&lt;/code&gt;, among other
+differences: [@Anderson2006, p 22-23].&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
