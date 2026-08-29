@@ -88,9 +88,9 @@ Karthik gives to the embark/ace-window function)</li>
 ace-window with link-hint, so that I could choose which window a link
 would open in. The result is a function called <code>link-hint-aw-select</code>:</p>
 <figure><img src="/images/aw-select-demo.gif"
-    alt="Figure 1: Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window."><figcaption>
-      <p><span class="figure-number">Figure 1: </span>Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.</p>
-    </figcaption>
+			alt="Figure 1: Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window."><figcaption>
+			<p><span class="figure-number">Figure 1: </span>Using &rsquo;link-hint-aw-select&rsquo; to open each of the links in the top left window in a different window. First, the desired link is chosen via character overlay, courtsey of link-hint, then the desired window is chosen via character overlay, courtsey of ace-window.</p>
+		</figcaption>
 </figure>
 
 <p>If you&rsquo;re unfamiliar, link-hint is a package that is conceptually similar to
@@ -105,7 +105,7 @@ types can also be defined by the user. (More on that later.)</p>
 performed on the chosen link. However, there are only two default actions for acting on links: open link and copy link.</p>
 <p>Defining a new action is done by defining a new function, in this case the
 above-mentioned <code>link-hint-aw-select</code>, which will be entry-point command for all link types:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint-aw-select</span> ()
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint-aw-select</span> ()
 </span></span><span style="display:flex;"><span>  <span style="color:#c41a16">&#34;Use avy to open a link in a window selected with ace-window.&#34;</span>
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">interactive</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">unless</span>
@@ -122,17 +122,17 @@ different actions, all roughly similar.</p>
 type is associated with a function that will perform the new action in the
 appropriate way.</p>
 <p>The <code>aw-select</code> action for file links is quite simple:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-file-link</span> (<span style="color:#000">link</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-file-link</span> (<span style="color:#000">link</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">with-demoted-errors</span> <span style="color:#c41a16">&#34;%s&#34;</span>
 </span></span><span style="display:flex;"><span>    (<span style="color:#000">aw-switch-to-window</span> (<span style="color:#000">aw-select</span> <span style="color:#000">nil</span>))
 </span></span><span style="display:flex;"><span>    (<span style="color:#000">find-file</span> <span style="color:#000">link</span>)))
 </span></span></code></pre></div><p>To make the link-hint ecosystem aware of this new association of link-type,
 action, and function, there is a handy macro:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">link-hint-define-type</span> <span style="color:#c41a16">&#39;file-link</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">link-hint-define-type</span> <span style="color:#c41a16">&#39;file-link</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a90d91">:aw-select</span> <span style="color:#000">#&#39;</span><span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-file-link</span>)
 </span></span></code></pre></div><p>If different link-types behave similarly, it is possible to create a macro
 of our own that will do all of the above very efficiently. This is the case with buttons and dired-filenames, for example:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defmacro</span> <span style="color:#000">define-link-hint-aw-select</span> (<span style="color:#000">link-type</span> <span style="color:#000">fn</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defmacro</span> <span style="color:#000">define-link-hint-aw-select</span> (<span style="color:#000">link-type</span> <span style="color:#000">fn</span>)
 </span></span><span style="display:flex;"><span>  <span style="color:#000">`</span>(<span style="color:#a90d91">progn</span>
 </span></span><span style="display:flex;"><span>     (<span style="color:#000">link-hint-define-type</span> <span style="color:#c41a16">&#39;,link-type</span>
 </span></span><span style="display:flex;"><span>       <span style="color:#a90d91">:aw-select</span> <span style="color:#000">#&#39;</span><span style="color:#000">,</span>(<span style="color:#000">intern</span> (<span style="color:#000">concat</span> <span style="color:#c41a16">&#34;link-hint–aw-select-&#34;</span>
@@ -158,13 +158,13 @@ org-links are opened using <code>find-file-other-window</code> instead of <code>
 meaning that the above macro wouldn&rsquo;t work properly.</p>
 <p>I prefer to change this setting globally, so that org-links are opened in the
 current window, by evaluating the following:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">setf</span> (<span style="color:#000">cdr</span> (<span style="color:#000">assoc</span> <span style="color:#c41a16">&#39;file</span> <span style="color:#000">org-link-frame-setup</span>)) <span style="color:#c41a16">&#39;find-file</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">setf</span> (<span style="color:#000">cdr</span> (<span style="color:#000">assoc</span> <span style="color:#c41a16">&#39;file</span> <span style="color:#000">org-link-frame-setup</span>)) <span style="color:#c41a16">&#39;find-file</span>)
 </span></span></code></pre></div><p>This allows me to use the macro:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">define-link-hint-aw-select</span> <span style="color:#000">org-link</span> <span style="color:#000">org-open-at-point</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">define-link-hint-aw-select</span> <span style="color:#000">org-link</span> <span style="color:#000">org-open-at-point</span>)
 </span></span></code></pre></div><p>To leave org&rsquo;s default behavior in place globally, it is necessary to define
 a function specifically for org-links, in which the behavior is changed
 locally in a let-binding:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-org-link</span> (<span style="color:#000">_link</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-org-link</span> (<span style="color:#000">_link</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">let</span> ((<span style="color:#000">org-link-frame-setup</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#000">&#39;</span>((<span style="color:#000">file</span> <span style="color:#000">.</span> <span style="color:#000">find-file</span>))))
 </span></span><span style="display:flex;"><span>    (<span style="color:#a90d91">with-demoted-errors</span> <span style="color:#c41a16">&#34;%s&#34;</span>
@@ -188,10 +188,10 @@ link-types differently. For example, if you want http/https links to be
 opened externally, there is no reason to call the <code>aw-select</code> behavior for
 that type of org-link. This could be accomplished by including something like
 the following in the function&rsquo;s &ldquo;if&rdquo; conditional:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">not</span> (<span style="color:#000">member</span> (<span style="color:#000">org-element-property</span> <span style="color:#a90d91">:type</span> (<span style="color:#000">org-element-context</span>))
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">not</span> (<span style="color:#000">member</span> (<span style="color:#000">org-element-property</span> <span style="color:#a90d91">:type</span> (<span style="color:#000">org-element-context</span>))
 </span></span><span style="display:flex;"><span>             <span style="color:#000">&#39;</span>(<span style="color:#c41a16">&#34;http&#34;</span> <span style="color:#c41a16">&#34;https&#34;</span>)))
 </span></span></code></pre></div><p>The whole function would be:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-org-link</span> (<span style="color:#000">_link</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">link-hint</span><span style="color:#000">–</span><span style="color:#000">aw-select-org-link</span> (<span style="color:#000">_link</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">let</span> ((<span style="color:#000">org-link-frame-setup</span>
 </span></span><span style="display:flex;"><span>         <span style="color:#000">&#39;</span>((<span style="color:#000">file</span> <span style="color:#000">.</span> <span style="color:#000">find-file</span>))))
 </span></span><span style="display:flex;"><span>    (<span style="color:#a90d91">with-demoted-errors</span> <span style="color:#c41a16">&#34;%s&#34;</span>
@@ -221,7 +221,7 @@ If I have several windows arrayed around my screen, I can use
 type <code>zk-link</code> and a function <code>zk-link-hint-aw-select</code>, along with other
 functions necessary to fully incorporate a new link type into the link-hint
 system:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">zk-link-hint</span><span style="color:#000">–</span><span style="color:#000">zk-link-at-point-p</span> ()
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">zk-link-hint</span><span style="color:#000">–</span><span style="color:#000">zk-link-at-point-p</span> ()
 </span></span><span style="display:flex;"><span>  <span style="color:#c41a16">&#34;Return the ID for the zk-link at the point or nil.&#34;</span>
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">and</span> (<span style="color:#000">zk</span><span style="color:#000">–</span><span style="color:#000">id-at-point</span>)
 </span></span><span style="display:flex;"><span>       (<span style="color:#000">thing-at-point-looking-at</span> <span style="color:#000">zk-link-regexp</span>)))

@@ -61,7 +61,7 @@
 <p>Since Prot wrote the code for use in Linux, it didn’t immediately work in MacOS. It turns out, the only necessary change was to add a <code>window-system</code> frame parameter to the popup frame. (See code below).</p>
 <p>But while I was at it, I made a few additions: 1) a <code>title</code> frame parameter, which allows me to configure the popup frame size and placement through my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>; and 2) an optional argument that runs <code>delete-frame</code> after the main command runs. This makes it possible to call commands that are minibuffer-centric — in my case, that’s <code>citar-open-file</code> and <code>password-store-copy</code>.</p>
 <p>Here’s the main code:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">popup-frame-delete</span> (<span style="color:#a90d91">&amp;rest</span> <span style="color:#000">_</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">popup-frame-delete</span> (<span style="color:#a90d91">&amp;rest</span> <span style="color:#000">_</span>)
 </span></span><span style="display:flex;"><span>  <span style="color:#c41a16">&#34;Kill selected frame if it has parameter </span><span style="color:#c41a16">`popup-frame&#39;</span><span style="color:#c41a16">.&#34;</span>
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">when</span> (<span style="color:#000">frame-parameter</span> <span style="color:#000">nil</span> <span style="color:#c41a16">&#39;popup-frame</span>))
 </span></span><span style="display:flex;"><span>  (<span style="color:#000">delete-frame</span>))
@@ -93,7 +93,7 @@
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">unless</span> (<span style="color:#000">server-running-p</span>)
 </span></span><span style="display:flex;"><span>    (<span style="color:#000">server-start</span>)))
 </span></span></code></pre></div><p>And here are the macro calls that define commands:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">org-capture</span> <span style="color:#c41a16">&#34;capture-popup&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">org-capture</span> <span style="color:#c41a16">&#34;capture-popup&#34;</span>)
 </span></span><span style="display:flex;"><span>(<span style="color:#000">add-hook</span> <span style="color:#c41a16">&#39;org-capture-after-finalize-hook</span> <span style="color:#000">#&#39;</span><span style="color:#000">popup-frame-delete</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">password-store-copy</span> <span style="color:#c41a16">&#34;minimal-popup&#34;</span> <span style="color:#c41a16">&#39;delete-frame</span>)
@@ -101,15 +101,15 @@
 </span></span><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">citar-open-files</span> <span style="color:#c41a16">&#34;minimal-popup&#34;</span> <span style="color:#c41a16">&#39;delete-frame</span>)
 </span></span></code></pre></div><h2 id="triggering-popups-with-keyboard-shortcuts">Triggering Popups with Keyboard Shortcuts</h2>
 <p>To quickly bring up these popup frames with keyboard shortcuts, I use <a href="https://github.com/koekeishiya/skhd" target="_blank">skhd</a>, a hotkey daemon for macOS. The following configuration goes in the skhd config file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cmd + ctrl - c : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-org-capture)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
 </span></span><span style="display:flex;"><span>cmd + ctrl - o : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-citar-open-files)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
 </span></span><span style="display:flex;"><span>cmd + ctrl - p : emacsclient -e <span style="color:#c41a16">&#39;(popup-frame-password-store-copy)&#39;</span> <span style="color:#000">||</span> yabai -m window –focus recent
 </span></span></code></pre></div><h2 id="managing-windows-with-yabai">Managing Windows with yabai</h2>
 <p>Finally, I have configured my tiling window manager, <a href="https://github.com/koekeishiya/yabai" target="_blank">yabai</a>, to give the popup frames the desired size and placement.</p>
 <p>First, the following goes in the yabai config file:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal –add <span style="color:#000">event</span><span style="color:#000">=</span>window_created <span style="color:#000">app</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;Emacs&#34;</span> <span style="color:#000">action</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yabai -m signal –add <span style="color:#000">event</span><span style="color:#000">=</span>window_created <span style="color:#000">app</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;Emacs&#34;</span> <span style="color:#000">action</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;~/.yabai-emacs-window-handler.sh&#34;</span>
 </span></span></code></pre></div><p>This will run a bash script (located at ~/.yabai-emacs-window-handler.sh) every time a new Emacs frame is created. The script tells yabai how to move and resize the new frame, depending on the frame’s title. Here is that script:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#633820">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#633820">#!/bin/bash
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#000">data</span><span style="color:#000">=</span><span style="color:#a90d91">$(</span>yabai -m query –windows –window <span style="color:#000">$YABAI_WINDOW_ID</span><span style="color:#a90d91">)</span>
 </span></span><span style="display:flex;"><span>
@@ -131,7 +131,7 @@
 </span></span></code></pre></div><h2 id="additional-custom-commands">Additional Custom Commands</h2>
 <p>In some cases, an Emacs command will work nicely in a popup frame right out of the box. A good case in point is <code>org-capture</code>. In other cases, I have needed to write my own custom commands. Here a few:</p>
 <h3 id="google-translate-interface">Google Translate Interface</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/translate</span> ()
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/translate</span> ()
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">interactive</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">let</span> ((<span style="color:#000">choice</span>
 </span></span><span style="display:flex;"><span>         (<span style="color:#000">completing-read</span> <span style="color:#c41a16">&#34;Select: &#34;</span> <span style="color:#000">&#39;</span>(<span style="color:#c41a16">&#34;EN-&gt;LT&#34;</span> <span style="color:#c41a16">&#34;LT-&gt;EN&#34;</span>))))
@@ -145,7 +145,7 @@
 </figure>
 
 <h3 id="unread-emails-in-mu4e">Unread Emails in mu4e</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/mu4e-unread</span> ()
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/mu4e-unread</span> ()
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">interactive</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#000">mu4e</span> <span style="color:#c41a16">&#39;background</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#000">mu4e-search-bookmark</span>
@@ -153,13 +153,13 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>(<span style="color:#000">popup-frame-define</span> <span style="color:#000">my/org-agenda</span> <span style="color:#c41a16">&#34;large-popup&#34;</span>)
 </span></span></code></pre></div><p>For this, I add another “elif” to the bash script, to ensure I can see the whole inbox in the popup:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a90d91">elif</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a90d91">elif</span>
 </span></span><span style="display:flex;"><span><span style="color:#000">[[</span> <span style="color:#000">$title</span> <span style="color:#000">=</span>~ <span style="color:#c41a16">&#34;large-popup&#34;</span> <span style="color:#000">&amp;&amp;</span> <span style="color:#000">$display</span> <span style="color:#000">==</span> <span style="color:#1c01ce">1</span> <span style="color:#000">]]</span>; <span style="color:#a90d91">then</span>
 </span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –toggle float –move abs:350:130
 </span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –resize abs:730:600
 </span></span><span style="display:flex;"><span>yabai -m window <span style="color:#000">$YABAI_WINDOW_ID</span> –focus
 </span></span></code></pre></div><h3 id="custom-org-agenda-view">Custom Org-Agenda View</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/org-agenda</span> (<span style="color:#a90d91">&amp;optional</span> <span style="color:#000">p</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a90d91">defun</span> <span style="color:#000">my/org-agenda</span> (<span style="color:#a90d91">&amp;optional</span> <span style="color:#000">p</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#a90d91">interactive</span> <span style="color:#c41a16">&#34;P&#34;</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#000">org-agenda</span> <span style="color:#000">p</span> <span style="color:#c41a16">&#34;d&#34;</span>)
 </span></span><span style="display:flex;"><span>  (<span style="color:#000">org-agenda-redo-all</span>))
